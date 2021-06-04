@@ -1,11 +1,13 @@
-import React from 'react';
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const App = () => {
+  const { t } = useTranslation()
   return (
     <>
-      <h1>Hello Flex Coast</h1>
+      <h1>{t('getStarted')}</h1>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App
