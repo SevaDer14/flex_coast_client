@@ -1,5 +1,28 @@
 @import 'globals';
 
-.title {
-  background-color: $mainColor;
+.form-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 5% 20%;
+  background-color: rgb(115, 121, 110);
+}
+
+.question-container {
+  display: flex;
+
+  p {
+    background-color: $mainColor;
+    font-size: 1.4rem;
+    padding: 1.1rem;
+    border-radius: 20px;
+  }
+}
+
+.type-field-container {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  width: 100%;
+  justify-content: flex-end;
 }
