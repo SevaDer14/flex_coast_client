@@ -41,13 +41,15 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  max-width: 1000px;
+  max-width: 800px;
   margin: auto;
-  margin-top: 100px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid #fe876f;
+  margin-top: 50px;
+  padding-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
   border-radius: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
 }
 
 .question-container {
@@ -147,11 +149,16 @@ h3 {
   background-color: #fe876f;
 }
 
+.welcomeMessage {
+  padding-bottom: 30px;
+  border-bottom: 3px solid #fe876f;
+}
+
 .MuiButton-root {
   border-radius: 20px !important;
-  font-size: 28px !important;
+  font-size: 24px !important;
   color: white !important;
-  background-color: #fe876f !important;
+  background-color: #02afb0 !important;
   padding: 10px !important;
   -ms-flex-item-align: center !important;
       -ms-grid-row-align: center !important;
