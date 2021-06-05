@@ -12,7 +12,7 @@ const QuestionaryForm = () => {
 
   return (
     <div className='form-container'>
-      <h2>{t('welcomeMessage')}</h2>
+      <h2 data-cy='welcome-message'>{t('welcomeMessage')}</h2>
       <div data-cy='email-container'>
         <Question text={t('question.email')} />
         <Answer
