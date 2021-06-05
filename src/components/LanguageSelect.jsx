@@ -12,16 +12,14 @@ const LanguageSelect = () => {
   return (
     <div>
       <Select
-      style={styles.menu}
         data-cy='language-dropdown'
         inputProps={{
           name: 'language',
           id: 'age-native-simple',
-        }}
-       
+        }}       
         value={language}
-        displayEmpty
-        onChange={handleChange}>
+        onChange={handleChange}
+        disableUnderline={true}>
         <MenuItem data-cy='english' value={'English'}>
           English
         </MenuItem>
@@ -35,10 +33,3 @@ const LanguageSelect = () => {
 
 export default LanguageSelect
 
-const styles = {
-menu:{ 
-  textAlign: 'right',
-  color: 'white',
-  textDecorationColor:"white"
-}
-}

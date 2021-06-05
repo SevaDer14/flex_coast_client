@@ -31,7 +31,6 @@ const QuestionaryForm = () => {
         <Button
           variant='outlined'
           circular
-          className='submit-btn'
           data-cy='submit-btn'
           onClick={() => Inquiries.create(formData)}>
           Submit

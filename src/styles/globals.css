@@ -23,4 +23,12 @@ h3 {
 .MuiSelect-icon {
   color: white !important;
 }
+
+.MuiAppBar-root {
+  background-color: #02afb0 !important;
+}
+
+.MuiInput-root {
+  color: white !important;
+}
 /*# sourceMappingURL=globals.css.map */

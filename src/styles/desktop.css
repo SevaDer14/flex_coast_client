@@ -20,8 +20,16 @@ h3 {
   padding-right: 10px;
 }
 
-.menu {
-  float: right;
+.MuiSelect-icon {
+  color: white !important;
+}
+
+.MuiAppBar-root {
+  background-color: #02afb0 !important;
+}
+
+.MuiInput-root {
+  color: white !important;
 }
 
 .form-container {
@@ -33,7 +41,13 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  margin: 100px 20%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #fe876f;
+  border-radius: 20px;
 }
 
 .question-container {
@@ -133,13 +147,14 @@ h3 {
   background-color: #fe876f;
 }
 
-.submit-btn {
-  border-radius: 20px;
-  background-color: #fe876f;
-  width: 100px;
-  padding: 10px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 28px !important;
+  color: white !important;
+  background-color: #fe876f !important;
+  padding: 10px !important;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
 }
 /*# sourceMappingURL=desktop.css.map */
