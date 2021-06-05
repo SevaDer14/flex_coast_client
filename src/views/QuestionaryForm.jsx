@@ -10,6 +10,7 @@ const QuestionaryForm = () => {
 
   return (
     <div className='form-container'>
+      <h2>Hi! Let's talk a little bit about your needs so that we can provide you with the most suitable suggestions for your business.</h2>
       <div data-cy='email-container'>
         <Question text='Where can we reach you?' />
         <Answer

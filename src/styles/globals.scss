@@ -14,8 +14,14 @@ $secondaryColor: #fe876f;
     'Lucida Sans', Arial, sans-serif;
 }
 
+h2 {
+  font-size: 2rem;
+  color: $secondaryColor;
+  margin: 50px 0;
+}
+
 h3 {
-  font-size: 25px;
+  font-size: 1.5rem;
   color: $secondaryColor;
   padding-right: 10px;
 }

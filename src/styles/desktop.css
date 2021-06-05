@@ -8,8 +8,14 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h2 {
+  font-size: 2rem;
+  color: #fe876f;
+  margin: 50px 0;
+}
+
 h3 {
-  font-size: 25px;
+  font-size: 1.5rem;
   color: #fe876f;
   padding-right: 10px;
 }
@@ -30,14 +36,22 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
+}
+
+.question-container img {
+  height: 60px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-right: 10px;
 }
 
 .question-container p {
   color: white;
   background-color: #02afb0;
   font-size: 1.4rem;
-  padding: 1.1rem;
+  padding: 1rem;
   border-radius: 20px;
 }
 
@@ -55,18 +69,19 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 50px;
 }
 
 .type-field-container input {
   font-size: 1rem;
   border-radius: 20px;
-  padding: 5px 10px;
+  padding: 0 10px;
   text-align: center;
   height: 50px;
   min-width: 200px;
   margin-right: 10px;
   outline: none;
-  border: 1px solid #fe876f;
+  border: 2px solid #fe876f;
   color: #fe876f;
 }
 
@@ -101,7 +116,7 @@ h3 {
   width: 50px;
   padding: 10px;
   cursor: pointer;
-  border: 1px solid #fe876f;
+  border: 2px solid #fe876f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -119,5 +134,8 @@ h3 {
   background-color: #fe876f;
   width: 100px;
   padding: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=desktop.css.map */
