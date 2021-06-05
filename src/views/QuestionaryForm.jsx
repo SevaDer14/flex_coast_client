@@ -6,9 +6,20 @@ import Button from '@material-ui/core/Button'
 const QuestionaryForm = () => {
   return (
     <div className='form-container'>
-      <Question text='Where can we reach you?' />
-      <TypeField text='My email is' type='email' />
-      <Button variant='outlined' className='submit-btn' data-cy='submit-btn'>
+      <div data-cy='email-container'>
+        <Question text='Where can we reach you?' />
+        <TypeField
+          text='My email is'
+          type='email'
+          placeholder='your.name@company.com'
+        />
+      </div>
+
+      <Button
+        variant='outlined'
+        circular
+        className='submit-btn'
+        data-cy='submit-btn'>
         Submit
       </Button>
     </div>

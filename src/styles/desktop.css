@@ -5,6 +5,7 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h3 {
@@ -22,16 +23,18 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  margin: 5% 20%;
+  margin: 100px 20%;
 }
 
 .question-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 25px;
 }
 
 .question-container p {
+  color: white;
   background-color: #02afb0;
   font-size: 1.4rem;
   padding: 1.1rem;
@@ -55,13 +58,41 @@ h3 {
 }
 
 .type-field-container input {
+  font-size: 1rem;
   border-radius: 20px;
-  background-color: #fe876f;
+  padding: 5px 10px;
   text-align: center;
   height: 50px;
+  min-width: 200px;
   margin-right: 10px;
   outline: none;
+  border: 1px solid #fe876f;
+  color: #fe876f;
+}
+
+.type-field-container input::before {
+  outline: none;
   border: none;
+}
+
+.type-field-container input::-webkit-input-placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container input:-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container input::-ms-input-placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
+}
+
+.type-field-container input::placeholder {
+  text-transform: capitalize;
+  color: #fe876f;
 }
 
 .type-field-container .done-btn {
@@ -69,8 +100,17 @@ h3 {
   height: 50px;
   width: 50px;
   padding: 10px;
-  font-size: 20px;
   cursor: pointer;
+  border: 1px solid #fe876f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.type-field-container .done-btn:hover {
+  background-color: #fe876f;
+}
+
+.type-field-container .done-btn:focus {
   background-color: #fe876f;
 }
 
