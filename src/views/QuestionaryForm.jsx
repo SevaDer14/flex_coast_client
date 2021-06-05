@@ -6,7 +6,7 @@ import Inquiries from '../modules/Inquiries'
 import { useSelector } from 'react-redux'
 
 const QuestionaryForm = () => {
-  const { formData } = useSelector((state) => state)
+  const { submitMessage, formData } = useSelector((state) => state)
 
   return (
     <div className='form-container'>
@@ -20,14 +20,20 @@ const QuestionaryForm = () => {
         />
       </div>
 
-      <Button
-        variant='outlined'
-        circular
-        className='submit-btn'
-        data-cy='submit-btn'
-        onClick={() => Inquiries.create(formData)}>
-        Submit
-      </Button>
+      {submitMessage ? (
+        <>
+          <Question dataCy='on-submit-message' text={submitMessage} />
+        </>
+      ) : (
+        <Button
+          variant='outlined'
+          circular
+          className='submit-btn'
+          data-cy='submit-btn'
+          onClick={() => Inquiries.create(formData)}>
+          Submit
+        </Button>
+      )}
     </div>
   )
 }
