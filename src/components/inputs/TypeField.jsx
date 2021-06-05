@@ -1,10 +1,21 @@
 import React from 'react'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import IconButton from '@material-ui/core/IconButton'
 
-const TypeField = () => {
+const TypeField = ({ text, type }) => {
   return (
-    <div data-cy='type-field-container'>
-      <input data-cy='email' name='email' type='email' placeholder='Email' />
-      <button data-cy='done-btn'>Done</button>
+    <div className='type-field-container'>
+      <h3>{text}</h3>
+      <input
+        variant='outlined'
+        data-cy={type}
+        name={type}
+        type={type}
+        placeholder={type}
+      />
+      <IconButton className='done-btn' data-cy='done-btn'>
+        <ExpandMoreIcon />
+      </IconButton>
     </div>
   )
 }

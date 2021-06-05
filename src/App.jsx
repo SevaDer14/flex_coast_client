@@ -8,7 +8,6 @@ const App = () => {
   const { t } = useTranslation()
   return (
     <>
-      <h1 className='title'>{t('getStarted')}</h1>
       <QuestionaryForm />
     </>
   )

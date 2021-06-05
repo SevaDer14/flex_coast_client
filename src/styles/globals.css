@@ -7,7 +7,9 @@
   margin: 0;
 }
 
-h1 {
-  font-size: 50px;
+h3 {
+  font-size: 25px;
+  color: #fe876f;
+  padding-right: 10px;
 }
 /*# sourceMappingURL=globals.css.map */

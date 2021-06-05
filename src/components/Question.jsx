@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Question = () => {
+const Question = ({ text }) => {
   return (
     <div className='question-container'>
-      <p data-cy='question'>Where can we reach you?</p>
+      <p data-cy='question'>{text}</p>
     </div>
   )
 }
