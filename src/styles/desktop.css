@@ -20,6 +20,10 @@ h3 {
   padding-right: 10px;
 }
 
+.menu {
+  float: right;
+}
+
 .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
