@@ -14,10 +14,10 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
   return (
     <div className='type-field-container'>
       <h3>{text}</h3>
-      <input
+      <div>
+        <input
         data-cy='input'
-        //value={answer}
-        type={type}
+        type={type} 
         onChange={(event) => {
           setAnswer(event.target.value)
         }}
@@ -26,6 +26,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
       <IconButton className='done-btn' data-cy='done-btn'>
         <ExpandMoreIcon />
       </IconButton>
+      </div>
     </div>
   )
 }

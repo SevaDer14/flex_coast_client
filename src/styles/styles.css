@@ -31,8 +31,16 @@ h3 {
 @media only screen and (max-width: 700px) {
   h3 {
     font-size: 18px;
+    margin-top: 5px;
     padding-right: 10px;
     margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  h3 {
+    font-size: 18px;
+    padding-right: 10px;
   }
 }
 
@@ -138,6 +146,9 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .type-field-container h3 {
+    margin-right: 35%;
+  }
 }
 
 .type-field-container input {
@@ -166,22 +177,18 @@ h3 {
 }
 
 .type-field-container input::-webkit-input-placeholder {
-  text-transform: capitalize;
   color: #fe876f;
 }
 
 .type-field-container input:-ms-input-placeholder {
-  text-transform: capitalize;
   color: #fe876f;
 }
 
 .type-field-container input::-ms-input-placeholder {
-  text-transform: capitalize;
   color: #fe876f;
 }
 
 .type-field-container input::placeholder {
-  text-transform: capitalize;
   color: #fe876f;
 }
 
@@ -194,6 +201,12 @@ h3 {
   border: 2px solid #fe876f;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media only screen and (max-width: 520px) {
+  .type-field-container .done-btn {
+    margin-left: 10px;
+  }
 }
 
 .type-field-container .done-btn:hover {
@@ -211,7 +224,7 @@ h3 {
 
 .MuiButton-root {
   border-radius: 20px !important;
-  font-size: 24px !important;
+  font-size: 100% !important;
   color: white !important;
   background-color: #02afb0 !important;
   padding: 10px !important;

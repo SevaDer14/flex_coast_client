@@ -18,7 +18,7 @@ const QuestionaryForm = () => {
         <Answer
           text={t('answer.email')}
           type='email'
-          placeholder='your.name@company.com'
+          placeholder='user@company.com'
           questionKey='email'
         />
       </div>

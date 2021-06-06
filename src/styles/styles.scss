@@ -53,6 +53,9 @@
   margin-bottom: 50px;
   @media only screen and (max-width: 520px) {
     flex-direction: column;
+    h3{
+     margin-right: 35%;
+    }
   }
 
   input {
@@ -76,7 +79,6 @@
     }
 
     &::placeholder {
-      text-transform: capitalize;
       color: $secondaryColor;
     }
   }
@@ -89,7 +91,9 @@
     cursor: pointer;
     border: 2px solid $secondaryColor;
     transition: 0.3s;
-
+    @media only screen and (max-width: 520px) {
+      margin-left: 10px;
+    }
     &:hover {
       background-color: $secondaryColor;
     }
@@ -106,7 +110,7 @@
 
 .MuiButton-root {
   border-radius: 20px !important;
-  font-size: 24px !important;
+  font-size: 100% !important;
   color: white !important;
   background-color: $mainColor !important;
   padding: 10px !important;
@@ -114,4 +118,4 @@
   @media only screen and (max-width: 520px) {
     font-size: 18px !important;
   }
-}
+} 
