@@ -29,7 +29,6 @@ const QuestionaryForm = () => {
         </>
       ) : (
         <Button          
-          circular
           data-cy='submit-btn'
           onClick={() => Inquiries.create(formData)}>
           Submit

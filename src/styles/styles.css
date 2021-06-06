@@ -5,20 +5,35 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 32px;
   color: #fe876f;
   margin: 50px 0;
 }
 
+@media only screen and (max-width: 700px) {
+  h2 {
+    font-size: 1.2rem;
+    margin: 50px;
+  }
+}
+
 h3 {
-  font-size: 1.5rem;
+  font-size: 24px;
   color: #fe876f;
   padding-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  h3 {
+    font-size: 18px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .MuiSelect-icon {
@@ -30,7 +45,7 @@ h3 {
 }
 
 .MuiInput-root {
-  color: blue !important;
+  color: white !important;
 }
 
 .form-container {
@@ -39,8 +54,8 @@ h3 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   max-width: 800px;
   margin: auto;
@@ -50,7 +65,14 @@ h3 {
   padding-right: 50px;
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+}
+
+@media only screen and (max-width: 520px) {
+  .form-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 .question-container {
@@ -60,11 +82,20 @@ h3 {
   margin-bottom: 50px;
 }
 
+@media only screen and (max-width: 520px) {
+  .question-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
 .question-container img {
   height: 60px;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-right: 10px;
 }
 
@@ -72,8 +103,15 @@ h3 {
   color: white;
   background-color: #02afb0;
   font-size: 1.4rem;
-  padding: 1rem;
+  padding: 16px;
   border-radius: 20px;
+}
+
+@media only screen and (max-width: 520px) {
+  .question-container p {
+    font-size: 18px;
+    padding: 20px;
+  }
 }
 
 .type-field-container {
@@ -82,15 +120,24 @@ h3 {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 520px) {
+  .type-field-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .type-field-container input {
@@ -104,6 +151,13 @@ h3 {
   outline: none;
   border: 2px solid #fe876f;
   color: #fe876f;
+}
+
+@media only screen and (max-width: 520px) {
+  .type-field-container input {
+    margin-bottom: 10px;
+    margin-right: 0px;
+  }
 }
 
 .type-field-container input::before {
@@ -162,7 +216,13 @@ h3 {
   background-color: #02afb0 !important;
   padding: 10px !important;
   -ms-flex-item-align: center !important;
-  -ms-grid-row-align: center !important;
-  align-self: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
 }
-/*# sourceMappingURL=desktop.css.map */
+
+@media only screen and (max-width: 520px) {
+  .MuiButton-root {
+    font-size: 18px !important;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

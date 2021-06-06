@@ -10,14 +10,21 @@
   padding-top: 10px;
   padding-left: 50px;
   padding-right: 50px;
-  //border: 1px solid lightgray;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+  @media only screen and (max-width: 520px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 .question-container {
   display: flex;
   margin-bottom: 50px;
+  @media only screen and (max-width: 520px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 
   img {
     height: 60px;
@@ -29,8 +36,12 @@
     color: white;
     background-color: $mainColor;
     font-size: 1.4rem;
-    padding: 1rem;
+    padding: 16px;
     border-radius: 20px;
+    @media only screen and (max-width: 520px) {
+      font-size: 18px;
+      padding: 20px;
+    }
   }
 }
 
@@ -40,6 +51,9 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 50px;
+  @media only screen and (max-width: 520px) {
+    flex-direction: column;
+  }
 
   input {
     font-size: 1rem;
@@ -52,7 +66,10 @@
     outline: none;
     border: 2px solid $secondaryColor;
     color: $secondaryColor;
-
+    @media only screen and (max-width: 520px) {
+      margin-bottom: 10px;
+      margin-right: 0px;
+    }
     &::before {
       outline: none;
       border: none;
@@ -94,4 +111,7 @@
   background-color: $mainColor !important;
   padding: 10px !important;
   align-self: center !important;
+  @media only screen and (max-width: 520px) {
+    font-size: 18px !important;
+  }
 }
