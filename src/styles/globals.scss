@@ -18,16 +18,32 @@ h2 {
   font-size: 2rem;
   color: $secondaryColor;
   margin: 50px 0;
+  @media only screen and (max-width: 700px) {
+    font-size: 1.2rem;
+    margin: 50px;
+  }
 }
 
 h3 {
   font-size: 1.5rem;
   color: $secondaryColor;
   padding-right: 10px;
+  margin-bottom: 10px;
+  @media only screen and (max-width: 700px) {
+    font-size: 1.2rem;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
 }
 
- 
-.MuiSelect-icon{
+.type-field-container {
+  @media only screen and (max-width: 520px) {
+    flex-direction: column;
+  }
+}
+
+
+.MuiSelect-icon {
   color: white !important;
 }
 
@@ -40,3 +56,26 @@ h3 {
 }
 
 // Blueprints
+
+@media only screen and (max-width: 700px) {
+  .welcomeMessage {
+    font-size: 24px;
+  }
+  .MuiButton-root {
+    border-radius: 20px !important;
+    font-size: 20px !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .question-container p {
+    font-size: 15px;
+  }
+  .MuiButton-root {
+    font-size: 15px !important;
+  }
+  .type-field-container input {
+    font-size: 15px;
+    height: 40px;
+    min-width: 150px;
+  }
+}
