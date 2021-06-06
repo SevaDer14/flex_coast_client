@@ -31,7 +31,7 @@ const QuestionaryForm = () => {
         <Button          
           data-cy='submit-btn'
           onClick={() => Inquiries.create(formData)}>
-          Submit
+          {t('submitButton')}
         </Button>
       )}
     </div>

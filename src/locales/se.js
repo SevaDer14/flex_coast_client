@@ -12,7 +12,7 @@ const se = {
   answer: {
     email: 'Min email är: ',
   },
-
+  submitButton: 'Skicka in',
   }
 }
 

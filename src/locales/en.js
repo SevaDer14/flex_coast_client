@@ -12,6 +12,7 @@ const en = {
     answer: {
       email: 'My email is: ',
     },
+    submitButton: 'Submit',
   },
 }
 
