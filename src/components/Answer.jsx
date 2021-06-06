@@ -8,6 +8,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
 
   const setAnswer = (event) => {
     event.preventDefault()
+    
     store.dispatch({
       type: 'SET_ANSWERS',
       payload: { key: questionKey, answer: email },

@@ -4,11 +4,14 @@ const rootReducer = (state = initialState, action) => {
     case 'SET_ANSWERS':
       let newData = state.formData
       newData[action.payload.key] = action.payload.answer
-      return { ...state, formData: newData }
+      return { 
+        ...state, 
+        formData: newData 
+      }
     case 'SET_SUBMIT_MESSAGE':
       return {
         ...state,
-        submitMessage: action.payload 
+        submitMessage: action.payload,
       }
     default:
       return state

@@ -1,5 +1,7 @@
 @import 'globals';
 
+$mobile: 520px;
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -7,12 +9,10 @@
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
-  padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 10px 50px 0 50px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: $mobile) {
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -21,7 +21,7 @@
 .question-container {
   display: flex;
   margin-bottom: 50px;
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: $mobile) {
     justify-content: center;
     margin-bottom: 30px;
   }
@@ -38,7 +38,7 @@
     font-size: 1.4rem;
     padding: 16px;
     border-radius: 20px;
-    @media only screen and (max-width: 520px) {
+    @media only screen and (max-width: $mobile) {
       font-size: 18px;
       padding: 20px;
     }
@@ -51,7 +51,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 50px;
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: $mobile) {
     flex-direction: column;
     h3{
      margin-right: 35%;
@@ -69,7 +69,7 @@
     outline: none;
     border: 2px solid $secondaryColor;
     color: $secondaryColor;
-    @media only screen and (max-width: 520px) {
+    @media only screen and (max-width: $mobile) {
       margin-bottom: 10px;
       margin-right: 0px;
     }
@@ -91,7 +91,7 @@
     cursor: pointer;
     border: 2px solid $secondaryColor;
     transition: 0.3s;
-    @media only screen and (max-width: 520px) {
+    @media only screen and (max-width: $mobile) {
       margin-left: 10px;
     }
     &:hover {
@@ -107,15 +107,3 @@
   padding-bottom: 30px;
   border-bottom: 3px solid $secondaryColor;
 }
-
-.MuiButton-root {
-  border-radius: 20px !important;
-  font-size: 20px !important;
-  color: white !important;
-  background-color: $mainColor !important;
-  padding: 10px !important;
-  align-self: center !important;
-  @media only screen and (max-width: 520px) {
-    font-size: 18px !important;
-  }
-} 
