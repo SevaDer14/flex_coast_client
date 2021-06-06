@@ -14,6 +14,7 @@ describe('User can send inquiry', () => {
   })
   describe('Successfully', () => {
     it('is expected to display success message', () => {
+      cy.get('[data-cy=submit-btn]').should('not.exist')
       cy.get('[data-cy=email-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
