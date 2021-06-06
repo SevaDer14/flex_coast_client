@@ -12,7 +12,9 @@ const QuestionaryForm = () => {
 
   return (
     <div className='form-container'>
-      <h2 className='welcomeMessage' data-cy='welcome-message'>{t('welcomeMessage')}</h2>
+      <h2 className='welcomeMessage' data-cy='welcome-message'>
+        {t('welcomeMessage')}
+      </h2>
       <div data-cy='email-container'>
         <Question text={t('question.email')} />
         <Answer
@@ -28,11 +30,13 @@ const QuestionaryForm = () => {
           <Question dataCy='on-submit-message' text={submitMessage} />
         </>
       ) : (
-        <Button          
-          data-cy='submit-btn'
-          onClick={() => Inquiries.create(formData)}>
-          {t('submitButton')}
-        </Button>
+        formData.email && (
+          <Button
+            data-cy='submit-btn'
+            onClick={() => Inquiries.create(formData)}>
+            {t('submitButton')}
+          </Button>
+        )
       )}
     </div>
   )
