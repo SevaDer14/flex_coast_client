@@ -56,6 +56,29 @@ h3 {
   color: white !important;
 }
 
+.MuiToolbar-root {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.MuiButton-root {
+  border-radius: 20px !important;
+  font-size: 20px !important;
+  color: white !important;
+  background-color: #02afb0 !important;
+  padding: 10px !important;
+  -ms-flex-item-align: center !important;
+      -ms-grid-row-align: center !important;
+      align-self: center !important;
+}
+
+@media only screen and (max-width: 520px) {
+  .MuiButton-root {
+    font-size: 18px !important;
+  }
+}
+
 .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,9 +91,7 @@ h3 {
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
-  padding-top: 10px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 10px 50px 0 50px;
   border-radius: 20px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
@@ -220,22 +241,5 @@ h3 {
 .welcomeMessage {
   padding-bottom: 30px;
   border-bottom: 3px solid #fe876f;
-}
-
-.MuiButton-root {
-  border-radius: 20px !important;
-  font-size: 20px !important;
-  color: white !important;
-  background-color: #02afb0 !important;
-  padding: 10px !important;
-  -ms-flex-item-align: center !important;
-      -ms-grid-row-align: center !important;
-      align-self: center !important;
-}
-
-@media only screen and (max-width: 520px) {
-  .MuiButton-root {
-    font-size: 18px !important;
-  }
 }
 /*# sourceMappingURL=styles.css.map */
