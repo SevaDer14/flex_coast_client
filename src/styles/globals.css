@@ -47,19 +47,27 @@ h3 {
 .custom-button {
   border: 1px solid #fff;
   border-radius: 4px;
-  padding: 14px  24px;
+  padding: 14px 24px;
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  margin-right: 25px;
   background-color: transparent;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+  background-color: rgba(97, 247, 210, 0.8);
 }
 
 .custom-button:hover {
-  background-color: rgba(97, 247, 210, 0.8);
+  background-color: #61f7d2;
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.custom-button a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .MuiSelect-icon {

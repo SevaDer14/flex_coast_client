@@ -7,9 +7,9 @@ const LandingHeader = () => {
     <div data-cy='header' className='header-container'>
       <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
       <div>
-        <div className='phone-btn' data-cy='phone-number'>
+        <button className='custom-button' data-cy='phone-number'>
           <a href='tel:+46812345678'>08-123 456 78</a>
-        </div>
+        </button>
         <LanguageSelect />
       </div>
     </div>

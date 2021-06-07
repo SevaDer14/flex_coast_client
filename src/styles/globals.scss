@@ -40,26 +40,27 @@ h3 {
     padding-right: 10px;
   }
 }
-.custom-button{
+.custom-button {
   border: 1px solid #fff;
   border-radius: 4px;
-  padding: 14px  24px; 
+  padding: 14px 24px;
   cursor: pointer;
   transition: 0.3s;
-  margin-right: 25px;
   background-color: transparent;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
+  background-color: rgba(97, 247, 210, 0.8);
 
   &:hover {
-    background-color: rgba(97, 247, 210, 0.8);
+    background-color: $mainColor;
+    transform: translateY(-5px);
   }
-
-  // a {
-  //   font-size: 18px;
-  //   text-decoration: none;
-  // }
+  a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .MuiSelect-icon {
