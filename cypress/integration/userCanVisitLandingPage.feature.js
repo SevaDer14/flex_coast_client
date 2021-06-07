@@ -13,7 +13,10 @@ describe('User can visit Flex Coast landing page', () => {
       cy.get('[data-cy=flex-coast]').should('be.visible')
     })
 
-    cy.get('[data-cy=welcome-text]').should('contain', 'Flexible short term office leasing in modern Gothenburg')
+    cy.get('[data-cy=welcome-text]').should(
+      'contain',
+      'Flexible short term office leasing in lovely Gothenburg'
+    )
     cy.get('[data-cy=get-started]').should('contain', 'Get Started').click()
     cy.url().should('contain', '/inquiry')
   })

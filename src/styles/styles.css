@@ -45,17 +45,17 @@ h3 {
 }
 
 .custom-button {
-  border: 1px solid #fff;
-  border-radius: 4px;
-  padding: 14px 24px;
+  height: 50px;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: transparent;
+  background-color: rgba(97, 247, 210, 0.9);
   color: #fff;
+  border-radius: 4px;
+  border: none;
+  padding: 14px 24px;
   font-size: 18px;
   text-decoration: none;
-  background-color: rgba(97, 247, 210, 0.8);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .custom-button:hover {
@@ -269,55 +269,12 @@ h3 {
   border-bottom: 3px solid #ffd09c;
 }
 
-.welcome-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  color: #fff;
-  margin: 200px 20vw;
-  text-align: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media only screen and (max-width: 620px) {
-  .welcome-text {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-top: 100px;
-  }
-}
-
-.welcome-text h1 {
-  padding-bottom: 35px;
-  font-size: 45px;
-  max-width: 600px;
-}
-
-@media only screen and (max-width: 620px) {
-  .welcome-text h1 {
-    font-size: 30px;
-  }
-}
-
-.welcome-text button {
-  height: 50px;
-  min-width: 200px;
-}
-
 .hero-section {
   background-image: url("/src/assets/hero.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
 
 .hero-section .header-container {
@@ -353,5 +310,59 @@ h3 {
 
 .hero-section .header-container .logo {
   height: 100px;
+}
+
+.hero-section .welcome-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #fff;
+  margin: 150px 20vw;
+  text-align: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 620px) {
+  .hero-section .welcome-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 100px 40px 0 40px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.hero-section .welcome-text h1 {
+  padding-bottom: 35px;
+  padding-right: 10px;
+  font-size: 45px;
+  max-width: 600px;
+}
+
+@media only screen and (max-width: 620px) {
+  .hero-section .welcome-text h1 {
+    font-size: 40px;
+  }
+}
+
+.hero-section .welcome-text button {
+  min-width: 180px;
+}
+
+.testimonials-container {
+  height: 50vh;
+  background-color: rgba(255, 208, 156, 0.2);
 }
 /*# sourceMappingURL=styles.css.map */
