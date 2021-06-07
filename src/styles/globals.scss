@@ -24,22 +24,7 @@ h2 {
   }
 }
 
-h3 {
-  font-size: 24px;
-  color: $secondaryColor;
-  padding-right: 10px;
-  margin-bottom: 10px;
-  @media only screen and (max-width: 700px) {
-    font-size: 18px;
-    margin-top: 5px;
-    padding-right: 10px;
-    margin-bottom: 10px;
-  }
-  @media only screen and (max-width: 520px) {
-    font-size: 18px;
-    padding-right: 10px;
-  }
-}
+
 
 .MuiSelect-icon {
   color: white !important;
@@ -64,6 +49,5 @@ h3 {
     font-size: 18px !important;
   }
 } 
-
 
 // Blueprints

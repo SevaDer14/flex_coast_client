@@ -5,10 +5,11 @@ import store from '../state/store/configureStore'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
   const [email, setEmail] = useState('')
+  const [filled, setFilled] = useState(false)
 
   const setAnswer = (event) => {
     event.preventDefault()
-    
+    setFilled(true)
     store.dispatch({
       type: 'SET_ANSWERS',
       payload: { key: questionKey, answer: email },
@@ -21,6 +22,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
       <div>
         <form onSubmit={(event) => setAnswer(event)}>
           <input
+            className={filled ? 'input-filled' : 'input'}
             data-cy='input'
             type={type}
             value={email}
