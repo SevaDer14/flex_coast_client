@@ -44,6 +44,24 @@ h3 {
   }
 }
 
+.custom-button {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  padding: 14px  24px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-right: 25px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.custom-button:hover {
+  background-color: rgba(97, 247, 210, 0.8);
+}
+
 .MuiSelect-icon {
   color: white !important;
 }

@@ -4,13 +4,16 @@ describe('User can visit Flex Coast landing page', () => {
   })
 
   it('shows the main landing page', () => {
+    cy.get('.hero-section')
+      .should('have.css', 'background-image')
+      .and('include', 'hero')
     cy.get('[data-cy=header]').within(() => {
       cy.get('[data-cy=phone-number]').should('contain', '08-123 456 78')
       cy.get('[data-cy=language-dropdown]').should('be.visible')
       cy.get('[data-cy=flex-coast]').should('be.visible')
     })
-    cy.get('[data-cy=hero-image]').should('be.visible')
-    cy.get('[data-cy=welcome-text]').should('contain', 'placeholder')
+
+    cy.get('[data-cy=welcome-text]').should('contain', 'Flexible short term office leasing in modern Gothenburg')
     cy.get('[data-cy=get-started]').should('contain', 'Get Started').click()
     cy.url().should('contain', '/inquiry')
   })

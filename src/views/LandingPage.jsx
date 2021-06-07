@@ -4,9 +4,12 @@ import heroImg from '../assets/hero.jpg'
 
 const LandingPage = () => {
   return (
-    <div className='hero-section'>
+    <div className='hero-section' data-cy='hero-section'>
      <LandingHeader />
-     <img src={heroImg} alt='hero' className='hero-img' />
+     <div data-cy='welcome-text' className='welcome-text'>
+       <h1>Flexible short term office leasing in modern Gothenburg</h1>
+       <button data-cy='get-started' className='custom-button'>Get Started</button>
+     </div>
     </div>
   )
 }
