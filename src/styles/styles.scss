@@ -114,6 +114,9 @@
   background-position: center;
   width: 100vw;
   height: 80vh;
+  @media only screen and (max-width: $mobile) {
+    height: 100vh;
+  }
 
   .header-container {
     padding: 50px 0;
@@ -129,9 +132,15 @@
       margin-right: 20px;
     }
 
-    div:first-of-type {
+    .menu-wrapper {
       display: flex;
       align-items: center;
+    }
+
+    .dropdown-menu {
+      button:first-of-type {
+        color: #fff;
+      }
     }
 
     .logo {
@@ -170,7 +179,39 @@
   }
 }
 
+.dropdown-container {
+  .MuiPaper-root {
+    background-color: $secondaryColorMedOpacity;
+    padding: 0 25%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    button {
+      background-color: transparent;
+      border: 1px solid #fff;
+    }
+
+    .MuiInputBase-root {
+      border: 1px solid #fff;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+  }
+}
+
+#menu-language {
+  .MuiPaper-root {
+    background-color: $secondaryColor;
+    color: white;
+    width: 125px;
+    position: absolute;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
 .testimonials-container {
   height: 50vh;
-  background-color: rgba(255, 208, 156, 0.2);
+  background-color: $secondaryColorLowOpacity;
 }
