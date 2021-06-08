@@ -26,7 +26,7 @@ const QuestionaryForm = () => {
           <Question dataCy='on-submit-message' text={submitMessage} />
         </>
       ) : (
-        formData.size && (
+        formData.office_type && (
           <Button
             data-cy='submit-btn'
             onClick={() => Inquiries.create(formData)}>
