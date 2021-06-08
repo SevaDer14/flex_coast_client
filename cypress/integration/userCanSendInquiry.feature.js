@@ -31,8 +31,8 @@ describe('User can send inquiry', () => {
       cy.get('[data-cy=office-type-container]').within(() => {
         cy.get('[data-cy=question]').should('contain', 'What type of office are you looking for?')
         cy.get('[data-cy=open-space-lable]').should('be.visible')
-        cy.get('[data-cy=own-room-lable]').should('be.visible')
-        cy.get('[data-cy=own-room-btn]').click({force: true})
+        cy.get('[data-cy=office-lable]').should('be.visible')
+        cy.get('[data-cy=office-btn]').click({force: true})
         cy.get('[data-cy=done-btn]').click()
       })
       cy.get('[data-cy=submit-btn]').click()

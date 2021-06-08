@@ -3,10 +3,12 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import CheckIcon from '@material-ui/icons/Check'
 import IconButton from '@material-ui/core/IconButton'
 import store from '../state/store/configureStore'
+import { useTranslation } from 'react-i18next'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
   const [inputValue, setInputValue] = useState('')
   const [filled, setFilled] = useState(false)
+  const { t } = useTranslation()
   
   const setAnswer = (event) => {
     event.preventDefault()
@@ -26,27 +28,29 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
             <div className='radio-group'>
               <input
                 type='radio'
-                id='own-room'
-                data-cy='own-room-btn'
-                value='own-room'
+                id='office'
+                data-cy='office-btn'
+                value='office'
                 name='selector'
+                required
                 onChange={(event) => {
                   setInputValue(event.target.value)
                 }}
                 
               />
-              <label data-cy='own-room-lable' for='own-room'>Own room</label>
+              <label data-cy='office-lable' for='office'>{t('answer.officeLable')}</label>
               <input
                 type='radio'
                 id='open-space'
                 data-cy='open-space-btn'
                 value='open-space'
                 name='selector'
+                required
                 onChange={(event) => {
                   setInputValue(event.target.value)
                 }}
               />
-              <label data-cy='open-space-lable' for='open-space'>Open space</label>
+              <label data-cy='open-space-lable' for='open-space'>{t('answer.openSpaceLable')}</label>
             </div>
           ) : (
             <input

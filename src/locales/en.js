@@ -8,13 +8,15 @@ const en = {
     question: {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
-      office_type: 'What type of office are you looking for?',
+      officeType: 'What type of office are you looking for?',
     },
 
     answer: {
       email: 'My email is: ',
       size: 'We are a group of: ',
-      office_type: 'We need: ',
+      officeType: 'We need: ',
+      officeLable: 'Office',
+      openSpaceLable: 'Open space'
     },
     submitButton: 'Submit',
   },
