@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import CheckIcon from '@material-ui/icons/Check'
 import IconButton from '@material-ui/core/IconButton'
+import EditIcon from '@material-ui/icons/Edit'
 import store from '../state/store/configureStore'
 import { useTranslation } from 'react-i18next'
 
@@ -9,14 +10,18 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
   const [inputValue, setInputValue] = useState('')
   const [filled, setFilled] = useState(false)
   const { t } = useTranslation()
-  
+
   const setAnswer = (event) => {
     event.preventDefault()
-    setFilled(true)
-    store.dispatch({
-      type: 'SET_ANSWERS',
-      payload: { key: questionKey, answer: inputValue },
-    })
+    if (filled) {
+      setFilled(false)
+    } else {
+      setFilled(true)
+      store.dispatch({
+        type: 'SET_ANSWERS',
+        payload: { key: questionKey, answer: inputValue },
+      })
+    }
   }
 
   return (
@@ -27,6 +32,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
           {type === 'toggle-btn' ? (
             <div className='radio-group'>
               <input
+                disabled={filled}
                 type='radio'
                 id='office'
                 data-cy='office-btn'
@@ -36,10 +42,12 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
                 onChange={(event) => {
                   setInputValue(event.target.value)
                 }}
-                
               />
-              <label data-cy='office-lable' for='office'>{t('answer.officeLable')}</label>
+              <label data-cy='office-lable' for='office'>
+                {t('answer.officeLable')}
+              </label>
               <input
+                disabled={filled}
                 type='radio'
                 id='open-space'
                 data-cy='open-space-btn'
@@ -50,7 +58,9 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
                   setInputValue(event.target.value)
                 }}
               />
-              <label data-cy='open-space-lable' for='open-space'>{t('answer.openSpaceLable')}</label>
+              <label data-cy='open-space-lable' for='open-space'>
+                {t('answer.openSpaceLable')}
+              </label>
             </div>
           ) : (
             <input
@@ -72,7 +82,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
             type='submit'
             data-cy='done-btn'>
             {filled ? (
-              <CheckIcon className={filled ? 'icon-filled' : 'icon'} />
+              <EditIcon className={filled ? 'icon-filled' : 'icon'} />
             ) : (
               <ExpandMoreIcon className={filled ? 'icon-filled' : 'icon'} />
             )}

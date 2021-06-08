@@ -8,7 +8,7 @@ const OfficeTypeInquiry = () => {
 
   return (
     <div data-cy='office-type-container'>
-      <Question text={t('question.office_type')} />
+      <Question text={t('question.officeType')} />
       <Answer
         text={t('answer.officeType')}
         type='toggle-btn'
