@@ -1,6 +1,6 @@
 describe('User can edit inquiry', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/inquiry')
   })
   describe('Successfully', () => {
     it('is expected to edit input field', () => {
