@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import CheckIcon from '@material-ui/icons/Check'
 import IconButton from '@material-ui/core/IconButton'
 import EditIcon from '@material-ui/icons/Edit'
 import store from '../state/store/configureStore'
