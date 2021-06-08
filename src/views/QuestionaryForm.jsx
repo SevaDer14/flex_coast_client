@@ -4,8 +4,8 @@ import Button from '@material-ui/core/Button'
 import Inquiries from '../modules/Inquiries'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
-import EmailInquiry from '../components/questionnaireBlocks/EmailInquiry'
-import CompanySizeInquiry from '../components/questionnaireBlocks/CompanySizeInquiry'
+import EmailInquiry from '../components/Inquiry/EmailInquiry'
+import CompanySizeInquiry from '../components/Inquiry/CompanySizeInquiry'
 
 const QuestionaryForm = () => {
   const { submitMessage, formData } = useSelector((state) => state)
@@ -16,15 +16,15 @@ const QuestionaryForm = () => {
       <h2 className='welcomeMessage' data-cy='welcome-message'>
         {t('welcomeMessage')}
       </h2>
+      
       <EmailInquiry />
-      <CompanySizeInquiry />
+      {formData.email && <CompanySizeInquiry />}
+
       {submitMessage ? (
         <>
           <Question dataCy='on-submit-message' text={submitMessage} />
         </>
-      ) : (
-        formData.email &&
-        formData.size && (
+      ) : ( formData.size && (
           <Button
             data-cy='submit-btn'
             onClick={() => Inquiries.create(formData)}>

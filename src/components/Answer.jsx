@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import CheckIcon from '@material-ui/icons/Check';
 import IconButton from '@material-ui/core/IconButton'
 import store from '../state/store/configureStore'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
-  const [email, setEmail] = useState('')
+  const [inputValue, setInputValue] = useState('')
   const [filled, setFilled] = useState(false)
 
   const setAnswer = (event) => {
@@ -12,7 +13,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
     setFilled(true)
     store.dispatch({
       type: 'SET_ANSWERS',
-      payload: { key: questionKey, answer: email },
+      payload: { key: questionKey, answer: inputValue },
     })
   }
 
@@ -25,19 +26,19 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
             className={filled ? 'input-filled' : 'input'}
             data-cy='input'
             type={type}
-            value={email}
+            value={inputValue}
             required
             onChange={(event) => {
-              setEmail(event.target.value)
+              setInputValue(event.target.value)
             }}
             placeholder={placeholder}
           />
 
           <IconButton
+            className={filled ? 'done-btn-filled' : 'done-btn'}
             type='submit'            
-            className='done-btn'
             data-cy='done-btn'>
-            <ExpandMoreIcon />
+            {filled ? <CheckIcon/> : <ExpandMoreIcon />}
           </IconButton>
         </form>
       </div>
