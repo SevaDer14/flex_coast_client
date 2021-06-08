@@ -28,6 +28,12 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=input]').type('100')
         cy.get('[data-cy=done-btn]').click()
       })
+      cy.get('[data-cy=office-size-container]').within(() => {
+        cy.get('[data-cy=question]').should('contain', 'What type of office are you looking for?')
+        cy.get('[data-cy=open-space-btn]').should('be.visible')
+        cy.get('[data-cy=own-room-btn]').click()
+        cy.get('[data-cy=done-btn]').click()
+      })
       cy.get('[data-cy=submit-btn]').click()
       cy.get('[data-cy=on-submit-message]').should(
         'contain',

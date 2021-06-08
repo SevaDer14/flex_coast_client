@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import CheckIcon from '@material-ui/icons/Check';
+import CheckIcon from '@material-ui/icons/Check'
 import IconButton from '@material-ui/core/IconButton'
 import store from '../state/store/configureStore'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
   const [inputValue, setInputValue] = useState('')
-  const [filled, setFilled] = useState(false)
+  const [filled, setFilled] = useState('')
 
   const setAnswer = (event) => {
     event.preventDefault()
-    setFilled(true)
+    setFilled('-filled')
     store.dispatch({
       type: 'SET_ANSWERS',
       payload: { key: questionKey, answer: inputValue },
@@ -35,10 +35,14 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
           />
 
           <IconButton
-            className={filled ? 'done-btn-filled' : 'done-btn'}
-            type='submit'            
+            className={`done-btn${filled}`}
+            type='submit'
             data-cy='done-btn'>
-            {filled ? <CheckIcon/> : <ExpandMoreIcon />}
+            {filled ? (
+              <CheckIcon className={`icon${filled}`} />
+            ) : (
+              <ExpandMoreIcon className={`icon${filled}`} />
+            )}
           </IconButton>
         </form>
       </div>

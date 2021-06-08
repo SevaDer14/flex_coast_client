@@ -258,12 +258,20 @@ input[type='number']::-webkit-outer-spin-button {
   background-color: #fe876f;
 }
 
-.type-field-container .done-btn:focus, .type-field-container .done-btn-filled:focus {
-  background-color: #fe876f;
+.type-field-container .done-btn:hover .icon, .type-field-container .done-btn-filled:hover .icon, .type-field-container .done-btn:hover .icon-filled, .type-field-container .done-btn-filled:hover .icon-filled {
+  color: white;
 }
 
 .type-field-container .done-btn-filled {
   background-color: #fe876f;
+}
+
+.type-field-container .done-btn .icon, .type-field-container .done-btn-filled .icon, .type-field-container .done-btn .icon-filled, .type-field-container .done-btn-filled .icon-filled {
+  color: #fe876f;
+}
+
+.type-field-container .done-btn .icon-filled, .type-field-container .done-btn-filled .icon-filled {
+  color: white;
 }
 
 .welcomeMessage {

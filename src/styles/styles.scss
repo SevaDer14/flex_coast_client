@@ -129,14 +129,26 @@ $mobile: 520px;
     }
     &:hover {
       background-color: $secondaryColor;
+      .icon {
+        color: white;
+      }
     }
-    &:focus {
-      background-color: $secondaryColor;
-    }
+    // &:focus {
+    //   background-color: $secondaryColor;
+    // }
     &-filled {
       @extend .done-btn;
-      background-color: $secondaryColor;
+      background-color: $secondaryColor;    
     }
+
+    .icon {
+      color: $secondaryColor;
+      &-filled {
+        @extend .icon;
+        color: white;
+      }
+    }
+    
   }
 }
 
