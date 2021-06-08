@@ -87,7 +87,7 @@ $mobile: 520px;
     @media only screen and (max-width: $mobile) {
       margin-bottom: 10px;
       margin-right: 0px;
-    }   
+    }
 
     &::before {
       outline: none;
@@ -104,7 +104,7 @@ $mobile: 520px;
       color: $secondaryColor;
     }
 
-    &[type=number] {
+    &[type='number'] {
       width: 100px;
     }
 
@@ -133,12 +133,9 @@ $mobile: 520px;
         color: white;
       }
     }
-    // &:focus {
-    //   background-color: $secondaryColor;
-    // }
     &-filled {
       @extend .done-btn;
-      background-color: $secondaryColor;    
+      background-color: $secondaryColor;
     }
 
     .icon {
@@ -148,7 +145,46 @@ $mobile: 520px;
         color: white;
       }
     }
-    
+  }
+
+  .radio-group {
+    border-radius: 20px;
+    // text-align: center;
+    height: 50px;
+    margin-right: 10px;
+    // outline: none;
+    border: 2px solid $secondaryColor;
+    // color: $secondaryColor;
+    // height: 50px;
+    // border: 2px solid $secondaryColor;
+    display: inline-block;
+    // // margin: 20px;
+    // border-radius: 10px;
+     overflow: hidden;
+
+    input[type='radio'] {
+      visibility: hidden;
+      display: none;
+      // padding: 10px;
+    }
+
+    label {
+      height: 55px;
+      font-size: 20px;
+      color: $secondaryColor;
+      display: inline-block;
+      cursor: pointer;
+      padding: 12px 20px;
+    }
+
+    input[type='radio']:checked + label {
+      color: lighten(white, 60%);
+      background: $secondaryColor;
+    }
+
+    label + input[type='radio'] + label {
+      border-left: 2px solid $secondaryColor;
+    }
   }
 }
 

@@ -22,17 +22,37 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
       <h3>{text}</h3>
       <div>
         <form onSubmit={(event) => setAnswer(event)}>
-          <input
-            className={filled ? 'input-filled' : 'input'}
-            data-cy='input'
-            type={type}
-            value={inputValue}
-            required
-            onChange={(event) => {
-              setInputValue(event.target.value)
-            }}
-            placeholder={placeholder}
-          />
+          {type === 'toggle-btn' ? (
+            <div className='radio-group'>
+              <input
+                type='radio'
+                id='own-room'
+                data-cy='own-room-btn'
+                name='selector'
+                checked
+              />
+              <label for='own-room'>Own room</label>
+              <input
+                type='radio'
+                id='open-space'
+                data-cy='open-space-btn'
+                name='selector'
+              />
+              <label for='open-space'>Open space</label>
+            </div>
+          ) : (
+            <input
+              className={filled ? 'input-filled' : 'input'}
+              data-cy='input'
+              type={type}
+              value={inputValue}
+              required
+              onChange={(event) => {
+                setInputValue(event.target.value)
+              }}
+              placeholder={placeholder}
+            />
+          )}
 
           <IconButton
             className={`done-btn${filled}`}

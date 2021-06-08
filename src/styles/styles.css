@@ -227,7 +227,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: #fe876f;
 }
 
-.type-field-container .input[type=number], .type-field-container .input-filled[type=number] {
+.type-field-container .input[type='number'], .type-field-container .input-filled[type='number'] {
   width: 100px;
 }
 
@@ -272,6 +272,38 @@ input[type='number']::-webkit-outer-spin-button {
 
 .type-field-container .done-btn .icon-filled, .type-field-container .done-btn-filled .icon-filled {
   color: white;
+}
+
+.type-field-container .radio-group {
+  border-radius: 20px;
+  height: 50px;
+  margin-right: 10px;
+  border: 2px solid #fe876f;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.type-field-container .radio-group input[type='radio'] {
+  visibility: hidden;
+  display: none;
+}
+
+.type-field-container .radio-group label {
+  height: 55px;
+  font-size: 20px;
+  color: #fe876f;
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px 20px;
+}
+
+.type-field-container .radio-group input[type='radio']:checked + label {
+  color: white;
+  background: #fe876f;
+}
+
+.type-field-container .radio-group label + input[type='radio'] + label {
+  border-left: 2px solid #fe876f;
 }
 
 .welcomeMessage {

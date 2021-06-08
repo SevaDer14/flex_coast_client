@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import EmailInquiry from '../components/Inquiry/EmailInquiry'
 import CompanySizeInquiry from '../components/Inquiry/CompanySizeInquiry'
+import OfficeTypeInquiry from '../components/Inquiry/OfficeTypeInquiry'
 
 const QuestionaryForm = () => {
   const { submitMessage, formData } = useSelector((state) => state)
@@ -16,15 +17,16 @@ const QuestionaryForm = () => {
       <h2 className='welcomeMessage' data-cy='welcome-message'>
         {t('welcomeMessage')}
       </h2>
-      
+
       <EmailInquiry />
       {formData.email && <CompanySizeInquiry />}
-
+      <OfficeTypeInquiry />
       {submitMessage ? (
         <>
           <Question dataCy='on-submit-message' text={submitMessage} />
         </>
-      ) : ( formData.size && (
+      ) : (
+        formData.size && (
           <Button
             data-cy='submit-btn'
             onClick={() => Inquiries.create(formData)}>
