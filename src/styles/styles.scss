@@ -108,6 +108,12 @@ $mobile: 520px;
       width: 100px;
     }
 
+    &:disabled {
+      @extend .input;
+      background-color: $secondaryColor;
+      color: white;
+    }
+
     &-filled {
       @extend .input;
       background-color: $secondaryColor;
@@ -149,32 +155,23 @@ $mobile: 520px;
 
   .radio-group {
     border-radius: 20px;
-    // text-align: center;
-    height: 50px;
-    margin-right: 10px;
-    // outline: none;
-    border: 2px solid $secondaryColor;
-    // color: $secondaryColor;
-    // height: 50px;
-    // border: 2px solid $secondaryColor;
     display: inline-block;
-    // // margin: 20px;
-    // border-radius: 10px;
-     overflow: hidden;
 
     input[type='radio'] {
+      
       visibility: hidden;
       display: none;
-      // padding: 10px;
     }
 
     label {
-      height: 55px;
-      font-size: 20px;
+      margin-right: 10px;
+      border: 2px solid $secondaryColor;
+      border-radius: 20px;
+      font-size: 22px;
       color: $secondaryColor;
       display: inline-block;
       cursor: pointer;
-      padding: 12px 20px;
+      padding: 10px;
     }
 
     input[type='radio']:checked + label {
@@ -183,6 +180,7 @@ $mobile: 520px;
     }
 
     label + input[type='radio'] + label {
+      
       border-left: 2px solid $secondaryColor;
     }
   }

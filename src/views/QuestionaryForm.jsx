@@ -20,7 +20,7 @@ const QuestionaryForm = () => {
 
       <EmailInquiry />
       {formData.email && <CompanySizeInquiry />}
-      <OfficeTypeInquiry />
+      {formData.size && <OfficeTypeInquiry />}
       {submitMessage ? (
         <>
           <Question dataCy='on-submit-message' text={submitMessage} />

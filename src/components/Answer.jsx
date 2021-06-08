@@ -6,11 +6,11 @@ import store from '../state/store/configureStore'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
   const [inputValue, setInputValue] = useState('')
-  const [filled, setFilled] = useState('')
-
+  const [filled, setFilled] = useState(false)
+  
   const setAnswer = (event) => {
     event.preventDefault()
-    setFilled('-filled')
+    setFilled(true)
     store.dispatch({
       type: 'SET_ANSWERS',
       payload: { key: questionKey, answer: inputValue },
@@ -28,21 +28,30 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
                 type='radio'
                 id='own-room'
                 data-cy='own-room-btn'
+                value='own-room'
                 name='selector'
-                checked
+                onChange={(event) => {
+                  setInputValue(event.target.value)
+                }}
+                
               />
-              <label for='own-room'>Own room</label>
+              <label data-cy='own-room-lable' for='own-room'>Own room</label>
               <input
                 type='radio'
                 id='open-space'
                 data-cy='open-space-btn'
+                value='open-space'
                 name='selector'
+                onChange={(event) => {
+                  setInputValue(event.target.value)
+                }}
               />
-              <label for='open-space'>Open space</label>
+              <label data-cy='open-space-lable' for='open-space'>Open space</label>
             </div>
           ) : (
             <input
-              className={filled ? 'input-filled' : 'input'}
+              className={'input'}
+              disabled={filled}
               data-cy='input'
               type={type}
               value={inputValue}
@@ -55,13 +64,13 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
           )}
 
           <IconButton
-            className={`done-btn${filled}`}
+            className={filled ? 'done-btn-filled' : 'done-btn'}
             type='submit'
             data-cy='done-btn'>
             {filled ? (
-              <CheckIcon className={`icon${filled}`} />
+              <CheckIcon className={filled ? 'icon-filled' : 'icon'} />
             ) : (
-              <ExpandMoreIcon className={`icon${filled}`} />
+              <ExpandMoreIcon className={filled ? 'icon-filled' : 'icon'} />
             )}
           </IconButton>
         </form>

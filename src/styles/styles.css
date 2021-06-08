@@ -172,7 +172,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
-.type-field-container .input, .type-field-container .input-filled {
+.type-field-container .input, .type-field-container .input:disabled, .type-field-container .input-filled {
   font-size: 1.4rem;
   border-radius: 20px;
   text-align: center;
@@ -184,13 +184,13 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 @media only screen and (max-width: 520px) {
-  .type-field-container .input, .type-field-container .input-filled {
+  .type-field-container .input, .type-field-container .input:disabled, .type-field-container .input-filled {
     margin-bottom: 10px;
     margin-right: 0px;
   }
 }
 
-.type-field-container .input::before, .type-field-container .input-filled::before {
+.type-field-container .input::before, .type-field-container .input:disabled::before, .type-field-container .input-filled::before {
   outline: none;
   border: none;
 }
@@ -211,24 +211,29 @@ input[type='number']::-webkit-outer-spin-button {
   color: transparent;
 }
 
-.type-field-container .input::-webkit-input-placeholder, .type-field-container .input-filled::-webkit-input-placeholder {
+.type-field-container .input::-webkit-input-placeholder, .type-field-container .input:disabled::-webkit-input-placeholder, .type-field-container .input-filled::-webkit-input-placeholder {
   color: #fe876f;
 }
 
-.type-field-container .input:-ms-input-placeholder, .type-field-container .input-filled:-ms-input-placeholder {
+.type-field-container .input:-ms-input-placeholder, .type-field-container .input:disabled:-ms-input-placeholder, .type-field-container .input-filled:-ms-input-placeholder {
   color: #fe876f;
 }
 
-.type-field-container .input::-ms-input-placeholder, .type-field-container .input-filled::-ms-input-placeholder {
+.type-field-container .input::-ms-input-placeholder, .type-field-container .input:disabled::-ms-input-placeholder, .type-field-container .input-filled::-ms-input-placeholder {
   color: #fe876f;
 }
 
-.type-field-container .input::placeholder, .type-field-container .input-filled::placeholder {
+.type-field-container .input::placeholder, .type-field-container .input:disabled::placeholder, .type-field-container .input-filled::placeholder {
   color: #fe876f;
 }
 
 .type-field-container .input[type='number'], .type-field-container .input-filled[type='number'] {
   width: 100px;
+}
+
+.type-field-container .input:disabled, .type-field-container .input-filled:disabled {
+  background-color: #fe876f;
+  color: white;
 }
 
 .type-field-container .input-filled {
@@ -276,11 +281,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .type-field-container .radio-group {
   border-radius: 20px;
-  height: 50px;
-  margin-right: 10px;
-  border: 2px solid #fe876f;
   display: inline-block;
-  overflow: hidden;
 }
 
 .type-field-container .radio-group input[type='radio'] {
@@ -289,12 +290,14 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .type-field-container .radio-group label {
-  height: 55px;
-  font-size: 20px;
+  margin-right: 10px;
+  border: 2px solid #fe876f;
+  border-radius: 20px;
+  font-size: 22px;
   color: #fe876f;
   display: inline-block;
   cursor: pointer;
-  padding: 12px 20px;
+  padding: 10px;
 }
 
 .type-field-container .radio-group input[type='radio']:checked + label {
