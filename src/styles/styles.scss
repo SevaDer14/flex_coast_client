@@ -202,12 +202,14 @@
 
 #menu-language {
   .MuiPaper-root {
-    background-color: $secondaryColor;
-    color: white;
-    width: 125px;
-    position: absolute;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    @media only screen and (max-width: $mobile) {
+      background-color: $secondaryColor;
+      color: white;
+      width: 125px;
+      position: absolute;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+    }
   }
 }
 
