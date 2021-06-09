@@ -1,6 +1,6 @@
 import React from 'react'
-import Question from '../Question'
-import Answer from '../Answer'
+import Question from './Question'
+import Answer from './Answer'
 import { useTranslation } from 'react-i18next'
 
 const EmailInquiry = () => {

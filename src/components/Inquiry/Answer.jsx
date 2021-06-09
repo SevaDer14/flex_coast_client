@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import IconButton from '@material-ui/core/IconButton'
-import EditIcon from '@material-ui/icons/Edit'
-import store from '../state/store/configureStore'
+import CustomIconButton from '../custom/CustomIconButton'
+import store from '../../state/store/configureStore'
 import { useTranslation } from 'react-i18next'
-import CustomRadioButton from '../components/custom/CustomRadioButton'
+import CustomRadioButton from '../../components/custom/CustomRadioButton'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
   const [inputValue, setInputValue] = useState('')
@@ -53,16 +51,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
             />
           )}
 
-          <IconButton
-            className={filled ? 'done-btn-filled' : 'done-btn'}
-            type='submit'
-            data-cy='done-btn'>
-            {filled ? (
-              <EditIcon className={filled ? 'icon-filled' : 'icon'} />
-            ) : (
-              <ExpandMoreIcon className={filled ? 'icon-filled' : 'icon'} />
-            )}
-          </IconButton>
+          <CustomIconButton toggle={filled}/>
         </form>
       </div>
     </div>

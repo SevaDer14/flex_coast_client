@@ -1,5 +1,5 @@
 import React from 'react'
-import Question from '../components/Question'
+import Question from '../components/Inquiry/Question'
 import CustomButton from '../components/custom/CustomButton'
 import Inquiries from '../modules/Inquiries'
 import { useSelector } from 'react-redux'

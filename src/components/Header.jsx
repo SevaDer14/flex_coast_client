@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import LanguageSelect from './LanguageSelect'
-import logo from '../assets/logo2.png'
+import logo from '../assets/logo.svg'
 import CustomButton from './custom/CustomButton'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import IconButton from '@material-ui/core/IconButton'
