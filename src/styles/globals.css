@@ -74,10 +74,6 @@ h3 {
   color: white !important;
 }
 
-.MuiAppBar-root {
-  background-color: #61f7d2 !important;
-}
-
 .MuiInput-root {
   color: white !important;
 }
@@ -185,16 +181,16 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .page-header-landing .menu-wrapper .MuiSelect-select {
-  color: #fff;
+  color: white;
 }
 
 .page-header-landing .dropdown-menu button:first-of-type {
-  color: #61f7d2;
+  color: white;
 }
 
 #menu-language .MuiPaper-root {
   background-color: #61f7d2;
-  color: #61f7d2;
+  color: white;
   width: 125px;
 }
 
