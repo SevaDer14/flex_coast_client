@@ -1,6 +1,6 @@
 import React from 'react'
 import Question from '../components/Question'
-import Button from '@material-ui/core/Button'
+import CustomButton from '../custom/CustomButton'
 import Inquiries from '../modules/Inquiries'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
@@ -30,11 +30,11 @@ const QuestionaryForm = () => {
           </>
         ) : (
           formData.office_type && (
-            <Button
+            <CustomButton
               data-cy='submit-btn'
               onClick={() => Inquiries.create(formData)}>
               {t('submitButton')}
-            </Button>
+            </CustomButton>
           )
         )}
       </div>

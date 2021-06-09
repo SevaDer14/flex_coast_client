@@ -231,6 +231,11 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+.form-container .custom-button {
+  width: 200px;
+  margin: 0 auto;
+}
+
 .question-container {
   display: -webkit-box;
   display: -ms-flexbox;
