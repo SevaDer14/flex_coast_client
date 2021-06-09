@@ -4,6 +4,7 @@ import IconButton from '@material-ui/core/IconButton'
 import EditIcon from '@material-ui/icons/Edit'
 import store from '../state/store/configureStore'
 import { useTranslation } from 'react-i18next'
+import CustomRadioButton from '../components/custom/CustomRadioButton'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
   const [inputValue, setInputValue] = useState('')
@@ -29,38 +30,14 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
       <div>
         <form onSubmit={(event) => setAnswer(event)}>
           {type === 'toggle-btn' ? (
-            <div className='radio-group'>
-              <input
-                disabled={filled}
-                type='radio'
-                id='office'
-                data-cy='office-btn'
-                value='office'
-                name='selector'
-                required
-                onChange={(event) => {
-                  setInputValue(event.target.value)
-                }}
-              />
-              <label data-cy='office-lable' for='office'>
-                {t('answer.officeLable')}
-              </label>
-              <input
-                disabled={filled}
-                type='radio'
-                id='open-space'
-                data-cy='open-space-btn'
-                value='open-space'
-                name='selector'
-                required
-                onChange={(event) => {
-                  setInputValue(event.target.value)
-                }}
-              />
-              <label data-cy='open-space-lable' for='open-space'>
-                {t('answer.openSpaceLable')}
-              </label>
-            </div>
+            <CustomRadioButton
+              disabled={filled}
+              label_1={t('answer.officeLable')}
+              label_2={t('answer.openSpaceLable')}
+              onChange={(event) => {
+                setInputValue(event.target.value)
+              }}
+            />
           ) : (
             <input
               className={'input'}

@@ -1,6 +1,6 @@
 import React from 'react'
 import Question from '../components/Question'
-import CustomButton from '../custom/CustomButton'
+import CustomButton from '../components/custom/CustomButton'
 import Inquiries from '../modules/Inquiries'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
@@ -15,7 +15,7 @@ const QuestionaryForm = () => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <div className='form-container'>
         <h2 className='welcomeMessage' data-cy='welcome-message'>
           {t('welcomeMessage')}
@@ -31,7 +31,7 @@ const QuestionaryForm = () => {
         ) : (
           formData.office_type && (
             <CustomButton
-              data-cy='submit-btn'
+              dataCy='submit-btn'
               onClick={() => Inquiries.create(formData)}>
               {t('submitButton')}
             </CustomButton>

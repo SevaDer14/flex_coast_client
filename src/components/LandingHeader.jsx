@@ -7,17 +7,15 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import Drawer from '@material-ui/core/Drawer'
 
-const LandingHeader = ({ landing }) => {
+const LandingHeader = ({ inverted }) => {
   const [open, setOpen] = useState(false)
   const isSmall = useMediaQuery('(max-width:620px)')
 
   return (
     <div
       data-cy='header'
-      className={landing ? 'page-header-landing' : 'page-header'}>
-      <a href='/'>
-        <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
-      </a>
+      className={inverted ? 'questionnaire-header' : 'landing-page-header'}>
+      <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
       {isSmall ? (
         <div className='dropdown-menu'>
           <IconButton onClick={() => setOpen(true)}>

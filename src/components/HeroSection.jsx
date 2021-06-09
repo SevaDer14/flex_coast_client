@@ -1,5 +1,5 @@
 import React from 'react'
-import CustomButton from '../custom/CustomButton'
+import CustomButton from './custom/CustomButton'
 import Header from './Header'
 import { useTranslation } from 'react-i18next'
 
