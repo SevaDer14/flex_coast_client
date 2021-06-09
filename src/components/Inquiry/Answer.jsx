@@ -32,7 +32,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
   }
 
   return (
-    <div className='type-field-container'>
+    <div className='answer-container'>
       <h3>{text}</h3>
       <div>
         <form onSubmit={(event) => setAnswer(event)}>

@@ -4,9 +4,9 @@ import CustomButton from '../components/custom/CustomButton'
 import Inquiries from '../modules/Inquiries'
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
-import EmailInquiry from '../components/Inquiry/EmailInquiry'
-import CompanySizeInquiry from '../components/Inquiry/CompanySizeInquiry'
-import OfficeTypeInquiry from '../components/Inquiry/OfficeTypeInquiry'
+import InquiryEmail from '../components/Inquiry/InquiryEmail'
+import InquiryCompanySize from '../components/Inquiry/InquiryCompanySize'
+import InquiryOfficeType from '../components/Inquiry/InquiryOfficeType'
 import Header from '../components/Header'
 
 const QuestionaryForm = () => {
@@ -21,9 +21,9 @@ const QuestionaryForm = () => {
           {t('welcomeMessage')}
         </h2>
 
-        <EmailInquiry />
-        {formData.email && <CompanySizeInquiry />}
-        {formData.size && <OfficeTypeInquiry />}
+        <InquiryEmail />
+        {formData.email && <InquiryCompanySize />}
+        {formData.size && <InquiryOfficeType />}
         {submitMessage ? (
           <>
             <Question dataCy='on-submit-message' text={submitMessage} />

@@ -3,7 +3,7 @@ import Question from './Question'
 import Answer from './Answer'
 import { useTranslation } from 'react-i18next'
 
-const EmailInquiry = () => {
+const InquiryEmail = () => {
   const { t } = useTranslation()
 
   return (
@@ -19,4 +19,4 @@ const EmailInquiry = () => {
   )
 }
 
-export default EmailInquiry
+export default InquiryEmail

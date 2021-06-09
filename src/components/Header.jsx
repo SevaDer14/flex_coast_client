@@ -14,7 +14,8 @@ const LandingHeader = ({ landing }) => {
   return (
     <div
       data-cy='header'
-      className={landing ? 'page-header-landing' : 'page-header'}>
+      className={landing ? 'page-header-landing' : 'page-header'}
+      >
       <a href='/'>
         <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
       </a>

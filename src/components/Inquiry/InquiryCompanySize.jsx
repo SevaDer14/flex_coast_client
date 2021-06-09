@@ -3,7 +3,7 @@ import Question from './Question'
 import Answer from './Answer'
 import { useTranslation } from 'react-i18next'
 
-const CompanySizeInquiry = () => {
+const InquiryCompanySize = () => {
   const { t } = useTranslation()
 
   return (
@@ -19,4 +19,4 @@ const CompanySizeInquiry = () => {
   )
 }
 
-export default CompanySizeInquiry
+export default InquiryCompanySize

@@ -3,7 +3,7 @@ import Question from './Question'
 import Answer from './Answer'
 import { useTranslation } from 'react-i18next'
 
-const OfficeTypeInquiry = () => {
+const InquiryOfficeType = () => {
   const { t } = useTranslation()
 
   return (
@@ -18,4 +18,4 @@ const OfficeTypeInquiry = () => {
   )
 }
 
-export default OfficeTypeInquiry
+export default InquiryOfficeType

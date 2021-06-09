@@ -3,7 +3,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import IconButton from '@material-ui/core/IconButton'
 import EditIcon from '@material-ui/icons/Edit'
 
-const CustomIconButton = ({toggle}) => {
+const CustomIconButton = ({ toggle }) => {
   return (
     <IconButton
       className={toggle ? 'done-btn-filled' : 'done-btn'}
