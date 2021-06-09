@@ -134,7 +134,7 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.landing-page-header {
+.page-header, .page-header-landing {
   max-width: 1280px;
   padding: 50px;
   display: -webkit-box;
@@ -145,19 +145,20 @@ input[type='number']::-webkit-outer-spin-button {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  border-bottom: 1px solid lightgray;
 }
 
 @media only screen and (max-width: 620px) {
-  .landing-page-header {
+  .page-header, .page-header-landing {
     margin: 0 20px;
   }
 }
 
-.landing-page-header button {
+.page-header button, .page-header-landing button {
   margin-right: 20px;
 }
 
-.landing-page-header .menu-wrapper {
+.page-header .menu-wrapper, .page-header-landing .menu-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,57 +167,28 @@ input[type='number']::-webkit-outer-spin-button {
           align-items: center;
 }
 
-.landing-page-header .dropdown-menu button:first-of-type {
+.page-header .menu-wrapper .MuiSelect-select, .page-header-landing .menu-wrapper .MuiSelect-select {
+  color: #61f7d2;
+}
+
+.page-header .dropdown-menu button:first-of-type, .page-header-landing .dropdown-menu button:first-of-type {
+  color: #61f7d2;
+}
+
+.page-header .logo, .page-header-landing .logo {
+  height: 100px;
+}
+
+.page-header-landing {
+  border-bottom: none;
+}
+
+.page-header-landing .menu-wrapper .MuiSelect-select {
   color: #fff;
 }
 
-.landing-page-header .logo {
-  height: 100px;
-}
-
-.questionnaire-header {
-  max-width: 1280px;
-  padding: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 75px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 620px) {
-  .questionnaire-header {
-    margin: 0 20px;
-  }
-}
-
-.questionnaire-header button {
-  margin-right: 20px;
-}
-
-.questionnaire-header .menu-wrapper {
-  color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.questionnaire-header .menu-wrapper .MuiSelect-select {
-  color: #61f7d2;
-}
-
-.questionnaire-header .dropdown-menu button:first-of-type {
-  color: #61f7d2;
-}
-
-.questionnaire-header .logo {
-  height: 100px;
+.page-header-landing .dropdown-menu button:first-of-type {
+  color: #fff;
 }
 
 #menu-language .MuiPaper-root {
@@ -234,4 +206,3 @@ input[type='number']::-webkit-outer-spin-button {
             transform: translateX(-50%) !important;
   }
 }
-/*# sourceMappingURL=globals.css.map */

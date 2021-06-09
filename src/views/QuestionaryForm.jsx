@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import EmailInquiry from '../components/Inquiry/EmailInquiry'
 import CompanySizeInquiry from '../components/Inquiry/CompanySizeInquiry'
 import OfficeTypeInquiry from '../components/Inquiry/OfficeTypeInquiry'
-import LandingHeader from '../components/LandingHeader'
+import Header from '../components/Header'
 
 const QuestionaryForm = () => {
   const { submitMessage, formData } = useSelector((state) => state)
@@ -15,7 +15,7 @@ const QuestionaryForm = () => {
 
   return (
     <>
-      <LandingHeader inverted/>
+      <Header/>
       <div className='form-container'>
         <h2 className='welcomeMessage' data-cy='welcome-message'>
           {t('welcomeMessage')}

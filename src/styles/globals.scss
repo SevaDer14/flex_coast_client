@@ -122,54 +122,23 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 0;
 }
 
-.landing-page-header {
+.page-header {
   max-width: 1280px;
   padding: 50px;
   display: flex;
   height: 75px;
   justify-content: space-between;
   margin: 0 auto;
+  border-bottom: 1px solid lightgray;
   @media only screen and (max-width: $mobile) {
     margin: 0 20px;
-  }
+  }  
 
   button {
     margin-right: 20px;
   }
 
   .menu-wrapper {
-    display: flex;
-    align-items: center;
-  }
-
-  .dropdown-menu {
-    button:first-of-type {
-      color: #fff;
-    }
-  }
-
-  .logo {
-    height: 100px;
-  }
-}
-
-.questionnaire-header {
-  max-width: 1280px;
-  padding: 50px;
-  display: flex;
-  height: 75px;
-  justify-content: space-between;
-  margin: 0 auto;
-  @media only screen and (max-width: $mobile) {
-    margin: 0 20px;
-  }
-
-  button {
-    margin-right: 20px;
-  }
-
-  .menu-wrapper {
-    color: black;
     display: flex;
     align-items: center;
     .MuiSelect-select {
@@ -186,7 +155,25 @@ input[type='number']::-webkit-outer-spin-button {
   .logo {
     height: 100px;
   }
+
+  &-landing {  
+    @extend .page-header;    
+    border-bottom: none;
+
+    .menu-wrapper {
+      .MuiSelect-select {
+        color: #fff;
+      }
+    }
+  
+    .dropdown-menu {
+      button:first-of-type {
+        color: #fff;
+      }
+    }
+  }
 }
+
 #menu-language {
   .MuiPaper-root {
     background-color: $mainColor;
