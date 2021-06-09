@@ -105,10 +105,49 @@ h3 {
   }
 }
 
+.dropdown-container .MuiPaper-root {
+  background-color: rgba(255, 208, 156, 0.7);
+  padding: 0 25%;
+  height: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.dropdown-container .MuiPaper-root button {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.dropdown-container .MuiPaper-root .MuiInputBase-root {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+#menu-language .MuiPaper-root {
+  background-color: #61f7d2;
+  color: white;
+  width: 125px;
+}
+
+@media only screen and (max-width: 620px) {
+  #menu-language .MuiPaper-root {
+    background-color: #ffd09c;
+    position: absolute;
+    left: 50% !important;
+    -webkit-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important;
+  }
 }
 
 .hero-section {
@@ -125,46 +164,6 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
-.hero-section .header-container {
-  max-width: 1280px;
-  padding: 50px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 75px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-}
-
-@media only screen and (max-width: 620px) {
-  .hero-section .header-container {
-    margin: 0 20px;
-  }
-}
-
-.hero-section .header-container button {
-  margin-right: 20px;
-}
-
-.hero-section .header-container .menu-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero-section .header-container .dropdown-menu button:first-of-type {
-  color: #fff;
-}
-
-.hero-section .header-container .logo {
-  height: 100px;
-}
-
 .hero-section .welcome-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -174,7 +173,8 @@ input[type='number']::-webkit-outer-spin-button {
       -ms-flex-direction: row;
           flex-direction: row;
   color: #fff;
-  margin: 150px 20vw;
+  margin: 150px auto;
+  padding: 50px;
   text-align: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -182,6 +182,7 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  max-width: 900px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -224,3 +225,4 @@ input[type='number']::-webkit-outer-spin-button {
   height: 50vh;
   background-color: rgba(255, 208, 156, 0.2);
 }
+/*# sourceMappingURL=landingPage.css.map */
