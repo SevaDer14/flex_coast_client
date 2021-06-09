@@ -39,6 +39,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
           {type === 'toggle-btn' ? (
             <CustomRadioButton
               disabled={filled}
+              value={inputValue}
               label_1={t('answer.officeLable')}
               label_2={t('answer.openSpaceLable')}
               onChange={(event) => {

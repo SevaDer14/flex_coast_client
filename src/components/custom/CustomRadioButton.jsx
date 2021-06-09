@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CustomRadioButton = ({ label_1, label_2, disabled, onChange }) => {
+const CustomRadioButton = ({ label_1, label_2, disabled, onChange, value }) => {
   return (
     <div className='radio-group'>
       <input
@@ -10,6 +10,7 @@ const CustomRadioButton = ({ label_1, label_2, disabled, onChange }) => {
         data-cy='office-btn'
         value='office'
         name='selector'
+        checked={value === 'office'}
         required
         onChange={onChange}
       />
@@ -23,6 +24,7 @@ const CustomRadioButton = ({ label_1, label_2, disabled, onChange }) => {
         data-cy='open-space-btn'
         value='open-space'
         name='selector'
+        checked={value === 'open-space'}
         required
         onChange={onChange}
       />
