@@ -1,20 +1,29 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import { useTranslation } from 'react-i18next'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 
 const Answer = ({ text, type, placeholder, questionKey }) => {
-  const [inputValue, setInputValue] = useState('')
-  const [filled, setFilled] = useState(false)
+  const [inputValue, setInputValue] = useState(
+    store.getState().formData[questionKey]
+  )
   const { t } = useTranslation()
+  const filled = useSelector((state) => state.filledAnswers[questionKey])
 
   const setAnswer = (event) => {
     event.preventDefault()
     if (filled) {
-      setFilled(false)
+      store.dispatch({
+        type: 'SWITCH_ANSWER_FILLED_STATUS',
+        payload: { key: questionKey, filled: false },
+      })
     } else {
-      setFilled(true)
+      store.dispatch({
+        type: 'SWITCH_ANSWER_FILLED_STATUS',
+        payload: { key: questionKey, filled: true },
+      })
       store.dispatch({
         type: 'SET_ANSWERS',
         payload: { key: questionKey, answer: inputValue },
@@ -51,7 +60,7 @@ const Answer = ({ text, type, placeholder, questionKey }) => {
             />
           )}
 
-          <CustomIconButton toggle={filled}/>
+          <CustomIconButton toggle={filled} />
         </form>
       </div>
     </div>
