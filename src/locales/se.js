@@ -12,6 +12,7 @@ const se = {
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
+      name: 'Vad heter ert företag änna?'
     },
 
     answer: {
@@ -20,6 +21,7 @@ const se = {
       officeType: 'Vi behöver: ',
       officeLable: 'Kontor',
       openSpaceLable: 'Öppet utrymme',
+      name: 'Det heter: '
     },
     submitButton: 'Skicka in',
   },

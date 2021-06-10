@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import InquiryEmail from '../components/Inquiry/InquiryEmail'
 import InquiryCompanySize from '../components/Inquiry/InquiryCompanySize'
 import InquiryOfficeType from '../components/Inquiry/InquiryOfficeType'
+import InquiryCompanyName from '../components/Inquiry/InquiryCompanyName'
 import Header from '../components/Header'
 
 const QuestionaryForm = () => {
@@ -21,9 +22,10 @@ const QuestionaryForm = () => {
           {t('welcomeMessage')}
         </h2>
 
-        <InquiryEmail />
-        {formData.email && <InquiryCompanySize />}
+        <InquiryCompanySize />
         {formData.size && <InquiryOfficeType />}
+        {formData.office_type && <InquiryEmail />}
+        {formData.email && <InquiryCompanyName />}
         {submitMessage ? (
           <>
             <Question dataCy='on-submit-message' text={submitMessage} />

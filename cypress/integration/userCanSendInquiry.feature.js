@@ -41,7 +41,7 @@ describe('User can send inquiry', () => {
       cy.get('[data-cy=company-name-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
-          'What is your company name?'
+          'What is the name of your company?'
         )
         cy.get('[data-cy=input]').type('Cyberdyne Systems')
         cy.get('[data-cy=done-btn]').click()

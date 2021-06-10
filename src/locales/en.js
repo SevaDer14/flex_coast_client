@@ -10,6 +10,7 @@ const en = {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
+      name: 'What is the name of your company?'
     },
     answer: {
       email: 'My email is: ',
@@ -17,6 +18,7 @@ const en = {
       officeType: 'We need: ',
       officeLable: 'Office',
       openSpaceLable: 'Open space',
+      name: 'It is called: '
     },
     submitButton: 'Submit',
   },
