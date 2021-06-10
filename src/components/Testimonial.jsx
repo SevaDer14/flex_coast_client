@@ -3,6 +3,8 @@ import companyLogo from '../assets/logo.png'
 import IconButton from '@material-ui/core/IconButton'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import Divider from '@material-ui/core/Divider'
+
 
 const TestimonialSlider = () => {
   const [slider, setSlider] = useState(1)
@@ -25,7 +27,7 @@ const TestimonialSlider = () => {
             saepe rem deleniti voluptatibus illum aliquid magnam non distinctio
             quam soluta laborum minima facilis."
           </h4>
-
+          <Divider light />
           <div>
             <p className='name'>Johnny Cage</p>
             <p className='job-title'>CEO of MK</p>
