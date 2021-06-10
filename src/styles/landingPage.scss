@@ -1,4 +1,10 @@
 @import 'globals';
+$bg-image1: url('../assets/testi-background1.jpg');
+$bg-image2: url('../assets/testi-background2.jpg');
+$bg-image3: url('../assets/testi-background3.jpg');
+// $guy1: url('../assets/hmmm.png');
+// $guy2: url('../assets/luke.jpeg');
+// $guy3: url('../assets/jens.png');
 
 .hero-section {
   background-image: $hero-img;
@@ -47,4 +53,87 @@
 .testimonials-container {
   height: 50vh;
   background-color: $secondaryColorLowOpacity;
+
+  * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    .bg-1 {
+      background-image: $bg-image2;
+    }
+    .bg-2 {
+      background-image: $bg-image1;
+    }
+    .bg-3 {
+      background-image: $bg-image3;
+    }
+    .slider-container {
+      display: flex;
+      flex: 1;
+      max-width: 1280px;
+      height: 750px;
+      background-size: cover;
+      background-position: center;
+      align-items: center;
+      transition: 1s;
+    }
+    .testimonial-container {
+      margin: 50px;
+      height: 80%;
+      flex: 1;
+      max-width: 400px;
+      background-color: whitesmoke;
+      border-radius: 4px;
+      text-align: center;
+      .social-image {
+        height: 40%;
+        width: 100%;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        transition: 1s;
+      }
+      .guy-1 {
+        background-image: $guy2;
+      }
+      .guy-2 {
+        background-image: $guy1;
+      }
+      .guy-3 {
+        background-image: $guy3;
+      }
+      .info-container {
+        padding: 10px;
+        h4 {
+          color: grey;
+          font-style: italic;
+        }
+        .name {
+          text-transform: uppercase;
+          color: aquamarine;
+          font-weight: bold;
+        }
+        .logo-section {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          button {
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+          }
+          .company-logo {
+            height: 100px;
+            transition: 1s;
+          }
+        }
+      }
+    }
+  }
 }
