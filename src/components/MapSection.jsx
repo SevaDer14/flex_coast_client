@@ -1,22 +1,26 @@
 import React from 'react'
-import GoogleMapReact from 'google-map-react'
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
 
 const MapSection = () => {
   let center = {
     lat: 57.700946,
     lng: 11.96603,
   }
-  let zoom = 15
-
+  const containerStyle = {
+    width: '100%',
+    height: '600px',
+  }
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAP_KEY,
+  })
   return (
-    <div style={{ height: '600px', width: '100%' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={
-          'https://maps.googleapis.com/maps/api/js?key=AIzaSyDylTLvci9BDC3t07ArllM9uc0_N5ordXg'
-        }
-        defaultCenter={center}
-        defaultZoom={zoom}></GoogleMapReact>
-    </div>
+    isLoaded && (
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={15}></GoogleMap>
+    )
   )
 }
 
