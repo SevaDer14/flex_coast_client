@@ -12,7 +12,7 @@ const se = {
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
-      name: 'Vad heter ert företag änna?'
+      name: 'Vad är namnet på erat företag?'
     },
 
     answer: {
