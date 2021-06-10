@@ -19,5 +19,16 @@ describe('User can visit Flex Coast landing page', () => {
     )
     cy.get('[data-cy=get-started]').should('contain', 'Get Started').click()
     cy.url().should('contain', '/inquiry')
+
+    cy.get('[data-cy=footer]').within(() => {
+      cy.get('[data-cy=phone-number]').should('contain', '08-123 456 78')
+      cy.get('[data-cy=footer-language]').should('be.visible')
+      cy.get('[data-cy=flex-coast]').should('be.visible')
+      cy.get('[data-cy=footer-text]').should(
+        'contain',
+        'Hyra kontor på den goa sidan änna'
+      )
+      cy.get('[data-cy=links]').should('be.visible')
+    })
   })
 })
