@@ -8,6 +8,7 @@ import InquiryEmail from '../components/Inquiry/InquiryEmail'
 import InquiryCompanySize from '../components/Inquiry/InquiryCompanySize'
 import InquiryOfficeType from '../components/Inquiry/InquiryOfficeType'
 import InquiryCompanyName from '../components/Inquiry/InquiryCompanyName'
+import InquiryPeers from '../components/Inquiry/InquiryPeers'
 import Header from '../components/Header'
 
 const QuestionaryForm = () => {
@@ -26,6 +27,7 @@ const QuestionaryForm = () => {
         {formData.size && <InquiryOfficeType />}
         {formData.office_type && <InquiryEmail />}
         {formData.email && <InquiryCompanyName />}
+        {formData.name && <InquiryPeers />}
         {submitMessage ? (
           <>
             <Question dataCy='on-submit-message' text={submitMessage} />

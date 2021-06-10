@@ -13,9 +13,15 @@ const InquiryOfficeType = () => {
         text={t('answer.officeType')}
         type='toggle-btn'
         questionKey='office_type'
+        label_1={t('answer.officeLable')}
+        dataCy_1='office'
+        label_2={t('answer.openSpaceLable')}
+        dataCy_2='open-space'
       />
     </div>
   )
 }
+
+
 
 export default InquiryOfficeType
