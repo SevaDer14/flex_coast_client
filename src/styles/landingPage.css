@@ -1,5 +1,6 @@
 #root {
   font-size: 62.5%;
+  background-color: rgba(255, 208, 156, 0.2);
 }
 
 * {
@@ -279,7 +280,6 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50vh;
   background-color: rgba(255, 208, 156, 0.2);
 }
 
@@ -318,9 +318,6 @@ input[type='number']::-webkit-outer-spin-button {
   margin: 50px;
   height: 80%;
   border-radius: 4px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   max-width: 400px;
   background-color: whitesmoke;
   border-radius: 4px;
@@ -353,11 +350,11 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .testimonials-container .testimonial-container .info-container {
-  height: 50%;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 55%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -374,7 +371,6 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .testimonials-container .testimonial-container .info-container .name {
-  margin-top: 10px;
   font-size: 12px;
   text-transform: uppercase;
   color: #a06206;
@@ -386,7 +382,6 @@ input[type='number']::-webkit-outer-spin-button {
   color: #a06206;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 50px;
 }
 
 .testimonials-container .testimonial-container .info-container .logo-section {
@@ -407,7 +402,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .testimonials-container .testimonial-container .info-container .logo-section .company-logo {
-  height: 100px;
+  height: 80px;
   -webkit-transition: 1s;
   transition: 1s;
 }

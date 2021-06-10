@@ -54,7 +54,7 @@ $person3: url('../assets/social-img-3.jpg');
   display: flex;
   padding-top: 75px;
   justify-content: center;
-  height: 50vh;
+
   background-color: $secondaryColorLowOpacity;
 
   .bg-1 {
@@ -81,7 +81,6 @@ $person3: url('../assets/social-img-3.jpg');
     margin: 50px;
     height: 80%;
     border-radius: 4px;
-    flex: 1;
     max-width: 400px;
     background-color: whitesmoke;
     border-radius: 4px;
@@ -107,9 +106,9 @@ $person3: url('../assets/social-img-3.jpg');
       background-image: $person3;
     }
     .info-container {
-      height: 50%;
       padding: 15px;
       display: flex;
+      height: 55%;
       flex-direction: column;
       justify-content: space-between;
       h4 {
@@ -118,7 +117,6 @@ $person3: url('../assets/social-img-3.jpg');
         font-style: italic;
       }
       .name {
-        margin-top: 10px;
         font-size: 12px;
         text-transform: uppercase;
         color: rgb(160, 98, 6);
@@ -129,7 +127,7 @@ $person3: url('../assets/social-img-3.jpg');
         color: rgb(160, 98, 6);
         text-transform: uppercase;
         font-weight: bold;
-        margin-bottom: 50px;
+        // margin-bottom: 50px;
       }
       .logo-section {
         display: flex;
@@ -141,7 +139,7 @@ $person3: url('../assets/social-img-3.jpg');
           border-radius: 100%;
         }
         .company-logo {
-          height: 100px;
+          height: 80px;
           transition: 1s;
         }
       }
