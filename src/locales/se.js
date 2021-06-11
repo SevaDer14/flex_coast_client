@@ -13,7 +13,7 @@ const se = {
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
       name: 'Vad är namnet på erat företag?',
-      peer: 'Whould you like to share office with peer companies?'
+      peers: 'Vill du dela kontor med andra från din bransch?'
     },
 
     answer: {
@@ -23,6 +23,7 @@ const se = {
       officeLable: 'Kontor',
       openSpaceLable: 'Öppet utrymme',
       name: 'Det heter: ',
+      companyPlaceholder: 'Mitt företag',
       peersNegative: 'Nej',
       peersPositive: 'Ja'
     },

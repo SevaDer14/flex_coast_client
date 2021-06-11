@@ -11,7 +11,7 @@ const en = {
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
       name: 'What is the name of your company?',
-      peers: 'Would you like to share office with peer companies?'
+      peers: 'Would you like to share office with others from your industry?'
     },
     answer: {
       email: 'My email is: ',
@@ -21,7 +21,7 @@ const en = {
       openSpaceLable: 'Open space',
       name: 'It is called: ',
       peersNegative: 'No',
-      peersPositive: 'Yep'
+      peersPositive: 'Yes'
     },
     submitButton: 'Submit',
   },

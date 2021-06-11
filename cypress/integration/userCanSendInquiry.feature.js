@@ -56,31 +56,18 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=positive-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
       })
+      const expectedOutcome = {
+        size: '100',
+        office_type: 'Office',
+        email: 'example@mail.com',
+        company: 'Cyberdyne Systems',
+        peers: 'Yes',
+      }
       cy.window()
         .its('store')
         .invoke('getState')
-        .its('formData.size')
-        .should('equal', '100')
-      cy.window()
-        .its('store')
-        .invoke('getState')
-        .its('formData.office_type')
-        .should('equal', 'Office')
-      cy.window()
-        .its('store')
-        .invoke('getState')
-        .its('formData.email')
-        .should('equal', 'example@mail.com')
-      cy.window()
-        .its('store')
-        .invoke('getState')
-        .its('formData.company')
-        .should('equal', 'Cyberdyne Systems')
-      cy.window()
-        .its('store')
-        .invoke('getState')
-        .its('formData.peers')
-        .should('equal', 'Yes')
+        .its('formData')
+        .should('deep.equal', expectedOutcome)      
       cy.get('[data-cy=submit-btn]').click()
       cy.get('[data-cy=on-submit-message]').should(
         'contain',

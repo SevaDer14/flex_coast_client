@@ -12,7 +12,7 @@ const InquiryCompanyName = () => {
       <Answer
         text={t('answer.name')}
         type='text'
-        placeholder='my company'
+        placeholder={t('answer.companyPlaceholder')}
         questionKey='company'
       />
     </div>
