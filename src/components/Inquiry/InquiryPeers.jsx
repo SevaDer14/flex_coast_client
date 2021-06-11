@@ -11,6 +11,8 @@ const InquiryPeers = () => {
       <Question text={t('question.peers')} />
       <Answer
         type='toggle-btn'
+        value_1='No'
+        value_2='Yes'
         questionKey='peers'
         label_1={t('answer.peersNegative')}
         dataCy_1='negative'

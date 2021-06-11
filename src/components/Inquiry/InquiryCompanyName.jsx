@@ -13,7 +13,7 @@ const InquiryCompanyName = () => {
         text={t('answer.name')}
         type='text'
         placeholder='my company'
-        questionKey='name'
+        questionKey='company'
       />
     </div>
   )
