@@ -11,13 +11,11 @@ const InquiryPeers = () => {
       <Question text={t('question.peers')} />
       <Answer
         type='toggle-btn'
-        value_1='No'
-        value_2='Yes'
+        values={{value_1: 'No', value_2: 'Yes'}}
+        labels={{label_1: t('answer.peersNegative'), label_2: t('answer.peersPositive')}}
+        dataCys={{dataCy_1: 'negative', dataCy_2: 'positive'}}
         questionKey='peers'
-        label_1={t('answer.peersNegative')}
-        dataCy_1='negative'
-        label_2={t('answer.peersPositive')}
-        dataCy_2='positive'
+        label_1={t('answer.peersNegative')}        
       />
     </div>
   )

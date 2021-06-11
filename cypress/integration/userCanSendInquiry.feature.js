@@ -49,7 +49,7 @@ describe('User can send inquiry', () => {
       cy.get('[data-cy=peer-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
-          'Would you like to share office with peer companies?'
+          'Would you like to share office with others from your industry?'
         )
         cy.get('[data-cy=positive-lable]').should('be.visible')
         cy.get('[data-cy=negative-lable]').should('be.visible')
