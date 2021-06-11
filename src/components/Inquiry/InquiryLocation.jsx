@@ -13,7 +13,7 @@ const InquiryLocation = () => {
         text=''
         type='multi-select'
         placeholder='Choose locations'
-        questionKey='location'
+        questionKey='locations'
       />
     </div>
   )

@@ -65,20 +65,22 @@ describe('User can send inquiry', () => {
           'contain',
           'Where would you like to be situated?'
         )
-        cy.get('[data-cy=location-select]').click({ force: true })
-        cy.contains('Gamlestaden').click()
-        cy.contains('Nordstan').click()
-        cy.contains('Majorna').click()
-        cy.contains('Majorna').click()
-        cy.get('[data-cy=done-btn]').click()
+        cy.get('[data-cy=location-select]').click()
       })
+      cy.contains('Gamlestaden').click()
+      cy.contains('Nordstan').click()
+      cy.contains('Majorna').click().click()
+      cy.get('[role=presentation]').click('center')
+      cy.get('[data-cy=location-question-container]')
+        .find('[data-cy=done-btn]')
+        .click()
       const expectedOutcome = {
         size: '100',
         office_type: 'Office',
         email: 'example@mail.com',
         company: 'Cyberdyne Systems',
         peers: 'Yes',
-        location: ['Gamlestaden', 'Nordstan'],
+        locations: ['Gamlestaden', 'Nordstan'],
       }
       cy.window()
         .its('store')

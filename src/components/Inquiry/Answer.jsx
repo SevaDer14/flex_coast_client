@@ -53,7 +53,7 @@ const Answer = ({
           />
         )
       case 'multi-select':
-        return <CustomSelectInput locationValue={inputValue} />
+        return <CustomSelectInput locationValue={inputValue} setInputValue={setInputValue}/>
 
       default:
         return (

@@ -11,7 +11,7 @@
   margin: auto;
   margin-top: 50px;
   padding: 10px 50px 0 50px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid lightgray;
 }
 
@@ -67,7 +67,7 @@
   background-color: #61f7d2;
   font-size: 1.4rem;
   padding: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -131,7 +131,7 @@
 
 .answer-container .input, .answer-container .input:disabled, .answer-container .input-filled {
   font-size: 1.4rem;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 0 10px;
   text-align: center;
   height: 55px;
@@ -240,7 +240,7 @@
 }
 
 .answer-container .radio-group {
-  border-radius: 5px;
+  border-radius: 10px;
   display: inline-block;
 }
 
@@ -256,7 +256,7 @@
   margin-right: 10px;
   padding: 13px;
   border: 2px solid #ffd09c;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -276,3 +276,21 @@
 .answer-container .radio-group label + input[type='radio'] + label {
   border-left: 2px solid #ffd09c;
 }
+
+.answer-container .MuiInputBase-input {
+  color: white;
+}
+
+.answer-container .MuiFormControl-root {
+  margin-right: 15px;
+  min-width: 200px;
+}
+
+.answer-container .MuiFormControl-root {
+  background-color: #ffd09c;
+}
+
+.answer-container .MuiSelect-outlined.MuiSelect-outlined {
+  height: 50px;
+}
+/*# sourceMappingURL=questionnaire.css.map */

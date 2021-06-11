@@ -21,19 +21,19 @@ const locations = [
   'Eriksberg',
 ]
 
-const CustomSelectInput = ({ locationValue }) => {
+const CustomSelectInput = ({ locationValue, setInputValue }) => {
   return (
-    <FormControl>
-      <InputLabel>Locations</InputLabel>
+    <FormControl variant="outlined" className='location-select'>
+      {/* <InputLabel>Locations</InputLabel> */}
       <Select
-        // labelId='demo-mutiple-checkbox-label'
         data-cy='location-select'
         multiple
         value={locationValue}
-        // onChange={handleChange}
+        onChange={(event) => {setInputValue(event.target.value)
+        }}
         input={<Input />}
         renderValue={(selected) => selected.join(', ')}
-        // MenuProps={MenuProps}
+        //MenuProps={MenuProps}
       >
         {locations.map((location) => (
           <MenuItem key={location} value={location}>

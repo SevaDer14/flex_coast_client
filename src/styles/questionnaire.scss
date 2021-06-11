@@ -199,4 +199,21 @@
       border-left: 2px solid $secondaryColor;
     }
   }
+
+  .MuiInputBase-input {
+    color: white;
+  }
+
+  .MuiFormControl-root {
+    margin-right: 15px;
+    min-width: 200px;
+  }
+
+  .MuiFormControl-root {
+    background-color: $secondaryColor;
+  }
+
+  .MuiSelect-outlined.MuiSelect-outlined {
+    height: 50px;
+  }
 }
