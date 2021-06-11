@@ -11,7 +11,7 @@ const InquiryLocation = () => {
       <Question text='Where would you like to be situated?' />
       <Answer
         text=''
-        type='select'
+        type='multi-select'
         placeholder='Choose locations'
         questionKey='location'
       />
