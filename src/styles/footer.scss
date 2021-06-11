@@ -46,20 +46,36 @@
       font-size: 18px;
     }
 
-    .sub-hr{
+    .sub-hr {
       border: none;
       height: 2px;
       background-color: rgb(242, 236, 236);
       text-align: center;
       margin: 0 5%;
       @media (min-width: 599px) {
-       display: none;
+        display: none;
       }
+    }
+    .custom-button {
+      background-color: #fff;
+      margin: 20px;
+      &:hover {
+        opacity: 70%;
+        transform: none;
+      }
+      a {
+        color: $secondaryColor;
+      }
+    }
+    .custom-button:nth-last-child(1) {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
     }
   }
 }
 
-.logo{
+.logo {
   height: 100px;
   color: white;
   padding-bottom: 40px;
