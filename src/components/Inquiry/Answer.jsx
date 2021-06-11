@@ -14,7 +14,6 @@ const Answer = ({
   label_2,
   dataCy_1,
   dataCy_2,
-
   value_1,
   value_2,
 }) => {
