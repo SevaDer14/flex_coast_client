@@ -14,7 +14,7 @@ const Footer = () => {
     <>
       <Grid data-cy='footer' id='footer' container alignItems='center'>
         <Grid className='footer-header' item xs={12}>
-          <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
+          <img src={logo} alt='logo' className='logo' data-cy='flex-coast-white' />
           <hr className='top-hr' />
         </Grid>
         <Grid data-cy='footer-categories' container alignItems='flex-start'>
@@ -43,8 +43,8 @@ const Footer = () => {
             <hr className='sub-hr' />
           </Grid>
           <Grid data-cy='links' className='sub-header' item xs={12} sm={4}>
-            <h3>Find Us</h3>
-            <Grid>
+            <h3>{t('footer.subHeader3')}</h3>
+            <Grid data-cy='link-grid'>
               <IconButton>
                 <FacebookIcon className='icon' fontSize='large' />
               </IconButton>

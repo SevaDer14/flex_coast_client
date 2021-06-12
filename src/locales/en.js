@@ -4,6 +4,9 @@ const en = {
       introText: 'Flexible short term office leasing in lovely Gothenburg',
       startButton: 'Get Started',
     },
+    footer: {
+      subHeader3: 'Find Us',
+    },
     welcomeMessage:
       "Hi! Let's talk requirements, so we can provide personalised suggestions for your company.",
     question: {
