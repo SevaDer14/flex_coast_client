@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import CustomIconButton from '../custom/CustomIconButton'
+import { animateScroll } from 'react-scroll'
 import store from '../../state/store/configureStore'
+import CustomIconButton from '../custom/CustomIconButton'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const Answer = ({
   text,
@@ -18,6 +20,7 @@ const Answer = ({
     store.getState().formData[questionKey]
   )
   const filled = useSelector((state) => state.filledAnswers[questionKey])
+  const isSmall = useMediaQuery('(max-width:620px)')
   const setAnswer = (event) => {
     event.preventDefault()
     if (filled) {
@@ -26,6 +29,7 @@ const Answer = ({
         payload: { key: questionKey, filled: false },
       })
     } else {
+      animateScroll.scrollMore( isSmall ? 280 : 200)
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
         payload: { key: questionKey, filled: true },
