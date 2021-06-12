@@ -24,16 +24,16 @@ const se = {
     },
 
     answer: {
-      email: 'Min email är... ',
-      size: 'Vi är en grupp av... ',
-      officeType: 'Vi behöver... ',
+      email: 'Min email är ',
+      size: 'Vi är en grupp av ',
+      officeType: 'Vi behöver ',
       officeLable: 'Kontor',
       openSpaceLable: 'Öppet utrymme',
-      name: 'Det är... ',
-      companyPlaceholder: 'MyCoolCompany',
+      name: 'Det heter ',
+      companyPlaceholder: 'Flex Coast',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
-      location: 'Vi är intresserade av...',
+      location: 'Vi är intresserade av',
       locationAll: 'Alla'
     },
     submitButton: 'Skicka in',
