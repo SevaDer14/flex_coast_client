@@ -1,11 +1,19 @@
 import React from 'react'
-import from 
+import avatar from '../assets/avatar.jpg'
 
 const CompellingStory = () => {
   return (
-    <div>
-      <img src="" alt=""/>
-      <p>yoyoy this is the gay stuff, mhmmm!</p>
+    <div className='compelling-container' data-cy='compelling-container'>
+      <img
+        className='compelling-avatar'
+        src={avatar}
+        alt='avatar'
+        data-cy='compelling-avatar'
+      />
+      <p className='compelling-text' data-cy='compelling-text'>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident
+        reprehenderit sed? Eaque, omnis cupiditate.
+      </p>
     </div>
   )
 }

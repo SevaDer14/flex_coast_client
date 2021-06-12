@@ -22,9 +22,9 @@ describe('User can visit Flex Coast landing page', () => {
   })
 
   it('compelling story', () => {
-    cy.get('data-cy=story-container').within(() => {
-      cy.get('data-cy=story-avatar').should('exist')
-      cy.get('data-cy=story-text').should('exist')
+    cy.get('[data-cy=compelling-container]').within(() => {
+      cy.get('[data-cy=compelling-avatar]').should('exist')
+      cy.get('[data-cy=compelling-text]').should('be.visible')
     })
   })
 })
