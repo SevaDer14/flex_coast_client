@@ -17,16 +17,18 @@ describe('User can visit Flex Coast landing page', () => {
       'contain',
       'Flexible short term office leasing in lovely Gothenburg'
     )
-    cy.get('[data-cy=get-started]').should('contain', 'Get Started').click()
-    cy.url().should('contain', '/inquiry')
 
-    // cy.get('[data-cy=footer]').within(() => {
-    //   cy.get('[data-cy=footer-header]').should('contain', 'Flex Coast')
-    //   cy.get('[data-cy=footer-categories]').within(() => {
-    //     cy.get('[data-cy=footer-about]').should('contain.text')
-    //     cy.get('[data-cy=footer-contact]').should('contain.text')
-    //     cy.get('[data-cy=links]').should('be.visible')
-    //   })
-    // })
+    cy.get('[data-cy=footer]').within(() => {
+      cy.get('[data-cy=flex-coast-white]')
+      cy.get('[data-cy=footer-categories]').within(() => {
+        cy.get('[data-cy=footer-about]').first().should('contain', 'About Us')
+        cy.get('[data-cy=footer-contact]').first().should('contain', 'Contact')
+        cy.get('[data-cy=links]').first().should('contain', 'Find Us')
+        cy.get('[data-cy=link-grid]').children().should('have.length', 3)
+      })
+    })
+
+    cy.get('[data-cy=get-started-1]').should('contain', 'Get Started').click()
+    cy.url().should('contain', '/inquiry')
   })
 })

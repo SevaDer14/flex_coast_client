@@ -1,0 +1,86 @@
+@import './variables';
+
+#footer {
+  background-color: $secondaryColor;
+  padding-top: 50px;
+  width: 100%;
+  padding-bottom: 50px;
+
+  .footer-header {
+    font-size: 20px;
+    color: rgb(247, 245, 245);
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  .top-hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(242, 236, 236);
+    text-align: center;
+    margin: 0 5%;
+  }
+
+  .sub-header {
+    color: $secondaryColor;
+    text-align: center;
+    padding-bottom: 30px;
+    h3 {
+      text-decoration: underline;
+      color: rgb(247, 245, 245);
+    }
+
+    .footer-text {
+      color: rgb(247, 245, 245);
+      text-decoration: none;
+      font-size: 18px;
+      margin: 0 40px 0 40px;
+      padding: 0 20px 15px 20px;
+    }
+
+    .footer-link a,
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: none;
+      color: rgb(247, 245, 245);
+      font-size: 18px;
+    }
+
+    .sub-hr {
+      border: none;
+      height: 2px;
+      background-color: rgb(242, 236, 236);
+      text-align: center;
+      margin: 10px 5% ;
+      @media (min-width: 599px) {
+        display: none;
+      }
+    }
+    .custom-button {
+      background-color: #fff;
+      margin: 15px;
+      &:hover {
+        opacity: 70%;
+        transform: none;
+      }
+      a {
+        color: $secondaryColor;
+      }
+    }
+    .custom-button:nth-last-child(1) {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+    .icon {
+      color: white !important;
+      margin: 10px;
+    }
+  }
+}
+
+.logo {
+  height: 100px;
+  color: white;
+  padding-bottom: 40px;
+}

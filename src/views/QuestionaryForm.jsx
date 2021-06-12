@@ -7,7 +7,10 @@ import { useTranslation } from 'react-i18next'
 import InquiryEmail from '../components/Inquiry/InquiryEmail'
 import InquiryCompanySize from '../components/Inquiry/InquiryCompanySize'
 import InquiryOfficeType from '../components/Inquiry/InquiryOfficeType'
+import InquiryCompanyName from '../components/Inquiry/InquiryCompanyName'
+import InquiryPeers from '../components/Inquiry/InquiryPeers'
 import Header from '../components/Header'
+import InquiryLocation from '../components/Inquiry/InquiryLocation'
 
 const QuestionaryForm = () => {
   const { submitMessage, formData } = useSelector((state) => state)
@@ -21,15 +24,18 @@ const QuestionaryForm = () => {
           {t('welcomeMessage')}
         </h2>
 
-        <InquiryEmail />
-        {formData.email && <InquiryCompanySize />}
+        <InquiryCompanySize />
         {formData.size && <InquiryOfficeType />}
+        {formData.office_type && <InquiryEmail />}
+        {formData.email && <InquiryCompanyName />}
+        {formData.company && <InquiryPeers />}
+        {formData.peers && <InquiryLocation />}
         {submitMessage ? (
           <>
             <Question dataCy='on-submit-message' text={submitMessage} />
           </>
         ) : (
-          formData.office_type && (
+          formData.locations[0] && (
             <CustomButton
               dataCy='submit-btn'
               onClick={() => Inquiries.create(formData)}>
