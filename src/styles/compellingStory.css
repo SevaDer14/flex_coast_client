@@ -17,6 +17,12 @@
   width: auto;
 }
 
+@media (max-width: 620px) {
+  .compelling-container .compelling-avatar {
+    height: 150px;
+  }
+}
+
 .compelling-container .compelling-text {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;

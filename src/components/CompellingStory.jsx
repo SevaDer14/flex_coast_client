@@ -1,7 +1,9 @@
 import React from 'react'
 import avatar from '../assets/avatar.jpg'
+import { useTranslation } from 'react-i18next'
 
 const CompellingStory = () => {
+  const { t } = useTranslation()
   return (
     <div className='compelling-container' data-cy='compelling-container'>
       <img
@@ -11,8 +13,7 @@ const CompellingStory = () => {
         data-cy='compelling-avatar'
       />
       <p className='compelling-text' data-cy='compelling-text'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident
-        reprehenderit sed? Eaque, omnis cupiditate.
+      {t('compellingText')}
       </p>
     </div>
   )

@@ -4,6 +4,8 @@ const en = {
       introText: 'Flexible short term office leasing in lovely Gothenburg',
       startButton: 'Get Started',
     },
+    compellingText:
+      ' Hey there! If you are looking for leasing flexible short term offices in Gothenburg you have found the right place. Maybe you just started up a new company or you just need some temporary office space to work in?',
     welcomeMessage:
       "Hi! Let's talk requirements, so we can provide personalised suggestions for your company.",
     question: {
@@ -11,7 +13,7 @@ const en = {
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
       name: 'What is the name of your company?',
-      peers: 'Would you like to share office with others from your industry?'
+      peers: 'Would you like to share office with others from your industry?',
     },
     answer: {
       email: 'My email is: ',
@@ -21,7 +23,7 @@ const en = {
       openSpaceLable: 'Open space',
       name: 'It is called: ',
       peersNegative: 'No',
-      peersPositive: 'Yes'
+      peersPositive: 'Yes',
     },
     submitButton: 'Submit',
   },

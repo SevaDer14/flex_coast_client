@@ -11,6 +11,10 @@
     align-self: center;
     height: 200px;
     width: auto;
+    @media (max-width: $mobile) {
+      height: 150px;
+     
+    }
   }
 
   .compelling-text {
