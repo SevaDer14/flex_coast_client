@@ -283,9 +283,20 @@
   display: flex;
 }
 
+.location-question-container .answer-form-container .rrs__multiselect-label__badge {
+  font-size: 14px;
+  color: #ffd09c;
+  border-color: #ffd09c;
+}
+
 .location-question-container .answer-form-container .location-filled .rrs__button {
   background-color: #ffd09c;
   color: white;
+}
+
+.location-question-container .answer-form-container .location-filled .rrs__button .rrs__multiselect-label__badge {
+  color: #fff;
+  border: 2px solid;
 }
 
 .location-question-container .answer-form-container .location-filled svg {
@@ -337,3 +348,4 @@
 .location-question-container .answer-form-container .rrs__option.rrs__option--selected svg {
   fill: #61f7d2;
 }
+/*# sourceMappingURL=questionnaire.css.map */

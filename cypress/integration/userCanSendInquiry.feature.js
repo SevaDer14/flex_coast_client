@@ -2,7 +2,7 @@ describe('User can send inquiry', () => {
   beforeEach(() => {
     cy.intercept(
       'POST',
-      'https://flex-coast-development.herokuapp.com/api/inquiries',
+      'https://flex-coast-api-development.herokuapp.com/api/inquiries',
       {
         body: {
           message:
@@ -65,12 +65,11 @@ describe('User can send inquiry', () => {
           'contain',
           'Where would you like to be situated?'
         )
-        cy.get('[data-cy=location-select]').click()
+        cy.get('[data-testID=locations]').click()
       })
-      cy.contains('Gamlestaden').click()
-      cy.contains('Nordstan').click()
-      cy.contains('Majorna').click().click()
-      cy.get('[role=presentation]').click('center')
+      cy.get('[data-testID=rrs-option_locations_1]').click()
+      cy.get('[data-testID=rrs-option_locations_2]').click()
+      cy.get('[data-testID=rrs-option_locations_3]').click().click()
       cy.get('[data-cy=location-question-container]')
         .find('[data-cy=done-btn]')
         .click()
@@ -80,7 +79,7 @@ describe('User can send inquiry', () => {
         email: 'example@mail.com',
         company: 'Cyberdyne Systems',
         peers: 'Yes',
-        locations: ['Gamlestaden', 'Nordstan'],
+        locations: ['Lindholmen','Gamlestaden'],
       }
       cy.window()
         .its('store')

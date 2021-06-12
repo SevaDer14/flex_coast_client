@@ -205,10 +205,20 @@
   .answer-form-container {
     display: flex;
 
+    .rrs__multiselect-label__badge {
+      font-size: 14px;
+      color: $secondaryColor;
+      border-color: $secondaryColor;
+    }
+    
     .location-filled {
       .rrs__button {
         background-color: $secondaryColor;
         color: white;
+        .rrs__multiselect-label__badge {
+          color: #fff;
+          border: 2px solid;
+        }
       }
       svg {
         fill: #fff;
@@ -235,6 +245,7 @@
         fill: $secondaryColor;
       }
     }
+
     .rrs--has-changed .rrs__label {
       color: $secondaryColor;
     }

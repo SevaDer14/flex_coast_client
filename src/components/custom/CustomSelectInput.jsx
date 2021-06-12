@@ -80,7 +80,11 @@ const locations = [
 
 const CustomSelectInput = ({ locationValue, setInputValue, disabled }) => {
   const handleChange = (newValue) => {
-    debugger
+    if (newValue.options[0].value) {
+      setInputValue(newValue.options.map((location) => location.value))
+    } else {
+      setInputValue(locations.slice(1).map((location) => location.value))
+    }
   }
   return (
     <>
