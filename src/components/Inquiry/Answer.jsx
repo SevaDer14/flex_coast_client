@@ -6,6 +6,7 @@ import store from '../../state/store/configureStore';
 import CustomRadioButton from '../../components/custom/CustomRadioButton';
 import CustomSelectInput from '../custom/CustomSelectInput';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 const Answer = ({
   text,
   type,
@@ -15,6 +16,7 @@ const Answer = ({
   dataCys,
   values,
 }) => {
+
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   );
@@ -22,12 +24,13 @@ const Answer = ({
   const isSmall = useMediaQuery('(max-width:620px)');
   const setAnswer = (event) => {
     event.preventDefault();
+
     if (filled) {
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
         payload: { key: questionKey, filled: false },
       });
-    } else {      
+    } else {
       animateScroll.scrollMore(isSmall ? 280 : 200);
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
