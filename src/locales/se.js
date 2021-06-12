@@ -6,6 +6,8 @@ const se = {
     },
 
     footer: {
+      subHeader1: 'Om Oss',
+      subHeader2: 'Kontakta Oss',
       subHeader3: 'Hitta Oss',
     },
 

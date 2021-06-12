@@ -19,7 +19,7 @@ const Footer = () => {
         </Grid>
         <Grid data-cy='footer-categories' container alignItems='flex-start'>
           <Grid data-cy='footer-about' className='sub-header' item sm={4}>
-            <h3>About Us</h3>
+            <h3>{t('footer.subHeader1')}</h3>
             <p className='footer-text'>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Laboriosam neque porro voluptatem nisi dolor debitis deserunt et
@@ -33,7 +33,7 @@ const Footer = () => {
             item
             xs={12}
             sm={4}>
-            <h3>Contact</h3>
+            <h3>{t('footer.subHeader2')}</h3>
             <CustomButton dataCy='phone-number'>
               <a href='tel:+46812345678'>08-123 456 78</a>
             </CustomButton>

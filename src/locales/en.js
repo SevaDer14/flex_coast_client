@@ -5,6 +5,8 @@ const en = {
       startButton: 'Get Started',
     },
     footer: {
+      subHeader1: 'About Us',
+      subHeader2: 'Contact',
       subHeader3: 'Find Us',
     },
     welcomeMessage:
