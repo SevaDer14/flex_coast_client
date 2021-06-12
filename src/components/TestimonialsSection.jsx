@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Testimonial from './Testimonial'
 import illustration from '../assets/office-illu.png'
 import { testimonials } from '../assets/testimonials'
@@ -6,13 +6,22 @@ import { testimonials } from '../assets/testimonials'
 const TestimonialsSection = () => {
   const [slider, setSlider] = useState(1)
   const sliderHandler = (number) => {
-    setSlider(slider + number)
     if (slider + number === 4) {
       setSlider(1)
     } else if (slider + number === 0) {
       setSlider(3)
-    }
+    } else {
+      setSlider(slider + number)
+    }    
   }
+
+  //onMouseOver Stop Slinding (set State) & clear TimeOut on click
+
+  useEffect(() => {
+    setTimeout(() => {
+      sliderHandler(1)
+    }, 4000)
+  }, [slider])
 
   return (
     <>
