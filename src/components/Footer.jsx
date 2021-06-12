@@ -14,7 +14,12 @@ const Footer = () => {
     <>
       <Grid data-cy='footer' id='footer' container alignItems='center'>
         <Grid className='footer-header' item xs={12}>
-          <img src={logo} alt='logo' className='logo' data-cy='flex-coast-white' />
+          <img
+            src={logo}
+            alt='logo'
+            className='logo'
+            data-cy='flex-coast-white'
+          />
           <hr className='top-hr' />
         </Grid>
         <Grid data-cy='footer-categories' container alignItems='flex-start'>
