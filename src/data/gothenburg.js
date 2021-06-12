@@ -262,7 +262,7 @@ export const providers = [
     ],
   },
   {
-    heading: 'Kolgruvegatan 12',
+    name: 'Kolgruvegatan 12',
     address: 'Lundby',
     description:
       'Våra kontor är alla unika i både storlek och design. Här kan ni jobba ostört och kreativt.  Oavsett om ni har ett kontor eller ej så kommer ni alltid att tillhöra en öppen och kollaborativ miljö med tillgång till allt vad vi kan erbjuda.  Välkommen på visning!  Villkor:  Vi skriver tillsvidarekontrakt med två månaders uppsägningstid eller bundet på minst sex månader. Vid bundet kontrakt är första månaden alltid gratis.  Rekommenderar man en vän som tar plats i det öppna landskapet får man själv en månad gratis.  Vi tar en deposition på två månadshyror oavsett kontrakt.',
@@ -277,7 +277,7 @@ export const providers = [
     ],
   },
   {
-    heading: 'Entreprenörsgatan',
+    name: 'Entreprenörsgatan',
     address: 'Östra Hamngatan 1, Nordstaden',
     description:
       'Välkommen till detta fantastiska kontorshotell. Här möter Göteborgs industrihistoria dagens entreprenörer och skapar en härlig kontorsmiljö med fina detaljer från nyrenässansstilen, högt i tak och utsikt över operan. De inglasade kontorsrummen är möblerade med eget höj- och sänkbart skrivbord, kontorsstol och andra kontorstillbehör. För flexplatserna finns det skärm och skrivbordsplats att låna.  Kontoret är även utrustat med kök, WC, lounge, konferensrum, skrivare och WiFi.',
@@ -294,7 +294,7 @@ export const providers = [
     ],
   },
   {
-    heading: 'Lasarettsgatan 9',
+    name: 'Lasarettsgatan 9',
     address: 'Inom Vallgraven',
     description:
       'Vi vill dela med oss av vår fina, nyrenoverade kontorslokal och söker kontorsgäster som är intresserade av att sitta på en av Göteborgs bästa adresser. Ni har tillgång till konferensrum med vacker utsikt över Göta Älv, fritt fiber och en positiv atmosfär. 1-2 platser finns till förfogande.  Du kommer ha nära både kommunikationer och bra afterwork.  Kontraktstid löper på perioder om 3 månader löpande och ni kan flytta in omgående.',
