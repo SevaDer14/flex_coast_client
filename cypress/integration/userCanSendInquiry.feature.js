@@ -74,7 +74,7 @@ describe('User can send inquiry', () => {
         .find('[data-cy=done-btn]')
         .click();
 
-      cy.get('[data-cy=peer-question-container]').within(() => {
+      cy.get('[data-cy=flexible-question-container]').within(() => {
         cy.get('[data-cy=question]').should(
           'contain',
           'Do you plan to work full-time or flexible hours?'
@@ -84,7 +84,7 @@ describe('User can send inquiry', () => {
         cy.get('[data-cy=flexible-btn]').click({ force: true });
         cy.get('[data-cy=done-btn]').click();
       });
-      
+
       const expectedOutcome = {
         size: '100',
         office_type: 'Office',
@@ -92,7 +92,7 @@ describe('User can send inquiry', () => {
         company: 'Cyberdyne Systems',
         peers: 'Yes',
         locations: ['Lindholmen', 'Gamlestaden'],
-        flexible: true,
+        flexible: 'true',
       };
       cy.window()
         .its('store')
