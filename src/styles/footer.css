@@ -36,7 +36,7 @@
   text-decoration: none;
   font-size: 18px;
   margin: 0 40px 0 40px;
-  padding: 0 20px 40px 20px;
+  padding: 0 20px 15px 20px;
 }
 
 #footer .sub-header .footer-link a,
@@ -53,7 +53,7 @@
   height: 2px;
   background-color: #f2ecec;
   text-align: center;
-  margin: 0 5%;
+  margin: 10px 5%;
 }
 
 @media (min-width: 599px) {
@@ -64,7 +64,7 @@
 
 #footer .sub-header .custom-button {
   background-color: #fff;
-  margin: 20px;
+  margin: 15px;
 }
 
 #footer .sub-header .custom-button:hover {
@@ -81,6 +81,11 @@
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff;
+}
+
+#footer .sub-header .icon {
+  color: white !important;
+  margin: 10px;
 }
 
 .logo {

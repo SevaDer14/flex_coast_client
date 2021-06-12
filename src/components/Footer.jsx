@@ -3,6 +3,10 @@ import Grid from '@material-ui/core/Grid'
 import logo from '../assets/logoWhite.svg'
 import CustomButton from './custom/CustomButton'
 import { useTranslation } from 'react-i18next'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import IconButton from '@material-ui/core/IconButton'
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -36,11 +40,21 @@ const Footer = () => {
             <CustomButton dataCy='get-started' link to='/inquiry'>
               {t('landingPage.startButton')}
             </CustomButton>
-
             <hr className='sub-hr' />
           </Grid>
           <Grid data-cy='links' className='sub-header' item xs={12} sm={4}>
             <h3>Find Us</h3>
+            <Grid>
+              <IconButton>
+                <FacebookIcon className='icon' fontSize='large' />
+              </IconButton>
+              <IconButton>
+                <InstagramIcon className='icon' fontSize='large' />
+              </IconButton>
+              <IconButton>
+                <TwitterIcon className='icon' fontSize='large' />
+              </IconButton>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
