@@ -7,6 +7,13 @@ const se = {
 
     compellingText:
       'Hallå där! Om du letar efter att hyra flexibla kortvariga kontor i Göteborg har du hittat rätt plats. Kanske har du precis startat ett nytt företag eller behöver du bara ett tillfälligt kontor att arbeta i?',
+    
+    footer: {
+      subHeader1: 'Om Oss',
+      subHeader2: 'Kontakta Oss',
+      subHeader3: 'Hitta Oss',
+    },
+
     welcomeMessage:
       'Hej! För att att hitta bästa möjliga kontor, behöver vi ställa lite frågor.',
 
@@ -16,18 +23,22 @@ const se = {
       officeType: 'Vilken typ av kontor letar du efter?',
       name: 'Vad är namnet på erat företag?',
       peers: 'Vill du dela kontor med andra från din bransch?',
+      location: 'Vilka områden är du intresserad av?',
+
     },
 
     answer: {
-      email: 'Min email är: ',
-      size: 'Vi är en grupp av: ',
-      officeType: 'Vi behöver: ',
+      email: 'Min email är ',
+      size: 'Vi är en grupp av ',
+      officeType: 'Vi behöver ',
       officeLable: 'Kontor',
       openSpaceLable: 'Öppet utrymme',
-      name: 'Det heter: ',
-      companyPlaceholder: 'Mitt företag',
+      name: 'Det heter ',
+      companyPlaceholder: 'Flex Coast',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
+      location: 'Vi är intresserade av',
+      locationAll: 'Alla'
     },
     submitButton: 'Skicka in',
   },
