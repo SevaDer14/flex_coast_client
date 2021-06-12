@@ -12,7 +12,7 @@ const InquiryLocation = () => {
       className='location-question-container'>
       <Question text={t('question.location')} />
       <Answer
-        text=''
+        text={t('answer.location')}
         type='multi-select'
         placeholder='Choose locations'
         questionKey='locations'

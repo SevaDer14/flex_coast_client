@@ -79,7 +79,7 @@ describe('User can send inquiry', () => {
         email: 'example@mail.com',
         company: 'Cyberdyne Systems',
         peers: 'Yes',
-        locations: ['Lindholmen','Gamlestaden'],
+        locations: ['Lindholmen', 'Gamlestaden'],
       }
       cy.window()
         .its('store')
