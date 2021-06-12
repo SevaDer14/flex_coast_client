@@ -277,20 +277,63 @@
   border-left: 2px solid #ffd09c;
 }
 
-.answer-container .MuiInputBase-input {
+.location-question-container .answer-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.location-question-container .answer-form-container .location-filled .rrs__button {
+  background-color: #ffd09c;
   color: white;
 }
 
-.answer-container .MuiFormControl-root {
-  margin-right: 15px;
-  min-width: 200px;
+.location-question-container .answer-form-container .location-filled svg {
+  fill: #fff;
 }
 
-.answer-container .MuiFormControl-root {
-  background-color: #ffd09c;
+.location-question-container .answer-form-container .rrs {
+  font-size: 1.4rem;
+  width: 300px;
+  margin-right: 13px;
+  color: #ffd09c;
 }
 
-.answer-container .MuiSelect-outlined.MuiSelect-outlined {
-  height: 50px;
+.location-question-container .answer-form-container .rrs__button {
+  background-color: #fff;
+  color: #ffd09c;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid #ffd09c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: 55px;
 }
-/*# sourceMappingURL=questionnaire.css.map */
+
+.location-question-container .answer-form-container .rrs__button svg {
+  fill: #ffd09c;
+}
+
+.location-question-container .answer-form-container .rrs--has-changed .rrs__label {
+  color: #ffd09c;
+}
+
+.location-question-container .answer-form-container .rrs__option:hover {
+  color: orange;
+}
+
+.location-question-container .answer-form-container .rrs__option.rrs__option--next-selection {
+  color: #ffd09c;
+}
+
+.location-question-container .answer-form-container .rrs__option.rrs__option--selected {
+  color: #61f7d2;
+}
+
+.location-question-container .answer-form-container .rrs__option.rrs__option--selected .checkbox {
+  border-color: #61f7d2;
+}
+
+.location-question-container .answer-form-container .rrs__option.rrs__option--selected svg {
+  fill: #61f7d2;
+}

@@ -7,8 +7,10 @@ const InquiryLocation = () => {
   const { t } = useTranslation()
 
   return (
-    <div data-cy='location-question-container'>
-      <Question text='Where would you like to be situated?' />
+    <div
+      data-cy='location-question-container'
+      className='location-question-container'>
+      <Question text={t('question.location')} />
       <Answer
         text=''
         type='multi-select'

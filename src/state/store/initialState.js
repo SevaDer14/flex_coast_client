@@ -13,6 +13,7 @@ const initialState = {
     email: false,
     company: false,
     peers: false,
+    locations: false,
   },
   submitMessage: '',
 }

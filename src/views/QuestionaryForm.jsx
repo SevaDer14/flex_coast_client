@@ -35,7 +35,7 @@ const QuestionaryForm = () => {
             <Question dataCy='on-submit-message' text={submitMessage} />
           </>
         ) : (
-          formData.office_type && (
+          formData.locations[0] && (
             <CustomButton
               dataCy='submit-btn'
               onClick={() => Inquiries.create(formData)}>
