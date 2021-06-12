@@ -1,52 +1,8 @@
 @import './variables';
 
-.hero-section {
-  background-image: $hero-img;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 80vh;
-  @media only screen and (max-width: $mobile) {
-    height: 100vh;
-  }
-
-  .welcome-text {
-    display: flex;
-    flex-direction: row;
-    color: #fff;
-    margin: 150px auto;
-    padding: 50px;
-    text-align: left;
-    align-items: center;
-    justify-content: space-evenly;
-    max-width: 900px;
-    @media only screen and (max-width: $mobile) {
-      padding: 0;
-      flex-direction: column;
-      margin: 50px 40px 0 40px;
-      align-items: flex-start;
-    }
-
-    h1 {
-      padding-bottom: 35px;
-      padding-right: 10px;
-      font-size: 45px;
-      max-width: 600px;
-      @media only screen and (max-width: $mobile) {
-        font-size: 40px;
-      }
-    }
-
-    button {
-      min-width: 180px;
-    }
-  }
-}
-
 .illu-container {
-  padding-top: 75px;
+  padding: 75px 25px 0 25px;
   max-width: 1280px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,7 +20,6 @@
     margin-bottom: 25px;
     @media only screen and (max-width: $mobile) {
       font-size: 12px;
-      text-align: center;
     }
   }
 
@@ -75,7 +30,6 @@
     margin-bottom: 75px;
     @media only screen and (max-width: $mobile) {
       font-size: 25px;
-      margin: 15px;
     }
   }
 }
@@ -103,7 +57,7 @@
 
   .slider-container {
     position: absolute;
-    max-width: 960px;
+    max-width: 1024px;
     border-radius: 4px;
     display: flex;
     width: 100%;
