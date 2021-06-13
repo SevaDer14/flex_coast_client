@@ -1,9 +1,11 @@
-@import './variables';
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+@import './compellingStory.scss', './footer.scss', './header.scss',
+  './hero.scss', './mapSection.scss', './questionnaire.scss',
+  './testimonialSlider.scss', './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap');
 
 #root {
   font-size: 62.5%;
-  background-color: whitesmoke;
+  background-color: rgb(246, 245, 245);
 }
 
 * {
@@ -81,8 +83,3 @@ h3 {
     font-size: 18px !important;
   }
 }
-
-
-
-
-

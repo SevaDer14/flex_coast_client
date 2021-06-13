@@ -1,7 +1,7 @@
 const en = {
   translation: {
     landingPage: {
-      introText: 'Flexible short term office leasing in lovely Gothenburg',
+      introText: 'Flexible office spaces in beautiful Gothenburg',
       startButton: 'Get Started',
     },
 
