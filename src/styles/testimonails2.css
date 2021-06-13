@@ -115,6 +115,9 @@ h4 {
   .swiper-container {
     width: 640px;
   }
+  .swiper-wrapper {
+    margin-left:50px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
