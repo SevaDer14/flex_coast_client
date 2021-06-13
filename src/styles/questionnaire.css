@@ -143,6 +143,7 @@
   outline: none;
   border: 2px solid #ffd09c;
   color: #ffd09c;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 @media only screen and (max-width: 620px) {

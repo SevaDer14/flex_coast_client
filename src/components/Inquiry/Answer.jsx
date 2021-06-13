@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { animateScroll } from 'react-scroll'
+import { scroller, scrollTo } from 'react-scroll'
 import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
@@ -15,6 +15,7 @@ const Answer = ({
   labels,
   dataCys,
   values,
+  ref
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
@@ -30,7 +31,7 @@ const Answer = ({
         payload: { key: questionKey, filled: false },
       })
     } else {
-      animateScroll.scrollMore(isSmall ? 280 : 200)
+     
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
         payload: { key: questionKey, filled: true },

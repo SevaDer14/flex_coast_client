@@ -10,6 +10,21 @@
     height: 100vh;
   }
 
+  .wizard-container {
+    background-color: rgba(0, 0, 0, 0.425);
+    margin: 10px 15px;
+    padding: 20px 10px;
+    border-radius: 10px;
+    max-height: 200px;
+    box-shadow: 7px 5px 10px rgba(0,0,0,.5);
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+  }
+
   .welcome-text {
     display: flex;
     flex-direction: row;

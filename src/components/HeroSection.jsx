@@ -2,6 +2,7 @@ import React from 'react'
 import CustomButton from './custom/CustomButton'
 import Header from './Header'
 import { useTranslation } from 'react-i18next'
+import Wizard from './Inquiry/Wizard'
 
 const HeroSection = () => {
   const { t } = useTranslation()
@@ -10,10 +11,11 @@ const HeroSection = () => {
       <Header landing />
       <div data-cy='welcome-text' className='welcome-text'>
         <h1>{t('landingPage.introText')}</h1>
-        <CustomButton dataCy='get-started-1' link to='/inquiry'>
+        {/* <CustomButton dataCy='get-started-1' link to='/inquiry'>
           {t('landingPage.startButton')}
-        </CustomButton>
+        </CustomButton> */}
       </div>
+        <Wizard />
     </div>
   )
 }
