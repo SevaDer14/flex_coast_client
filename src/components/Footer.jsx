@@ -26,9 +26,7 @@ const Footer = () => {
           <Grid data-cy='footer-about' className='sub-header' item sm={4}>
             <h3>{t('footer.subHeader1')}</h3>
             <p className='footer-text'>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam neque porro voluptatem nisi dolor debitis deserunt et
-              vitae quam odio?
+              {t('footer.aboutUsText')}
             </p>
             <hr className='sub-hr' />
           </Grid>

@@ -12,6 +12,7 @@ const se = {
       subHeader1: 'Om Oss',
       subHeader2: 'Kontakta Oss',
       subHeader3: 'Hitta Oss',
+      aboutUsText: 'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.'
     },
 
     welcomeMessage:
