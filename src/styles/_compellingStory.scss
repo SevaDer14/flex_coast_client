@@ -1,40 +1,48 @@
 @import './variables';
 
 .compelling-container {
-  width: 100%;
   height: 600px;
   background-color: #fff;
   display: flex;
-  flex-direction: row;
-  align-content: center;
+  flex-direction: column;
   justify-content: center;
-
-  .compelling-wrapper {
-    display: flex;
-    flex-direction: row;
-    max-width: 1280px;
+  @media only screen and (max-width: $mobile) {
+    height: auto;
+    padding: 50px 20px 50px 20px;
   }
-
-  .compelling-avatar {
-    align-self: center;
-    height: 300px;
-    width: auto;
-    margin-right: 50px;
-    @media (max-width: $mobile) {
-      height: 150px;
+  .offer-title {
+    display: flex;
+    align-items: flex-end;
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    h1 {
+      font-size: 30px;
     }
   }
-
-  .compelling-text {
-    align-self: center;
-    font-size: 2rem;
-    background-color: $mainColor;
-    border-radius: 15px;
-    padding: 20px;
-    margin-right: 10%;
-    color: #111;
-    @media (max-width: $mobile) {
-      font-size: 1rem;
+  .offer-container {
+    max-width: 1024px;
+    margin: 10px auto;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    @media only screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+    .offer {
+      padding: 0 30px;
+      img {
+        height: 170px;
+        @media only screen and (max-width: $mobile) {
+          height: 120px;
+        }
+      }
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 17px;
+      }
     }
   }
 }

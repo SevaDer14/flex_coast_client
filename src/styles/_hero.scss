@@ -53,11 +53,12 @@
 
     h1 {
       padding-bottom: 35px;
-      padding-right: 30px;
+      padding-right: 30px;      
       font-size: 55px;
       max-width: 800px;
       @media only screen and (max-width: $mobile) {
-        font-size: 30px;
+        margin-bottom: 50px;
+        font-size: 34px;
         padding: 20px;
       }
     }
