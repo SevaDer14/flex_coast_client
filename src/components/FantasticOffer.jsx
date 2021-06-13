@@ -1,14 +1,16 @@
 import React from 'react'
-import avatar from '../assets/avatar.png'
-import iconCity from '../assets/iconCityPurple.svg';
+import iconCity from '../assets/iconCityPurple.svg'
+import size from '../assets/sizePurple.svg'
+import calendar from '../assets/calendarPurple.svg'
 import { useTranslation } from 'react-i18next'
 
 const FantasticOffer = () => {
   const { t } = useTranslation()
+
   const Offer = ({ image, title, content }) => {
     return (
       <div className='offer'>
-        <img src={iconCity}/>
+        <img src={image} alt='title' />
         <h3>{title}</h3>
         <p>{content}</p>
       </div>
@@ -17,23 +19,23 @@ const FantasticOffer = () => {
   return (
     <div className='compelling-container' data-cy='compelling-container'>
       <div className='offer-title'>
-        <h1>Flexible workspace where and how you need it</h1>
+        <h1>{t('fantasticOffer.offerTitle')}</h1>
       </div>
       <div className='offer-container'>
         <Offer
-          image={avatar}
-          title='Any size space'
-          content='From a single desk, all the way up to configured offices.'
+          image={size}
+          title={t('fantasticOffer.offer1Sub')}
+          content={t('fantasticOffer.offer1')}
         />
         <Offer
-          image={avatar}
-          title='On your terms'
-          content='Month, quarter or longer term.'
+          image={calendar}
+          title={t('fantasticOffer.offer2Sub')}
+          content={t('fantasticOffer.offer2')}
         />
         <Offer
-          image={avatar}
-          title='Best Locations'
-          content='Choose a single location, or access any building worldwide.'
+          image={iconCity}
+          title={t('fantasticOffer.offer3Sub')}
+          content={t('fantasticOffer.offer3')}
         />
       </div>
     </div>

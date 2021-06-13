@@ -25,12 +25,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  max-width: 1024px;
-  width: 100%;
-  margin: 0 auto;
+  max-width: 1280px;
+  text-align: center;
 }
 
 .compelling-container .offer-title h1 {
@@ -38,8 +38,8 @@
 }
 
 .compelling-container .offer-container {
-  max-width: 1024px;
-  margin: 10px auto;
+  max-width: 1280px;
+  margin: 30px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,7 +60,20 @@
 }
 
 .compelling-container .offer-container .offer {
-  padding: 0 30px;
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .compelling-container .offer-container .offer img {
@@ -79,6 +92,11 @@
 
 .compelling-container .offer-container .offer p {
   font-size: 17px;
+}
+
+.compelling-container .offer-container div:nth-of-type(3) img {
+  margin-top: 20px;
+  margin-bottom: -20px;
 }
 
 #footer {
@@ -368,6 +386,15 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+.hero-section .welcome-text .wizard-container .submit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .hero-section .welcome-text h1 {
   padding-bottom: 35px;
   padding-right: 30px;
@@ -377,8 +404,9 @@ input[type='number']::-webkit-outer-spin-button {
 
 @media only screen and (max-width: 620px) {
   .hero-section .welcome-text h1 {
+    text-align: center;
     margin-bottom: 50px;
-    font-size: 34px;
+    font-size: 38px;
     padding: 20px;
   }
 }
@@ -774,7 +802,7 @@ input[type='number']::-webkit-outer-spin-button {
 .testimonials-header {
   font-size: 18px;
   color: #333;
-  margin: 50px auto 10px auto;
+  margin: 50px auto 50px auto;
   max-width: 1050px;
 }
 

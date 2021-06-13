@@ -16,6 +16,16 @@ const se = {
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
     },
 
+    fantasticOffer: {
+      offerTitle: 'Flexibla arbetsplatser när du behöver det',
+      offer1Sub: 'Valfri storlek',
+      offer1: 'Från ett öppet landskap till ett eget rum',
+      offer2Sub: 'På dina villkor',
+      offer2: 'Månad, kvartal eller längre perioder',
+      offer3Sub: 'Bästa lägena',
+      offer3: 'Välj bland dem bästa lägena i Göteborg',
+    },
+
     welcomeMessage:
       'Hej! För att att hitta bästa möjliga kontor, behöver vi ställa lite frågor.',
 
