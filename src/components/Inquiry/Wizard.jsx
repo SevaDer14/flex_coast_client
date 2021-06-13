@@ -16,21 +16,12 @@ const Wizard = () => {
   const { submitMessage, formData } = useSelector((state) => state)
   const { t } = useTranslation()
 
-  let container = document.getElementById('wizard-container')
-  let scroll = () => container.scrollBy({ top: 240, behavior: 'smooth' })
+  
 
   return (
     <div className='wizard-container' id='wizard-container'>
       <InquiryCompanySize />
-      {formData.size && (
-        <>
-          <InquiryOfficeType />
-          {setTimeout(() => {
-            scroll()
-          }, 10)}
-          ;
-        </>
-      )}
+      {formData.size && <InquiryOfficeType />}
       {formData.office_type && <InquiryEmail />}
       {formData.email && <InquiryCompanyName />}
       {formData.company && <InquiryPeers />}

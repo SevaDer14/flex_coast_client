@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { scroller, scrollTo } from 'react-scroll'
 import CustomIconButton from '../custom/CustomIconButton'
@@ -15,7 +15,7 @@ const Answer = ({
   labels,
   dataCys,
   values,
-  ref
+  ref,
 }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
@@ -31,7 +31,6 @@ const Answer = ({
         payload: { key: questionKey, filled: false },
       })
     } else {
-     
       store.dispatch({
         type: 'SWITCH_ANSWER_FILLED_STATUS',
         payload: { key: questionKey, filled: true },
@@ -42,6 +41,16 @@ const Answer = ({
       })
     }
   }
+
+  const scroll = () => {
+    let container = document.getElementById('wizard-container')
+    container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
+  }
+
+  useEffect(() => {    
+    scroll()
+  }, [])
+
   const chooseInputType = (type) => {
     switch (type) {
       case 'toggle-btn':

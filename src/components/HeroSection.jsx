@@ -11,11 +11,12 @@ const HeroSection = () => {
       <Header landing />
       <div data-cy='welcome-text' className='welcome-text'>
         <h1>{t('landingPage.introText')}</h1>
+        <Wizard />
         {/* <CustomButton dataCy='get-started-1' link to='/inquiry'>
           {t('landingPage.startButton')}
         </CustomButton> */}
       </div>
-        <Wizard />
+        
     </div>
   )
 }
