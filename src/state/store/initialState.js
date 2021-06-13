@@ -20,6 +20,7 @@ const initialState = {
     flexible: false,
   },
   submitMessage: '',
+  language: 'English'
 }
 
 export default initialState

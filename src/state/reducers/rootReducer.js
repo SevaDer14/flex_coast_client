@@ -7,7 +7,7 @@ const rootReducer = (state = initialState, action) => {
       let newData = state.formData;
       newData[action.payload.key] = action.payload.answer;
       if (action.payload.key === 'locations' && !action.payload.answer[0]) {
-          newData[action.payload.key] = locations.slice(1);
+        newData[action.payload.key] = locations.slice(1);
       }
       return {
         ...state,
@@ -25,6 +25,7 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         filledAnswers: filledAnswers,
       };
+
     default:
       return state;
   }
