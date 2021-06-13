@@ -21,7 +21,8 @@ const Testimonial2 = () => {
       slidesPerView={4}
       navigation={true}
       pagination={true}
-      loop={true}>
+      loop={true}
+      className='pagination'>
       <section>
         <SwiperSlide>
           <div className='swiper-container'>
@@ -60,7 +61,6 @@ const Testimonial2 = () => {
                     />
                     <h3>Delbert Simonas</h3>
                   </div>
-                  <h5>Delbert Simonas</h5>
                   <div className='content'>
                     <p>
                       "Online reviews can make or break a customer's decision to
