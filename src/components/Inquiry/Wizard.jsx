@@ -19,7 +19,7 @@ const Wizard = () => {
   
 
   return (
-    <div className='wizard-container' id='wizard-container'>
+    <div className='wizard-container' id='wizard-container' data-cy='wizard'>
       <InquiryCompanySize />
       {formData.size && <InquiryOfficeType />}
       {formData.office_type && <InquiryEmail />}

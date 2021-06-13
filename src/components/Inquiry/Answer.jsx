@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { scroller, scrollTo } from 'react-scroll'
 import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-
 const Answer = ({
   text,
   type,
@@ -21,7 +18,6 @@ const Answer = ({
     store.getState().formData[questionKey]
   )
   const filled = useSelector((state) => state.filledAnswers[questionKey])
-  const isSmall = useMediaQuery('(max-width:620px)')
   const setAnswer = (event) => {
     event.preventDefault()
 
@@ -47,7 +43,7 @@ const Answer = ({
     container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
   }
 
-  useEffect(() => {    
+  useEffect(() => {
     scroll()
   }, [])
 
