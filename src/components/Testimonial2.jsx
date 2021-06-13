@@ -2,7 +2,6 @@ import profile1 from '../assets/social-img-1.jpg'
 import profile2 from '../assets/social-img-2.jpg'
 import profile3 from '../assets/social-img-3.jpg'
 import React, { useRef, useState } from 'react'
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow } from 'swiper/core'
 
@@ -14,11 +13,21 @@ import SwiperCore, { Pagination, Navigation } from 'swiper/core'
 const Testimonial2 = () => {
   SwiperCore.use([EffectCoverflow, Pagination, Navigation])
   return (
+   
     <Swiper
-      effect={'coverflow'}
+    breakpoints={{
+      640: {
+        width: 640,
+        slidesPerView: 1,
+      },
+      1280: {
+        maxWidth: 1280,
+        slidesPerView: 4,
+      },
+    }}
+      // effect={'coverflow'}
       grabCursor={true}
       centeredSlides={true}
-      slidesPerView={4}
       navigation={true}
       pagination={true}
       loop={true}
@@ -36,6 +45,7 @@ const Testimonial2 = () => {
                       alt='profile-image'
                     />
                     <h3>Delbert Simonas</h3>
+                    <h4>CEO OF FAKE-NEWS</h4>
                   </div>
                   <div className='content'>
                     <p>
@@ -60,6 +70,7 @@ const Testimonial2 = () => {
                       alt='profile-image'
                     />
                     <h3>Delbert Simonas</h3>
+                    <h4>CEO OF FAKE-NEWS</h4>
                   </div>
                   <div className='content'>
                     <p>
@@ -84,9 +95,9 @@ const Testimonial2 = () => {
                       alt='profile-image'
                     />
                     <h3>Delbert Simonas</h3>
+                    <h4>CEO OF FAKE-NEWS</h4>
                   </div>
                   <div className='content'>
-                    <h5>Delbert Simonas</h5>
                     <p>
                       "Online reviews can make or break a customer's decision to
                       make a purchase. Read about these customer review on site"
