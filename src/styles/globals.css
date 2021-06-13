@@ -34,7 +34,7 @@
 }
 
 .compelling-container .offer-title h1 {
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .compelling-container .offer-container {
@@ -100,7 +100,7 @@
 }
 
 #footer {
-  background-color: #ffd09c;
+  background-color: #61f7d2;
   padding-top: 50px;
   width: 100%;
   padding-bottom: 50px;
@@ -129,6 +129,7 @@
 
 #footer .sub-header h3 {
   text-decoration: underline;
+  text-transform: uppercase;
   color: #f7f5f5;
 }
 
@@ -175,7 +176,7 @@
 }
 
 #footer .sub-header .custom-button a {
-  color: #ffd09c;
+  color: #61f7d2;
 }
 
 #footer .sub-header .custom-button:nth-last-child(1) {
@@ -189,8 +190,8 @@
   margin: 10px;
 }
 
-.logo {
-  height: 100px;
+#footer .logo {
+  height: 120px;
   color: white;
   padding-bottom: 40px;
 }
@@ -206,6 +207,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid lightgray;
 }
 
@@ -239,11 +243,13 @@
 
 .page-header .logo, .page-header-landing .logo {
   height: 100px;
+  margin-top: 50px;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 620px) {
   .page-header .logo, .page-header-landing .logo {
+    margin-top: 25px;
     height: 75px;
   }
 }
@@ -291,7 +297,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 #menu-language .MuiPaper-root {
   background-color: #61f7d2;
-  color: #222;
+  color: #fff;
   width: 125px;
 }
 
@@ -349,7 +355,7 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 50px 20px 0 0px;
+    margin: 50px 0 0 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -359,13 +365,11 @@ input[type='number']::-webkit-outer-spin-button {
 .hero-section .welcome-text .wizard-container {
   width: 100%;
   max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.534);
+  background-color: rgba(0, 0, 0, 0.434);
   margin: 10px 15px;
   padding: 20px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   max-height: 240px;
-  -webkit-box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
   -ms-overflow-style: none;
   /* for Internet Explorer, Edge */
@@ -390,9 +394,10 @@ input[type='number']::-webkit-outer-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25px 0;
 }
 
 .hero-section .welcome-text h1 {

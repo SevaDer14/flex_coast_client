@@ -12,7 +12,7 @@ const InquiryOfficeType = () => {
       <Answer
         text={t('answer.officeType')}
         type='toggle-btn'
-        values={{ value_1: 'Office', value_2: 'Open Space' }}
+        values={{ value_1: 'office', value_2: 'open_space' }}
         labels={{
           label_1: t('answer.officeLable'),
           label_2: t('answer.openSpaceLable'),
