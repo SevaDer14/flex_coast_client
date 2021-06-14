@@ -92,7 +92,7 @@ describe('User can send inquiry', () => {
 
       const expectedOutcome = {
         size: '100',
-        office_type: 'Office',
+        office_type: 'office',
         email: 'example@mail.com',
         company: 'Cyberdyne Systems',
         peers: 'Yes',
