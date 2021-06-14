@@ -1,10 +1,26 @@
+import { testimonials } from '../assets/testimonials'
 const se = {
   translation: {
     landingPage: {
       introText: 'Flexibla kontor i vackra Göteborg',
     },
+    testimonials: {
+      id_1: {
+        text: testimonials[0].review_se,
+        position: testimonials[0].position_se,
+      },
+      id_2: {
+        text: testimonials[1].review_se,
+        position: testimonials[1].position_se,
+      },
+      id_3: {
+        text: testimonials[2].review_se,
+        position: testimonials[2].position_se,
+      },
+    },
 
-    pitchMessage: 'Ditt fokus är att bygga ett fantastiskt företag. Vårt fokus är att hitta det bästa kontoret för dig och ditt team.',
+    pitchMessage:
+      'Ditt fokus är att bygga ett fantastiskt företag. Vårt fokus är att hitta det bästa kontoret för dig och ditt team.',
 
     compellingText:
       'Hallå där! Om du letar efter att hyra flexibla kortvariga kontor i Göteborg har du hittat rätt plats. Kanske har du precis startat ett nytt företag eller behöver du bara ett tillfälligt kontor att arbeta i?',
@@ -15,7 +31,7 @@ const se = {
       subHeader3: 'Hitta Oss',
       aboutUsText:
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
-      startButton: 'Hitta Kontor'
+      startButton: 'Hitta Kontor',
     },
 
     fantasticOffer: {
