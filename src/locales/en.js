@@ -2,8 +2,10 @@ const en = {
   translation: {
     landingPage: {
       introText: 'Flexible office spaces in beautiful Gothenburg',
-      startButton: 'Get Started',
     },
+
+
+    pitchMessage: 'Your focus is to build an awesome company. Our focus is to find the best office for you and your team.',
 
     compellingText:
       ' Hey there! If you are looking for leasing flexible short term offices in Gothenburg you have found the right place. Maybe you just started up a new company or you just need some temporary office space to work in?',
@@ -14,6 +16,7 @@ const en = {
       subHeader3: 'Find Us',
       aboutUsText:
         'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+      startButton: 'Get Started'
     },
 
     fantasticOffer: {

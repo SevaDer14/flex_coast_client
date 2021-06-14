@@ -2,8 +2,9 @@ const se = {
   translation: {
     landingPage: {
       introText: 'Flexibla kontor i vackra Göteborg',
-      startButton: 'Hitta Kontor',
     },
+
+    pitchMessage: 'Ditt fokus är att bygga ett fantastiskt företag. Vårt fokus är att hitta det bästa kontoret för dig och ditt team.',
 
     compellingText:
       'Hallå där! Om du letar efter att hyra flexibla kortvariga kontor i Göteborg har du hittat rätt plats. Kanske har du precis startat ett nytt företag eller behöver du bara ett tillfälligt kontor att arbeta i?',
@@ -14,6 +15,7 @@ const se = {
       subHeader3: 'Hitta Oss',
       aboutUsText:
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
+      startButton: 'Hitta Kontor'
     },
 
     fantasticOffer: {
