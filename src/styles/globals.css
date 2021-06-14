@@ -166,6 +166,7 @@
 
 #footer .sub-header .custom-button {
   background-color: #ffd09c;
+  color: #333;
   margin: 15px;
 }
 
@@ -180,7 +181,6 @@
 }
 
 #footer .sub-header .custom-button:nth-last-child(1) {
-  background-color: transparent;
   border: 2px solid #ffd09c;
   color: #ffd09c;
 }
