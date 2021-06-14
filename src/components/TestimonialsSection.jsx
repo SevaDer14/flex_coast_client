@@ -37,7 +37,7 @@ const TestimonialsSection = () => {
   return (
     <>
     <div className='testimonials-header'>
-      <h1>In the last 12 months, we helped over 100 companies find their new offices - here are some examples</h1>
+      <h1>Your focus is to build an awesome company. Our focus is to find the best office for you and your team.</h1>
     </div>    
       <div className='testimonials-container'>        
         <Testimonial

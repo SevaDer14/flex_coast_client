@@ -21,10 +21,9 @@ const Testimonial2 = () => {
         },
         1280: {
           maxWidth: 1280,
-          slidesPerView: 3.5,
+          slidesPerView: 4,
         },
       }}
-      effect={'coverflow'}
       grabCursor={true}
       centeredSlides={true}
       navigation={true}

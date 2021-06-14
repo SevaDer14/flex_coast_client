@@ -297,7 +297,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 #menu-language .MuiPaper-root {
   background-color: #61f7d2;
-  color: #fff;
+  color: '#222';
   width: 125px;
 }
 
@@ -365,7 +365,7 @@ input[type='number']::-webkit-outer-spin-button {
 .hero-section .welcome-text .wizard-container {
   width: 100%;
   max-width: 800px;
-  background-color: rgba(0, 0, 0, 0.434);
+  background-color: rgba(0, 0, 0, 0.301);
   margin: 10px 15px;
   padding: 20px 10px;
   border-radius: 5px;
@@ -1027,7 +1027,7 @@ section {
 }
 
 .swiper-container {
-  width: 100%;
+  max-width: 1920px;
   height: 100%;
 }
 
@@ -1042,8 +1042,14 @@ section {
   margin-top: 20px;
 }
 
+@media only screen and (max-width: 1280px) {
+  .swiper-wrapper {
+    margin-left: 50px;
+  }
+}
+
 .pagination {
-  margin-bottom: 6%;
+  margin-bottom: 70px;
 }
 
 .swiper-slide {
@@ -1183,7 +1189,7 @@ h3 {
 .custom-button a {
   font-size: 18px;
   text-decoration: none;
-  color: #fff;
+  color: #222;
 }
 
 .MuiInput-root {
