@@ -100,7 +100,7 @@
 }
 
 #footer {
-  background-color: #61f7d2;
+  background-color: #333;
   padding-top: 50px;
   width: 100%;
   padding-bottom: 50px;
@@ -108,7 +108,7 @@
 
 #footer .footer-header {
   font-size: 20px;
-  color: #f7f5f5;
+  color: #ffd09c;
   text-align: center;
   margin: 0 0 20px 0;
 }
@@ -116,7 +116,7 @@
 #footer .top-hr {
   border: none;
   height: 2px;
-  background-color: #f2ecec;
+  background-color: #ffd09c;
   text-align: center;
   margin: 0 5%;
 }
@@ -130,11 +130,11 @@
 #footer .sub-header h3 {
   text-decoration: underline;
   text-transform: uppercase;
-  color: #f7f5f5;
+  color: #ffd09c;
 }
 
 #footer .sub-header .footer-text {
-  color: #f7f5f5;
+  color: #ffd09c;
   text-decoration: none;
   font-size: 18px;
   margin: 0 40px 0 40px;
@@ -165,7 +165,7 @@
 }
 
 #footer .sub-header .custom-button {
-  background-color: #fff;
+  background-color: #ffd09c;
   margin: 15px;
 }
 
@@ -176,23 +176,23 @@
 }
 
 #footer .sub-header .custom-button a {
-  color: #61f7d2;
+  color: #333;
 }
 
 #footer .sub-header .custom-button:nth-last-child(1) {
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #ffd09c;
+  color: #ffd09c;
 }
 
 #footer .sub-header .icon, #footer .sub-header .answer-container .done-btn .icon-filled, .answer-container .done-btn #footer .sub-header .icon-filled, #footer .sub-header .answer-container .done-btn-filled .icon-filled, .answer-container .done-btn-filled #footer .sub-header .icon-filled {
-  color: white !important;
+  color: #ffd09c !important;
   margin: 10px;
 }
 
 #footer .logo {
   height: 120px;
-  color: white;
+  color: #ffd09c;
   padding-bottom: 40px;
 }
 
