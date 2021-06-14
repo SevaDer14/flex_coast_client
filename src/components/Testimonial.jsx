@@ -16,7 +16,7 @@ const TestimonialSlider = ({ slider, info, sliderHandler, stopTimer}) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1 }}>
-        <div className='testimonial-container' data-cy={`testimonial-container-${info.id}`}>
+        <div className='testimonial-container' data-cy={`testimonial-${info.id}-container`}>
           <div className={`social-image person-${slider}`}></div>
           <div className='info-container'> 
             <div className='testimonial-text' data-cy='testimonial-text'>
@@ -24,7 +24,7 @@ const TestimonialSlider = ({ slider, info, sliderHandler, stopTimer}) => {
             </div>
             <div className='testimonial-person'>
               <p className='name'>{info.name}</p>
-              <p className='job-title' data-cy='job-title'>{t(`testimonials.id_${info.id}.position`)}</p>
+              <p className='job-title' data-cy='testimonial-position'>{t(`testimonials.id_${info.id}.position`)}</p>
             </div>
             <div className='logo-section'>
               <IconButton
