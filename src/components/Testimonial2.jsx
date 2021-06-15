@@ -4,14 +4,15 @@ import profile3 from '../assets/social-img-3.jpg'
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCoverflow } from 'swiper/core'
-
+import { useTranslation } from 'react-i18next'
 import 'swiper/swiper.min.css'
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css'
 import 'swiper/components/pagination/pagination.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 import SwiperCore, { Pagination, Navigation } from 'swiper/core'
-const Testimonial2 = () => {
+const Testimonial2 = ({  info }) => {
   SwiperCore.use([EffectCoverflow, Pagination, Navigation])
+  const { t } = useTranslation()
   return (
     <Swiper
       breakpoints={{
@@ -42,63 +43,12 @@ const Testimonial2 = () => {
                       src={profile1}
                       alt='profile'
                     />
-                    <h3>Delbert Simonas</h3>
-                    <h4>CEO OF FAKE-NEWS</h4>
+                    <h3>{info.name}</h3>
+                    <h4>{t(`testimonials.id_${info.id}.position`)}</h4>
                   </div>
                   <div className='content'>
                     <p>
-                      "Online reviews can make or break a customer's decision to
-                      make a purchase. Read about these customer review on site"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='swiper-container'>
-            <div className='swiper-wrapper'>
-              <div className='swiper-slide'>
-                <div className='testimonialBox'>
-                  <div className='details'>
-                    <img
-                      className='profile-image'
-                      src={profile2}
-                      alt='profile'
-                    />
-                    <h3>Delbert Simonas</h3>
-                    <h4>CEO OF FAKE-NEWS</h4>
-                  </div>
-                  <div className='content'>
-                    <p>
-                      "Online reviews can make or break a customer's decision to
-                      make a purchase. Read about these customer review on site"
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='swiper-container'>
-            <div className='swiper-wrapper'>
-              <div className='swiper-slide'>
-                <div className='testimonialBox'>
-                  <div className='details'>
-                    <img
-                      className='profile-image'
-                      src={profile3}
-                      alt='profile'
-                    />
-                    <h3>Delbert Simonas</h3>
-                    <h4>CEO OF FAKE-NEWS</h4>
-                  </div>
-                  <div className='content'>
-                    <p>
-                      "Online reviews can make or break a customer's decision to
-                      make a purchase. Read about these customer review on site"
+                    {t(`testimonials.id_${info.id}.text`)}
                     </p>
                   </div>
                 </div>
