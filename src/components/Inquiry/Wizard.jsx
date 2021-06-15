@@ -11,16 +11,11 @@ import InquiryPeers from './InquiryPeers'
 import InquiryLocation from './InquiryLocation'
 import InquiryWorkingHours from './InquiryWorkingHours'
 import { useTranslation } from 'react-i18next'
-import store from '../../state/store/configureStore'
 
 const Wizard = () => {
-  const { submitMessage, formData, started } = useSelector((state) => state)
+  const { submitMessage, formData } = useSelector((state) => state)
   const [loading, setLoading] = useState(false)
   const { t } = useTranslation()
-
-  const start = () => {
-    store.dispatch({ type: 'START_WIZARD' })
-  }
 
   return (
     <div
@@ -28,12 +23,7 @@ const Wizard = () => {
       id='wizard-container'
       data-cy='wizard'
       tabindex='0'>
-      <div className='greeting-container' data-cy='sounds-good-btn'>
-        <Question hero text={t('question.greeting')} />
-        <CustomButton onClick={start}>{t('answer.interesting')}</CustomButton>
-      </div>
-
-      {started && <InquiryCompanySize />}
+      {<InquiryCompanySize />}
       {formData.size && <InquiryOfficeType />}
       {formData.office_type && <InquiryEmail />}
       {formData.email && <InquiryPeers />}

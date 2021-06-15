@@ -70,8 +70,6 @@ const se = {
     },
 
     question: {
-      greeting:
-        'Välkommen till Flex Coast! Låt oss hjälpa dig att hitta din drömarbetsyta genom att fylla i sex snabba frågor',
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',

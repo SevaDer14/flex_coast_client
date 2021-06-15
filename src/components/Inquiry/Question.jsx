@@ -11,12 +11,11 @@ const Question = ({ text, dataCy = 'question', hero }) => {
       {hero && (
         <>
           <em>Jens Østgaard</em>
-          <br />
-          <em>
-            <a href='https://www.linkedin.com/in/jensostgaard/'>
-              LinkedIn
-            </a>
-          </em>
+          <div>
+            <em>
+              <a href='https://www.linkedin.com/in/jensostgaard/'>LinkedIn</a>
+            </em>
+          </div>
         </>
       )}
     </>

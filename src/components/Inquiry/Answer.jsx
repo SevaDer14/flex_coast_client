@@ -42,7 +42,6 @@ const Answer = ({
 
   const scroll = () => {
     let container = document.getElementById('wizard-container')
-    // !first &&
     container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
   }
 

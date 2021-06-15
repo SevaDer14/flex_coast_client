@@ -17,7 +17,6 @@ const initialState = {
     flexible: false,
     phone: '',
   },
-  started: false,
   submitMessage: '',
   language: 'English',
 }

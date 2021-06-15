@@ -71,8 +71,6 @@ const en = {
     },
 
     question: {
-      greeting:
-        'Welcome to Flex Coast! Let us help you find your dream workspace by filling out 6 quick questions',
       email: 'Where can we reach you?',
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
