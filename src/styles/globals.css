@@ -485,7 +485,7 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .question-container p {
-  color: #333333;
+  color: #333;
   background-color: #61f7d2;
   font-size: 1.4rem;
   padding: 16px;
