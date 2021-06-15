@@ -6,7 +6,7 @@ const Inquiries = {
     setLoading(true)
     setTimeout(() => {
       return
-    }, 1000000000)
+    }, 500)
     try {
       let params = { inquiry: formData }
       let response = await axios.post('/inquiries', params)

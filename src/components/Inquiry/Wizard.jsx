@@ -23,7 +23,7 @@ const Wizard = () => {
       id='wizard-container'
       data-cy='wizard'
       tabindex='0'>
-      {<InquiryCompanySize />}
+      <InquiryCompanySize />
       {formData.size && <InquiryOfficeType />}
       {formData.office_type && <InquiryEmail />}
       {formData.email && <InquiryPeers />}
@@ -32,9 +32,7 @@ const Wizard = () => {
       {formData.flexible && <InquiryPhoneNumber />}
 
       {submitMessage ? (
-        <>
-          <Question dataCy='on-submit-message' text={submitMessage} />
-        </>
+        <Question dataCy='on-submit-message' text={submitMessage} />
       ) : (
         formData.phone && (
           <div className='submit-container'>
