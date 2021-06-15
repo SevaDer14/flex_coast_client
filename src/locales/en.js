@@ -1,10 +1,52 @@
+import { testimonials, persons } from '../assets/testimonials'
+
 const en = {
   translation: {
     landingPage: {
       introText: 'Flexible office spaces in beautiful Gothenburg',
       startButton: 'Get Started',
-      phoneCallUsText: 'Or if you want, just call us'
+      phoneCallUsText: 'Or if you want, just call us',
     },
+    testimonials: {
+      id_1: {
+        text: testimonials[0].review_en,
+        position: testimonials[0].position_en,
+      },
+      id_2: {
+        text: testimonials[1].review_en,
+        position: testimonials[1].position_en,
+      },
+      id_3: {
+        text: testimonials[2].review_en,
+        position: testimonials[2].position_en,
+      },
+    },
+
+    persons: {
+      id_0: {
+        text: persons[0].text_en,
+        position: persons[0].position_en,
+      },
+      id_1: {
+        text: persons[1].text_en,
+        position: persons[1].position_en,
+      },
+      id_2: {
+        text: persons[2].text_en,
+        position: persons[2].position_en,
+      },
+      id_3: {
+        text: persons[3].text_en,
+        position: persons[3].position_en,
+      },
+      id_4: {
+        text: persons[4].text_en,
+        position: persons[4].position_en,
+      },
+    },
+
+    pitchMessage:
+      'Your focus is to build an awesome company. Our focus is to find the best office for you and your team.',
 
     compellingText:
       ' Hey there! If you are looking for leasing flexible short term offices in Gothenburg you have found the right place. Maybe you just started up a new company or you just need some temporary office space to work in?',
@@ -15,6 +57,7 @@ const en = {
       subHeader3: 'Find Us',
       aboutUsText:
         'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+      startButton: 'Get Started',
     },
 
     fantasticOffer: {
