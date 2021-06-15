@@ -1,4 +1,4 @@
-import { testimonials } from '../assets/testimonials'
+import { testimonials, persons } from '../assets/testimonials'
 
 const en = {
   translation: {
@@ -17,6 +17,29 @@ const en = {
       id_3: {
         text: testimonials[2].review_en,
         position: testimonials[2].position_en,
+      },
+    },
+
+    persons: {
+      id_0: {
+        text: persons[0].text_en,
+        position: persons[0].position_en,
+      },
+      id_1: {
+        text: persons[1].text_en,
+        position: persons[1].position_en,
+      },
+      id_2: {
+        text: persons[2].text_en,
+        position: persons[2].position_en,
+      },
+      id_3: {
+        text: persons[3].text_en,
+        position: persons[3].position_en,
+      },
+      id_4: {
+        text: persons[4].text_en,
+        position: persons[4].position_en,
       },
     },
 

@@ -1,4 +1,7 @@
 import logoPlaceholder from './logoPlaceholder.png'
+import profile1 from '../assets/social-img-1.jpg'
+import profile2 from '../assets/social-img-2.jpg'
+import profile3 from '../assets/social-img-3.jpg'
 
 export const testimonials = [
   {
@@ -45,6 +48,7 @@ export const persons = [
     position_en: 'CEO of MK',
     position_se: 'CEO av MK',
     logo: logoPlaceholder,
+    image: profile1
   },
   { id: 2,
     text_en: 'EN-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -53,6 +57,7 @@ export const persons = [
     position_en: 'CEO of Lenvovo',
     position_se: 'CEO av Lenvovo',
     logo: logoPlaceholder,
+    image: profile3
   },
   { id:3,
     text_en: 'EN-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -61,6 +66,7 @@ export const persons = [
     position_en: 'Chief Editor at Some News',
     position_se: 'Chefredaktör av Some News',
     logo: logoPlaceholder,
+    image: profile1
   },
   { id: 4,
     text_en: 'EN-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -69,6 +75,7 @@ export const persons = [
     position_en: 'Chief Editor at Some News',
     position_se: 'Chefredaktör av Some News',
     logo: logoPlaceholder,
+    image: profile2
   },
   { id: 5,
     text_en: 'EN-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -77,5 +84,6 @@ export const persons = [
     position_en: 'Chief Editor at Some News',
     position_se: 'Chefredaktör av Some News',
     logo: logoPlaceholder,
+    image: profile3
   },
 ]

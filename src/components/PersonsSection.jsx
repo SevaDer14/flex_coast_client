@@ -1,8 +1,4 @@
-import profile1 from '../assets/social-img-1.jpg'
-import profile2 from '../assets/social-img-2.jpg'
-import profile3 from '../assets/social-img-3.jpg'
 import React from 'react'
-import PersonCard from './PersonCard'
 import { persons } from '../assets/testimonials'
 import { useTranslation } from 'react-i18next'
 import SwiperCore, { Pagination, Navigation } from 'swiper/core'
@@ -15,6 +11,27 @@ import 'swiper/components/navigation/navigation.min.css'
 
 const PersonsSection = () => {
   const { t } = useTranslation()
+
+  const listOfPersonCards = persons.map((person, index) => (
+    <SwiperSlide>
+      <div className='swiper-container'>
+        <div className='swiper-wrapper'>
+          <div className='swiper-slide'>
+            <div className='testimonialBox'>
+              <div className='details'>
+                <img className='profile-image' src={person.image} alt='profile' />
+                <h3>{person.name}</h3>
+                <h4>{t(`persons.id_${index}.position`)}</h4>
+              </div>
+              <div className='content'>
+                <p>{t(`persons.id_${index}.text`)}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))
 
   SwiperCore.use([EffectCoverflow, Pagination, Navigation])
   return (
@@ -38,7 +55,7 @@ const PersonsSection = () => {
           loop={true}
           className='pagination'>
           <section>
-            <PersonCard image={profile1} />
+            {listOfPersonCards}
           </section>
         </Swiper>
       </div>

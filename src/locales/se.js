@@ -1,4 +1,4 @@
-import { testimonials } from '../assets/testimonials'
+import { testimonials, persons } from '../assets/testimonials'
 const se = {
   translation: {
     landingPage: {
@@ -16,6 +16,29 @@ const se = {
       id_3: {
         text: testimonials[2].review_se,
         position: testimonials[2].position_se,
+      },
+    },
+
+    persons: {
+      id_0: {
+        text: persons[0].text_se,
+        position: persons[0].position_se,
+      },
+      id_1: {
+        text: persons[1].text_se,
+        position: persons[1].position_se,
+      },
+      id_2: {
+        text: persons[2].text_se,
+        position: persons[2].position_se,
+      },
+      id_3: {
+        text: persons[3].text_se,
+        position: persons[3].position_se,
+      },
+      id_4: {
+        text: persons[4].text_se,
+        position: persons[4].position_se,
       },
     },
 
