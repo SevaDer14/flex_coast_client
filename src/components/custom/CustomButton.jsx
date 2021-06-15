@@ -7,6 +7,7 @@ const CustomButton = ({
   submit = false,
   onClick,
   loading = false,
+  color,
 }) => {
   const scroll = () => {
     let container = document.getElementById('wizard-container')

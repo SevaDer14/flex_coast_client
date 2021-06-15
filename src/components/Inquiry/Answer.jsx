@@ -6,6 +6,7 @@ import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
 
 const Answer = ({
+  first,
   text,
   type,
   placeholder,
@@ -39,11 +40,13 @@ const Answer = ({
 
   const scroll = () => {
     let container = document.getElementById('wizard-container')
-    container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
+    // !first &&
+      container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
   }
 
   useEffect(() => {
     scroll()
+    // eslint-disable-next-line
   }, [])
 
   const chooseInputType = (type) => {
