@@ -16,6 +16,7 @@ describe('User can send inquiry', () => {
     it('is expected to display success message', () => {
       cy.get('[data-cy=submit-btn]').should('not.exist')
       cy.get('[data-cy=wizard]').within(() => {
+        cy.get('[data-cy=sounds-good-btn]').find('button').click()
         cy.get('[data-cy=company-size-container]').within(() => {
           cy.get('[data-cy=question]').should(
             'contain',
@@ -99,7 +100,7 @@ describe('User can send inquiry', () => {
         peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
         flexible: 'mixed',
-        phone: '0713371337'
+        phone: '0713371337',
       }
       cy.window()
         .its('store')

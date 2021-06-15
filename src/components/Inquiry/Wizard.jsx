@@ -28,7 +28,7 @@ const Wizard = () => {
       id='wizard-container'
       data-cy='wizard'
       tabindex='0'>
-      <div className='greeting-container'>
+      <div className='greeting-container' data-cy='sounds-good-btn'>
         <Question hero text={t('question.greeting')} />
         <CustomButton onClick={start}>{t('answer.interesting')}</CustomButton>
       </div>
