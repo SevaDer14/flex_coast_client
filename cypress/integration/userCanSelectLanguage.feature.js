@@ -1,4 +1,7 @@
+
+
 describe('User can switch between languages', () => {
+  
   beforeEach(() => {
     cy.visit('/')
   })
@@ -151,5 +154,83 @@ describe('User can switch between languages', () => {
         'Chief Editor at Some News'
       )
     })
+  })
+  it('is expected to translate persons cards', () => {
+    cy.get('[data-cy=language-dropdown]').click()
+    cy.get('[data-cy=svenska]').click()
+    cy.get('[data-cy=person-0-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'SE-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'CEO av MK'
+      )
+    })
+    cy.get('[data-cy=person-1-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'SE-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'CEO av Lenvovo'
+      )
+    })
+    cy.get('[data-cy=person-2-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'SE-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'Chefredaktör av Some News'
+      )
+    })
+    cy.get('[data-cy=person-3-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'SE-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'Chefredaktör av Some News'
+      )
+    })
+    cy.get('[data-cy=person-4-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'SE-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'Chefredaktör av Some News'
+      )
+    })
+
+    cy.get('[data-cy=language-dropdown]').click()
+    cy.get('[data-cy=english]').click()
+    cy.get('[data-cy=person-0-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'EN-1 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'CEO of MK'
+      )
+    })
+    cy.get('[data-cy=person-1-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'EN-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'CEO of Lenvovo'
+      )
+    })
+    cy.get('[data-cy=person-2-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'EN-3 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'Chief Editor at Some News'
+      )
+    })
+    cy.get('[data-cy=person-3-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'EN-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'Chief Editor at Some News'
+      )
+    })
+    cy.get('[data-cy=person-4-container]').within(() => {
+      cy.get('[data-cy=person-text]').should('contain', 'EN-5 Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+      cy.get('[data-cy=person-position]').should(
+        'contain',
+        'Chief Editor at Some News'
+      )
+    })
+
   })
 })

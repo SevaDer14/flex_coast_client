@@ -13,18 +13,24 @@ const PersonsSection = () => {
   const { t } = useTranslation()
 
   const listOfPersonCards = persons.map((person, index) => (
-    <SwiperSlide>
+    <SwiperSlide data-cy={`person-${index}-container`}>
       <div className='swiper-container'>
         <div className='swiper-wrapper'>
           <div className='swiper-slide'>
             <div className='testimonialBox'>
               <div className='details'>
-                <img className='profile-image' src={person.image} alt='profile' />
+                <img
+                  className='profile-image'
+                  src={person.image}
+                  alt='profile'
+                />
                 <h3>{person.name}</h3>
-                <h4>{t(`persons.id_${index}.position`)}</h4>
+                <h4 data-cy='person-position'>
+                  {t(`persons.id_${index}.position`)}
+                </h4>
               </div>
               <div className='content'>
-                <p>{t(`persons.id_${index}.text`)}</p>
+                <p data-cy='person-text'>{t(`persons.id_${index}.text`)}</p>
               </div>
             </div>
           </div>
@@ -54,9 +60,7 @@ const PersonsSection = () => {
           pagination={true}
           loop={true}
           className='pagination'>
-          <section>
-            {listOfPersonCards}
-          </section>
+          <section>{listOfPersonCards}</section>
         </Swiper>
       </div>
     </>
