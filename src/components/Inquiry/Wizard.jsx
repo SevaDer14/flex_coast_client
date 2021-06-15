@@ -6,7 +6,7 @@ import Inquiries from '../../modules/Inquiries'
 import InquiryEmail from './InquiryEmail'
 import InquiryCompanySize from './InquiryCompanySize'
 import InquiryOfficeType from './InquiryOfficeType'
-import InquiryCompanyName from './InquiryCompanyName'
+import InquiryPhoneNumber from './InquiryPhoneNumber'
 import InquiryPeers from './InquiryPeers'
 import InquiryLocation from './InquiryLocation'
 import InquiryWorkingHours from './InquiryWorkingHours'
@@ -21,16 +21,17 @@ const Wizard = () => {
       <InquiryCompanySize />
       {formData.size && <InquiryOfficeType />}
       {formData.office_type && <InquiryEmail />}
-      {formData.email && <InquiryCompanyName />}
-      {formData.company && <InquiryPeers />}
+      {formData.email && <InquiryPeers />}
       {formData.peers && <InquiryLocation />}
       {formData.locations[0] && <InquiryWorkingHours />}
+      {formData.flexible && <InquiryPhoneNumber />}
+
       {submitMessage ? (
         <>
           <Question dataCy='on-submit-message' text={submitMessage} />
         </>
       ) : (
-        formData.flexible && (
+        formData.phone && (
           <div className='submit-container'>
             <CustomButton
               submit

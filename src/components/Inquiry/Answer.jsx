@@ -4,15 +4,8 @@ import CustomIconButton from '../custom/CustomIconButton'
 import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
-const Answer = ({
-  text,
-  type,
-  placeholder,
-  questionKey,
-  labels,
-  dataCys,
-  values,
-}) => {
+
+const Answer = ({ text, type, placeholder, questionKey, radioData }) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   )
@@ -52,10 +45,8 @@ const Answer = ({
         return (
           <CustomRadioButton
             disabled={filled}
-            radio_value={inputValue}
-            values={values}
-            labels={labels}
-            dataCys={dataCys}
+            inputValue={inputValue}
+            data={radioData}
             onChange={(event) => {
               setInputValue(event.target.value)
             }}

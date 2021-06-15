@@ -3,11 +3,11 @@ import Question from './Question'
 import Answer from './Answer'
 import { useTranslation } from 'react-i18next'
 
-const InquiryCompanyName = () => {
+const PhoneNumber = () => {
   const { t } = useTranslation()
 
   return (
-    <div data-cy='company-name-container'>
+    <div data-cy='phone-number-container'>
       <Question text={t('question.name')} />
       <Answer
         text={t('answer.name')}
@@ -19,4 +19,4 @@ const InquiryCompanyName = () => {
   )
 }
 
-export default InquiryCompanyName
+export default PhoneNumber
