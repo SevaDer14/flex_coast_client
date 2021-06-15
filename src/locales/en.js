@@ -42,6 +42,7 @@ const en = {
       workingHours: 'Do you plan to work full-time or flexible hours?',
     },
     answer: {
+      interesting: 'Sounds interesting!',
       email: 'My email is ',
       size: 'We are a group of ',
       officeType: 'We need an ',

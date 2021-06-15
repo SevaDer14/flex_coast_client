@@ -30,7 +30,7 @@ const Wizard = () => {
       tabindex='0'>
       <div className='greeting-container'>
         <Question hero text={t('question.greeting')} />
-        <CustomButton onClick={start}>Sounds interesting!</CustomButton>
+        <CustomButton onClick={start}>{t('answer.interesting')}</CustomButton>
       </div>
 
       {started && <InquiryCompanySize />}

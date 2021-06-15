@@ -30,11 +30,12 @@ const se = {
       'Hej! För att att hitta bästa möjliga kontor, behöver vi ställa lite frågor.',
 
     question: {
+      greeting:
+        'Välkommen till Flex Coast! Låt oss hjälpa dig att hitta din drömarbetsyta genom att fylla i sex snabba frågor',
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
-      phone:
-        'Finally, please provide your number so that we can easily reach you.',
+      phone: 'Slutligen ange ditt nummer så att vi enkelt kan nå dig.',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
       workingHours:
@@ -42,6 +43,7 @@ const se = {
     },
 
     answer: {
+      interesting: 'Låter bra!',
       email: 'Min email är ',
       size: 'Vi är en grupp av ',
       officeType: 'Vi behöver ',

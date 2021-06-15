@@ -41,7 +41,7 @@ const Answer = ({
   const scroll = () => {
     let container = document.getElementById('wizard-container')
     // !first &&
-      container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
+    container.scrollBy({ top: container.offsetHeight, behavior: 'smooth' })
   }
 
   useEffect(() => {
@@ -78,6 +78,7 @@ const Answer = ({
             data-cy='input'
             type={type}
             id='input'
+            onWheel={(event) => event.currentTarget.blur()}
             value={inputValue}
             required
             onChange={(event) => {

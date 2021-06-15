@@ -470,7 +470,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .greeting-container em {
   font-size: 14px;
-  margin-left: 25px;
+  margin-left: 5px;
 }
 
 .greeting-container em a {

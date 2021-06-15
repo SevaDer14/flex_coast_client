@@ -10,10 +10,10 @@ const Question = ({ text, dataCy = 'question', hero }) => {
       </div>
       {hero && (
         <>
-          <em>Jens Østergaard</em>
+          <em>Jens Østgaard</em>
           <br />
           <em>
-            <a href='https://www.linkedin.com/search/results/people/?keywords=jens%20%C3%B8stergaard%20brand&origin=CLUSTER_EXPANSION'>
+            <a href='https://www.linkedin.com/in/jensostgaard/'>
               LinkedIn
             </a>
           </em>
