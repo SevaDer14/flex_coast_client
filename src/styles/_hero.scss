@@ -74,14 +74,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130px; 
+    height: 130px;
     flex-direction: column;
+
     @media (min-width: $mobile) {
       display: none;
     }
-    
+
     p {
-      margin-bottom: 15px;
+      text-align: center;
+      margin: 15px 0;
       color: #fff;
       font-weight: bolder;
       font-size: 26px;
