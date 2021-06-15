@@ -769,6 +769,14 @@ input[type='number']::-webkit-outer-spin-button {
   fill: #61f7d2;
 }
 
+input.phone {
+  width: 250px !important;
+}
+
+.MuiCircularProgress-svg {
+  color: #fff;
+}
+
 .illu-container {
   padding: 75px 25px 0 25px;
   max-width: 1280px;

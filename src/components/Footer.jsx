@@ -14,9 +14,9 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
-    });
-  };
+      behavior: 'smooth',
+    })
+  }
 
   return (
     <Grid data-cy='footer' id='footer' container alignItems='center'>
@@ -42,7 +42,7 @@ const Footer = () => {
           xs={12}
           sm={4}>
           <h3>{t('footer.subHeader2')}</h3>
-          <CustomButton dataCy='phone-number'>
+          <CustomButton dataCy='phone-question'>
             <a href='tel:+46812345678'>08-123 456 78</a>
           </CustomButton>
           <CustomButton dataCy='get-started' onClick={scrollToTop}>

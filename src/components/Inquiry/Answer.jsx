@@ -5,7 +5,14 @@ import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
 
-const Answer = ({ text, type, placeholder, questionKey, radioData }) => {
+const Answer = ({
+  text,
+  type,
+  placeholder,
+  questionKey,
+  radioData,
+  className,
+}) => {
   const [inputValue, setInputValue] = useState(
     store.getState().formData[questionKey]
   )
@@ -63,7 +70,7 @@ const Answer = ({ text, type, placeholder, questionKey, radioData }) => {
       default:
         return (
           <input
-            className={'input'}
+            className={`input ${className}`}
             disabled={filled}
             data-cy='input'
             type={type}

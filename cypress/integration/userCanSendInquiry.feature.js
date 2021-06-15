@@ -54,8 +54,7 @@ describe('User can send inquiry', () => {
         )
         cy.get('[data-cy=positive-label]').should('be.visible')
         cy.get('[data-cy=negative-label]').should('be.visible')
-        cy.get('[data-cy=mixed-label]').should('be.visible')
-        cy.get('[data-cy=mixed-btn]').click({ force: true })
+        cy.get('[data-cy=positive-btn]').click({ force: true })
         cy.get('[data-cy=done-btn]').click()
       })
       cy.get('[data-cy=location-question-container]').within(() => {
@@ -79,7 +78,17 @@ describe('User can send inquiry', () => {
         )
         cy.get('[data-cy=full-time-label]').should('be.visible')
         cy.get('[data-cy=flexible-label]').should('be.visible')
-        cy.get('[data-cy=flexible-btn]').click({ force: true })
+        cy.get('[data-cy=mixed-label]').should('be.visible')
+        cy.get('[data-cy=mixed-btn]').click({ force: true })
+        cy.get('[data-cy=done-btn]').click()
+      })
+
+      cy.get('[data-cy=phone-question-container]').within(() => {
+        cy.get('[data-cy=question]').should(
+          'contain',
+          'Finally, please provide your number so that we can easily reach you.'
+        )
+        cy.get('[data-cy=input]').type('0713371337')
         cy.get('[data-cy=done-btn]').click()
       })
 
@@ -87,9 +96,10 @@ describe('User can send inquiry', () => {
         size: '100',
         office_type: 'combined',
         email: 'example@mail.com',
-        peers: 'Yes',
+        peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
         flexible: 'mixed',
+        phone: '0713371337'
       }
       cy.window()
         .its('store')

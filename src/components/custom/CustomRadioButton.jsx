@@ -5,7 +5,7 @@ const CustomRadioButton = ({ data, disabled, onChange, inputValue }) => {
     <div className='radio-group'>
       {data.map((item) => {
         return (
-          <>
+          <div key={item.label} style={{ display: 'inline' }}>
             <input
               disabled={disabled}
               type='radio'
@@ -20,7 +20,7 @@ const CustomRadioButton = ({ data, disabled, onChange, inputValue }) => {
             <label data-cy={`${item.dataCy}-label`} for={item.dataCy}>
               {item.label}
             </label>
-          </>
+          </div>
         )
       })}
       {/* <input

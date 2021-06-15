@@ -27,7 +27,7 @@ const LandingHeader = ({ landing }) => {
             open={open}
             onClose={() => setOpen(false)}>
             <>
-              <CustomButton dataCy='phone-number'>
+              <CustomButton dataCy='phone-question'>
                 <a href='tel:+46812345678'>08-123 456 78</a>
               </CustomButton>
               <LanguageSelect setOpen={() => setOpen()} />
@@ -36,7 +36,7 @@ const LandingHeader = ({ landing }) => {
         </div>
       ) : (
         <div className='menu-wrapper'>
-          <CustomButton dataCy='phone-number'>
+          <CustomButton dataCy='phone-question'>
             <a href='tel:+46812345678'>08-123 456 78</a>
           </CustomButton>
           <LanguageSelect />

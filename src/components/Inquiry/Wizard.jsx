@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useSelector } from 'react-redux'
 import Question from './Question'
 import CustomButton from '../custom/CustomButton'
@@ -14,6 +14,7 @@ import { useTranslation } from 'react-i18next'
 
 const Wizard = () => {
   const { submitMessage, formData } = useSelector((state) => state)
+  const [loading, setLoading] = useState(false)
   const { t } = useTranslation()
 
   return (
@@ -34,9 +35,10 @@ const Wizard = () => {
         formData.phone && (
           <div className='submit-container'>
             <CustomButton
+              loading={loading}
               submit
               dataCy='submit-btn'
-              onClick={() => Inquiries.create(formData)}>
+              onClick={() => Inquiries.create(formData, setLoading)}>
               {t('submitButton')}
             </CustomButton>
           </div>

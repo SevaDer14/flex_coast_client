@@ -33,7 +33,8 @@ const en = {
       email: 'Where can we reach you?',
       size: 'How big is your team?',
       officeType: 'What type of office are you looking for?',
-      name: 'What is the name of your company?',
+      phone:
+        'Finally, please provide your number so that we can easily reach you.',
       peers: 'Would you like to share office with others from your industry?',
       location: 'Where would you like to be situated?',
       workingHours: 'Do you plan to work full-time or flexible hours?',
@@ -45,8 +46,7 @@ const en = {
       officeLabel: 'Office',
       openSpaceLabel: 'Open space',
       combinedLabel: 'Combined',
-      name: 'It is called',
-      companyPlaceholder: 'MyCoolCompany',
+      phone: 'My number is',
       peersNegative: 'No',
       peersPositive: 'Yes',
       location: "We're interested in",
@@ -56,7 +56,7 @@ const en = {
       flexibleLabel: 'Flexible',
       mixedLabel: 'Mixed',
     },
-    submitButton: 'Submit',
+    submitButton: 'Send',
   },
 }
 

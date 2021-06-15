@@ -33,7 +33,8 @@ const se = {
       email: 'Hur kan vi kontakta dig?',
       size: 'Hur stort är ditt team?',
       officeType: 'Vilken typ av kontor letar du efter?',
-      name: 'Vad är namnet på erat företag?',
+      phone:
+        'Finally, please provide your number so that we can easily reach you.',
       peers: 'Vill du dela kontor med andra från din bransch?',
       location: 'Vilka områden är du intresserad av?',
       workingHours:
@@ -47,8 +48,7 @@ const se = {
       officeLabel: 'Kontor',
       openSpaceLabel: 'Öppet utrymme',
       combinedLabel: 'Kombinerad',
-      name: 'Det heter ',
-      companyPlaceholder: 'Flex Coast',
+      phone: 'Mitt nummer är',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
       location: 'Vi är intresserade av',

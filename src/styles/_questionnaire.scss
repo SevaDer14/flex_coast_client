@@ -207,7 +207,6 @@
 
 .location-question-container {
   .answer-form-container {
-
     display: flex;
     .rrs__multiselect-label__badge {
       margin-left: 15px;
@@ -273,7 +272,10 @@
     }
   }
 }
+input.phone {
+  width: 250px !important;
+}
 
-// .MuiCheckbox-colorSecondary.Mui-checked {
-//   color: $mainColor !important;
-// }
+.MuiCircularProgress-svg {
+  color: #fff;
+}

@@ -7,13 +7,14 @@ const PhoneNumber = () => {
   const { t } = useTranslation()
 
   return (
-    <div data-cy='phone-number-container'>
-      <Question text={t('question.name')} />
+    <div data-cy='phone-question-container'>
+      <Question text={t('question.phone')} />
       <Answer
-        text={t('answer.name')}
-        type='text'
-        placeholder={t('answer.companyPlaceholder')}
-        questionKey='company'
+        text={t('answer.phone')}
+        type='number'
+        placeholder='0712345678'
+        className='phone'
+        questionKey='phone'
       />
     </div>
   )
