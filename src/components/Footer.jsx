@@ -43,9 +43,9 @@ const Footer = () => {
           sm={4}>
           <h3 data-cy='footer-contact-header'>{t('footer.subHeader2')}</h3>
           <CustomButton dataCy='phone-number'>
-            <a href='tel:+46812345678'>08-123 456 78</a>
+            <a href='tel:+46812345678'>031-123 456 78</a>
           </CustomButton>
-          <CustomButton dataCy='get-started' link to='/inquiry'>
+          <CustomButton dataCy='get-started' onClick={scrollToTop}>
             {t('footer.startButton')}
           </CustomButton>
           <hr className='sub-hr' />
