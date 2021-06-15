@@ -78,7 +78,6 @@ const Answer = ({
             data-cy='input'
             type={type}
             id='input'
-            onWheel={(event) => event.currentTarget.blur()}
             value={inputValue}
             required
             onChange={(event) => {
