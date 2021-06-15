@@ -14,7 +14,6 @@ const InquiryCompanySize = () => {
         type='number'
         placeholder='5'
         questionKey='size'
-        data-section="company-size"
       />
     </div>
   )
