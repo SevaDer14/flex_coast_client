@@ -10,6 +10,14 @@ import IconButton from '@material-ui/core/IconButton'
 
 const Footer = () => {
   const { t } = useTranslation()
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <Grid data-cy='footer' id='footer' container alignItems='center'>
       <Grid className='footer-header' item xs={12}>
