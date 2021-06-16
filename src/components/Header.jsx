@@ -3,6 +3,7 @@ import LanguageSelect from './LanguageSelect'
 import logo from '../assets/logo.svg'
 import CustomButton from './custom/CustomButton'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
+import ahoy from '../modules/analytics'
 
 const LandingHeader = ({ landing }) => {
   const isSmall = useMediaQuery('(max-width:620px)')

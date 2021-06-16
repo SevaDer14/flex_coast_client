@@ -1,6 +1,6 @@
 import axios from 'axios'
 import store from '../state/store/configureStore'
-import ahoy from '../../modules/analytics'
+import ahoy from '../modules/analytics'
 
 const Inquiries = {
   async create(formData, setLoading) {
@@ -16,7 +16,7 @@ const Inquiries = {
         type: 'SET_SUBMIT_MESSAGE',
         payload: response.data.message,
       })      
-      ahoy.track(`answer`, question: 'submit');
+      ahoy.track(`answer`, {question: 'submit'});
     } catch (error) {}
 
     setLoading(false)

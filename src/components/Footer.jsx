@@ -7,6 +7,7 @@ import InstagramIcon from '@material-ui/icons/Instagram'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import TwitterIcon from '@material-ui/icons/Twitter'
 import IconButton from '@material-ui/core/IconButton'
+import ahoy from '../modules/analytics'
 
 const Footer = () => {
   const { t } = useTranslation()
