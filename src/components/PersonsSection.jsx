@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import SwiperCore, { Pagination, Navigation } from 'swiper/core'
 import { EffectCoverflow } from 'swiper/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 import 'swiper/swiper.min.css'
 import 'swiper/components/effect-coverflow/effect-coverflow.min.css'
 import 'swiper/components/pagination/pagination.min.css'
@@ -11,6 +12,9 @@ import 'swiper/components/navigation/navigation.min.css'
 
 const PersonsSection = () => {
   const { t } = useTranslation()
+  const isPhone = useMediaQuery('(max-width:460px)')
+  const isTablet = useMediaQuery('(max-width:960px)')
+  const isBig = useMediaQuery('(max-width:1280px)')
 
   const listOfPersonCards = persons.map((person, index) => (
     <>
@@ -47,27 +51,16 @@ const PersonsSection = () => {
   SwiperCore.use([EffectCoverflow, Pagination, Navigation])
   return (
     <>
-      <div className='testimonials-container'>
+      <div className='testimonials-container-persons'>
         <Swiper
-          breakpoints={{
-            460: {
-              width: 460,
-              slidesPerView: 1,
-            },
-            720: {
-              slidesPerView: 1.5,
-            },
-            960: {
-              slidesPerView: 3,
-            },
-          }}
+          slidesPerView={isPhone ? 1 : isTablet ? 1.5 : isBig ? 2 : 4}
           spaceBetween={30}
           grabCursor={true}
           centeredSlides={true}
           navigation={true}
-          pagination={true}
           loop={true}
-          className='pagination'>
+          className='pagination'
+          >
           <section>{listOfPersonCards}</section>
         </Swiper>
       </div>
