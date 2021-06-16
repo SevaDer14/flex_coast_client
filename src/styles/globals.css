@@ -100,7 +100,7 @@
 }
 
 #footer {
-  background-color: #ddd;
+  background-color: #333;
   padding-top: 50px;
   width: 100%;
   padding-bottom: 50px;
@@ -321,7 +321,7 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 50px 0 0 0;
+    margin: 0;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -370,7 +370,7 @@ input[type='number']::-webkit-outer-spin-button {
     border-radius: 0;
   }
   .hero-section .welcome-text .wizard-container:focus-within {
-    max-height: 350px;
+    max-height: 250px;
   }
 }
 
@@ -381,7 +381,7 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 25px 0;
+  margin: 0 0;
 }
 
 .hero-section .welcome-text h1 {
@@ -394,7 +394,7 @@ input[type='number']::-webkit-outer-spin-button {
 @media only screen and (max-width: 620px) {
   .hero-section .welcome-text h1 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     font-size: 38px;
     padding: 20px;
   }
@@ -425,7 +425,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .hero-section .phone-number-button p {
   text-align: center;
-  margin: 15px 0;
+  margin: 10px 0;
   color: #fff;
   font-weight: bolder;
   font-size: 26px;
