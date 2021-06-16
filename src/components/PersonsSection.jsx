@@ -1,12 +1,10 @@
 import React from 'react'
 import { persons } from '../assets/testimonials'
 import { useTranslation } from 'react-i18next'
-import SwiperCore, { Pagination, Navigation } from 'swiper/core'
-import { EffectCoverflow } from 'swiper/core'
+import SwiperCore, { Pagination, Navigation,Autoplay } from 'swiper/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import 'swiper/swiper.min.css'
-import 'swiper/components/effect-coverflow/effect-coverflow.min.css'
 import 'swiper/components/pagination/pagination.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 
@@ -48,7 +46,7 @@ const PersonsSection = () => {
     </>
   ))
 
-  SwiperCore.use([EffectCoverflow, Pagination, Navigation])
+  SwiperCore.use([ Pagination, Navigation,Autoplay])
   return (
     <>
       <div className='testimonials-container-persons'>
@@ -59,6 +57,10 @@ const PersonsSection = () => {
           centeredSlides={true}
           navigation={true}
           loop={true}
+          autoplay={{
+            "delay": 4000,
+            "disableOnInteraction": false
+          }}
           className='pagination'
           >
           <section>{listOfPersonCards}</section>
