@@ -15,7 +15,8 @@ const LanguageSelect = ({ setOpen }) => {
   useEffect(() => {
     if (navigator.language.includes('sv')) {
       setLanguage('Svenska')
-      i18n.changeLanguage('Svenska')  
+    } else {
+      setLanguage('English')
     }
   }, [])
 
