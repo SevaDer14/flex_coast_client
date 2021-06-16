@@ -10,9 +10,10 @@ import 'swiper/components/navigation/navigation.min.css'
 
 const PersonsSection = () => {
   const { t } = useTranslation()
-  const isPhone = useMediaQuery('(max-width:460px)')
-  const isTablet = useMediaQuery('(max-width:960px)')
-  const isBig = useMediaQuery('(max-width:1280px)')
+  const isPhone = useMediaQuery('(max-width:620px)')
+  const isTablet = useMediaQuery('(max-width:1280px)')
+  const isBig = useMediaQuery('(max-width:1920px)')
+
 
   const listOfPersonCards = persons.map((person, index) => (
     <>
@@ -51,10 +52,9 @@ const PersonsSection = () => {
     <>
       <div className='testimonials-container-persons'>
         <Swiper
-          slidesPerView={isPhone ? 1 : isTablet ? 1.5 : isBig ? 2 : 4}
+          slidesPerView={isPhone ? 1 : isTablet ? 2 : isBig ? 4 : 6}
           spaceBetween={30}
           grabCursor={true}
-          centeredSlides={true}
           navigation={true}
           loop={true}
           autoplay={{
