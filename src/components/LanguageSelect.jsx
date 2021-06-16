@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
 import i18n from '../i18n'
+import { useEffect } from 'react'
 
 const LanguageSelect = ({ setOpen }) => {
   const [language, setLanguage] = useState(i18n.language)
@@ -10,6 +11,14 @@ const LanguageSelect = ({ setOpen }) => {
     i18n.changeLanguage(event.target.value)
     setOpen && setOpen(false)
   }
+
+  useEffect(() => {
+    if (navigator.language.includes('sv')) {
+      setLanguage('Svenska')
+      i18n.changeLanguage('Svenska')  
+    }
+  }, [])
+
   return (
     <Select
       data-cy='language-dropdown'
