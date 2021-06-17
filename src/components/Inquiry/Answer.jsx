@@ -5,10 +5,8 @@ import store from '../../state/store/configureStore'
 import CustomRadioButton from '../../components/custom/CustomRadioButton'
 import CustomSelectInput from '../custom/CustomSelectInput'
 import ahoy from '../../modules/analytics'
-import { motion } from 'framer-motion'
 
 const Answer = ({
-  first,
   text,
   type,
   placeholder,
@@ -97,14 +95,7 @@ const Answer = ({
     }
   }
   return (
-    <motion.div
-      className='answer-container'
-      initial={{ opacity: 0, x: -25 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{
-        duration: 1,
-        delay: 0.5,
-      }}>
+    <div className='answer-container'>
       <h3>{text}</h3>
       <form
         className='answer-form-container'
@@ -112,7 +103,7 @@ const Answer = ({
         {chooseInputType(type)}
         <CustomIconButton toggle={filled} />
       </form>
-    </motion.div>
+    </div>
   )
 }
 export default Answer

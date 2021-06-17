@@ -19,8 +19,9 @@ const Wizard = () => {
   const { t } = useTranslation()
 
   const containerVariants = {
-    initial: { opacity: 0, y: 25 },
-    animate: { opacity: 1, y: 0, transition: { delay: 2.7, duration: 0.8 } },
+    initial: { opacity: 0 },
+    animate: { opacity: 1, transition: { delay: 2.6, duration: 0.6 } },
+    exit: { opacity: 0, transition: { duration: 0.5 } },
   }
   const submitVariants = {
     initial: { opacity: 0, x: -25 },
@@ -28,38 +29,49 @@ const Wizard = () => {
   }
 
   return (
-    <motion.div
-      variants={containerVariants}
-      initial='initial'
-      animate='animate'
-      className='wizard-container'
-      id='wizard-container'
-      data-cy='wizard'
-      tabindex='0'>
-      <InquiryCompanySize />
-      {formData.size && <InquiryOfficeType />}
-      {formData.office_type && <InquiryEmail />}
-      {formData.email && <InquiryPeers />}
-      {formData.peers && <InquiryLocation />}
-      {formData.locations[0] && <InquiryWorkingHours />}
-      {formData.flexible && <InquiryPhoneNumber />}
-
+    <>
       {submitMessage ? (
-        <Question dataCy='on-submit-message' text={submitMessage} />
+        <motion.div
+          className='submit-message-container'
+          initial={{ opacity: 0, y: 25 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1, delay: 0.5 },
+          }}>
+          <Question dataCy='on-submit-message' text={submitMessage} />
+        </motion.div>
       ) : (
-        formData.phone && (
-          <motion.div className='submit-container' variants={submitVariants}>
-            <CustomButton
-              loading={loading}
-              submit
-              dataCy='submit-btn'
-              onClick={() => Inquiries.create(formData, setLoading)}>
-              {t('submitButton')}
-            </CustomButton>
-          </motion.div>
-        )
+        <motion.div
+          variants={containerVariants}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          className='wizard-container'
+          id='wizard-container'
+          data-cy='wizard'
+          tabindex='0'>
+          <InquiryCompanySize />
+          {formData.size && <InquiryOfficeType />}
+          {formData.office_type && <InquiryEmail />}
+          {formData.email && <InquiryPeers />}
+          {formData.peers && <InquiryLocation />}
+          {formData.locations[0] && <InquiryWorkingHours />}
+          {formData.flexible && <InquiryPhoneNumber />}
+          {formData.phone && (
+            <motion.div className='submit-container' variants={submitVariants}>
+              <CustomButton
+                loading={loading}
+                submit
+                dataCy='submit-btn'
+                onClick={() => Inquiries.create(formData, setLoading)}>
+                {t('submitButton')}
+              </CustomButton>
+            </motion.div>
+          )}
+        </motion.div>
       )}
-    </motion.div>
+    </>
   )
 }
 
