@@ -100,7 +100,7 @@ const en = {
       mixedLabel: 'Mixed',
       start_dateNow: 'ASAP',
       start_dateQuarter: 'In two month',
-      start_dateUnsure: 'Now Sure'
+      start_dateUnsure: 'Not Sure'
     },
     submitButton: 'Send',
   },
