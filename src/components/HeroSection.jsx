@@ -15,7 +15,7 @@ const HeroSection = () => {
           data-cy='welcome-message'
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.7, duration: 1 }}>
+          transition={{ delay: 0.5, duration: 1 }}>
           {t('landingPage.introText')}
         </motion.h1>
         <Wizard />
@@ -23,7 +23,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 3.4, duration: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
         className='phone-number-button'>
         <p>{t('landingPage.phoneCallUsText')}</p>
         <CustomButton dataCy='phone-number'>

@@ -13,7 +13,7 @@ const LandingHeader = ({ landing }) => {
     <motion.div
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 2.3, duration: 1 }}
+      transition={{ duration: 1 }}
       data-cy='header'
       className={landing ? 'page-header-landing' : 'page-header'}>
       <img src={logo} alt='logo' className='logo' data-cy='flex-coast' />
