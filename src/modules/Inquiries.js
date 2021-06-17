@@ -8,7 +8,6 @@ const Inquiries = {
     setLoading(true)
     try {
       let params = { inquiry: formData }
-      debugger
       await axios.post('/inquiries', params)
       store.dispatch({
         type: 'SET_SUBMIT_MESSAGE',

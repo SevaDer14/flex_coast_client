@@ -116,7 +116,7 @@ describe('User can send inquiry', () => {
       cy.get('[data-cy=wizard]').should('not.exist')
       cy.get('[data-cy=on-submit-message]').should(
         'contain',
-        'Thank you for your answers! I will get to work as soon as possible. Be in touch soon!'
+        'Thanks for your answers! We will get back to you as soon as possible with the best results!'
       )
     })
   })
