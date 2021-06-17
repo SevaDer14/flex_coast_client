@@ -20,11 +20,11 @@ const Wizard = () => {
 
   const containerVariants = {
     initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { delay: 0.8, duration: 0.6 } },
+    animate: { opacity: 1, transition: { delay: 0.5, duration: 0.6 } },
   }
   const submitVariants = {
     initial: { opacity: 0, x: -25 },
-    animate: { opacity: 1, x: 0, transition: { duration: 1, delay: 0.25 } },
+    animate: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.25 } },
   }
 
   return (
@@ -32,11 +32,11 @@ const Wizard = () => {
       {submitMessage ? (
         <motion.div
           className='submit-message-container'
-          initial={{ opacity: 0, y: 25 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{
             opacity: 1,
             y: 0,
-            transition: { duration: 1, delay: 0.5 },
+            transition: { duration: 0.5, delay: 0.5 },
           }}>
           <Question dataCy='on-submit-message' text={submitMessage} />
         </motion.div>

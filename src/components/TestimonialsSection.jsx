@@ -44,8 +44,8 @@ const TestimonialsSection = () => {
           initial={{ opacity: 0, x: 25 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{
-            delay: 1.8,
-            duration: 1,
+            delay: 1.3,
+            duration: 0.5,
           }}
           data-cy='pitch-message'>
           {t('pitchMessage')}
@@ -55,8 +55,8 @@ const TestimonialsSection = () => {
         initial={{ opacity: 0, x: 25 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{
-          delay: 1.8,
-          duration: 1,
+          delay: 1.3,
+          duration: 0.5,
         }}
         className='testimonials-container'>
         <Testimonial
