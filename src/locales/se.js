@@ -78,6 +78,7 @@ const se = {
       location: 'Vilka områden är du intresserad av?',
       workingHours:
         'Kommer ni jobba heltid på plats eller var lite mer flexibel?',
+      start_date: '/////////////////////////////'
     },
 
     answer: {
@@ -97,6 +98,9 @@ const se = {
       fullTimeLabel: 'Heltid',
       flexibleLabel: 'Flexibel',
       mixedLabel: 'En mix',
+      start_dateNow: 'ASAP',
+      start_dateQuarter: '////////////',
+      start_dateUnsure: '////////'
     },
     submitButton: 'Skicka in',
   },

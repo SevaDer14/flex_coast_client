@@ -116,6 +116,7 @@ describe('User can send inquiry', () => {
         peers: 'yes',
         locations: ['Lindholmen', 'Gamlestaden'],
         flexible: 'mixed',
+        start_date: 'now',
         phone: '0713371337',
       }
       cy.window()
