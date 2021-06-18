@@ -357,7 +357,7 @@ input[type='number']::-webkit-outer-spin-button {
   .hero-section .welcome-text #wizard-container {
     max-height: 260px;
     padding: 10px 10px;
-    margin: 0;
+    margin: 0 0 40px 0;
     border-radius: 0;
   }
   .hero-section .welcome-text #wizard-container:focus-within {
@@ -385,7 +385,7 @@ input[type='number']::-webkit-outer-spin-button {
 @media only screen and (max-width: 620px) {
   .hero-section .welcome-text h1 {
     text-align: center;
-    margin-bottom: 0;
+    margin: 75px 0;
     font-size: 38px;
     padding: 20px;
   }
@@ -393,37 +393,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 .hero-section .submit-message-container {
   width: 75%;
-}
-
-.hero-section .phone-number-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 130px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 620px) {
-  .hero-section .phone-number-button {
-    display: none;
-  }
-}
-
-.hero-section .phone-number-button p {
-  text-align: center;
-  margin: 10px 0;
-  color: #fff;
-  font-weight: bolder;
-  font-size: 26px;
 }
 
 .form-container {
@@ -481,8 +450,8 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
-    margin-bottom: 30px;
-    margin-right: 0;
+    margin: 0 0 30px 0;
+    padding: 0;
   }
 }
 
@@ -541,6 +510,7 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    padding: 0;
   }
   .answer-container .answer-form-container {
     width: 100%;
@@ -775,6 +745,18 @@ input[type='number']::-webkit-outer-spin-button {
   width: 300px;
   margin-right: 10px;
   color: #ffd09c;
+}
+
+.location-question-container .answer-form-container .rrs .rrs__button + .rrs__options {
+  top: auto;
+  bottom: 100%;
+}
+
+@media only screen and (max-width: 620px) {
+  .location-question-container .answer-form-container .rrs .rrs__button + .rrs__options {
+    top: 60px;
+    bottom: auto;
+  }
 }
 
 .location-question-container .answer-form-container .rrs__button {

@@ -37,8 +37,8 @@
   padding: 0 20px;
   @media only screen and (max-width: $mobile) {
     justify-content: left;
-    margin-bottom: 30px;
-    margin-right: 0;
+    margin: 0 0 30px 0;
+    padding: 0;
   }
 
   &.hero {
@@ -75,6 +75,7 @@
   @media only screen and (max-width: $mobile) {
     flex-direction: column;
     align-items: flex-end;
+    padding: 0;
 
     .answer-form-container {
       width: 100%;
@@ -215,7 +216,7 @@
         padding: 8px;
         font-size: 18px;
         margin: 6px 2px;
-      }      
+      }
     }
 
     .radio {
@@ -266,6 +267,15 @@
       width: 300px;
       margin-right: 10px;
       color: $secondaryColor;
+
+      .rrs__button + .rrs__options {
+        top: auto;
+        bottom: 100% ;
+        @media only screen and (max-width: $mobile) {
+          top: 60px;
+          bottom: auto;
+        }
+      }
     }
 
     .rrs__button {

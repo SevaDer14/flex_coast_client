@@ -88,7 +88,7 @@ const se = {
       officeType: '– Vi behöver ',
       officeLabel: 'Kontor',
       openSpaceLabel: 'Öppet utrymme',
-      combinedLabel: 'Kombinerad',
+      combinedLabel: 'Alla',
       phone: '– Mitt nummer är',
       peersNegative: 'Nej',
       peersPositive: 'Ja',
