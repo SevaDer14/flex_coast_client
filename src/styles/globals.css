@@ -374,8 +374,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .hero-section .welcome-text h1 {
-  padding: 20px 0 15px 10px;
-  line-height: 1.1;
+  padding: 30px 0 20px 10px;
+  line-height: 1.2;
   font-size: 55px;
   max-width: 800px;
 }
@@ -585,6 +585,10 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
+.answer-container .input[type=number], .answer-container .input-filled[type=number] {
+  font-size: 1.7rem;
+}
+
 .answer-container .input::before, .answer-container .input:disabled::before, .answer-container .input-filled::before {
   outline: none;
   border: none;
@@ -622,7 +626,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: #ffd09c;
 }
 
-.answer-container .input[type='number'], .answer-container .input-filled[type='number'] {
+.answer-container .input[type=number], .answer-container .input-filled[type=number] {
   width: 100px;
 }
 

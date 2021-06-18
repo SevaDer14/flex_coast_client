@@ -110,6 +110,10 @@
       margin-bottom: 10px;
     }
 
+    &[type=number] {
+      font-size: 1.7rem;
+    }
+
     &::before {
       outline: none;
       border: none;
