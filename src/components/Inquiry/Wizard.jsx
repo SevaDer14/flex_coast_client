@@ -42,6 +42,7 @@ const Wizard = () => {
         </motion.div>
       ) : (
         <motion.div
+          style={{ width: '100%' }}
           variants={containerVariants}
           initial='initial'
           animate='animate'
