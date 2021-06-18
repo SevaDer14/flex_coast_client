@@ -33,8 +33,12 @@
       color: $secondaryColor;
       text-decoration: none;
       font-size: 18px;
-      margin: 0 40px 0 40px;
+      margin: 0 100px 0 100px;
       padding: 0 20px 15px 20px;
+
+      @media (max-width: 600px) {
+        margin: 0 50px 0 50px;
+      }
     }
 
     .footer-link a,
