@@ -33,7 +33,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 50px auto;
   max-width: 1280px;
   text-align: center;
 }
@@ -44,7 +44,7 @@
 }
 
 .compelling-container .offer-title h2 {
-  margin: 0;
+  margin: 10px;
   color: #ff9bee;
 }
 
@@ -91,6 +91,12 @@
 @media (max-width: 1000px) {
   .compelling-container .offer-container .offer {
     padding: 10px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .compelling-container .offer-container .offer {
+    margin-bottom: 50px;
   }
 }
 
