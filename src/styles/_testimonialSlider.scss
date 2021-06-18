@@ -53,9 +53,6 @@
   .bg-2 {
     background-image: $bg-image2;
   }
-  .bg-3 {
-    background-image: $bg-image3;
-  }
 
   .slider-container {
     position: absolute;
@@ -89,16 +86,15 @@
       background-position: center;
     }
     .person-1 {
-      background-image: $person2;
+      background-image: $leif;
     }
     .person-2 {
-      background-image: $person1;
-    }
-    .person-3 {
-      background-image: $person3;
+      background-image: $matilda;
     }
     .info-container {
       display: flex;
+      justify-content: space-between;
+
       height: 60%;
       flex-direction: column;
 
@@ -155,6 +151,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-bottom: 15px;
         button {
           height: 40px;
           width: 40px;
