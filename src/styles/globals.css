@@ -1068,7 +1068,7 @@ section {
 }
 
 .testimonialBox h3, .testimonialBox-employee h3 {
-  color: #453d3d;
+  color: #333;
 }
 
 .testimonialBox-employee {
@@ -1083,7 +1083,7 @@ section {
 
 .swiper-container p {
   font-size: 20px;
-  color: #453d3d;
+  color: #333;
   margin: 0 50px;
 }
 
@@ -1094,7 +1094,7 @@ section {
 
 .swiper-container h4 {
   font-size: 20px;
-  color: #453d3d;
+  color: #333;
   margin-bottom: 10px;
 }
 

@@ -51,7 +51,7 @@ section {
   border: 5px solid #ddd;
   border-radius: 5px;
   h3 {
-    color: rgb(69, 61, 61);
+    color: $fontColor;
   }
   &-employee {
     @extend .testimonialBox;
@@ -65,7 +65,7 @@ section {
   height: 100%;
   p {
     font-size: 20px;
-    color: rgb(69, 61, 61);
+    color: $fontColor;
     margin: 0 50px
   }
   h3 {
@@ -74,7 +74,7 @@ section {
   }
   h4 {
     font-size: 20px;
-    color: rgb(69, 61, 61);
+    color: $fontColor;
     margin-bottom: 10px;
   }
   .content {
