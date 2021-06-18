@@ -139,6 +139,19 @@
       @extend .input;
       background-color: $secondaryColor;
       color: $fontColor;
+      &:hover {
+        background-color: $secondaryColor;
+        transform: none;
+        transition: none;
+        color: $fontColor;
+      }
+    }
+
+    &:hover {
+      background-color: $secondaryColorLowOpacity;
+      transform: translateY(-3px);
+      transition: all 0.3s;
+      color: $secondaryColor;
     }
 
     &-filled {
@@ -202,6 +215,14 @@
         padding: 8px;
         font-size: 18px;
         margin: 6px 2px;
+      }      
+    }
+
+    .radio {
+      &:hover {
+        background-color: $secondaryColorLowOpacity;
+        transform: translateY(-5px);
+        transition: 300ms;
       }
     }
 

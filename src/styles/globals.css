@@ -639,6 +639,24 @@ input[type='number']::-webkit-outer-spin-button {
   color: #333;
 }
 
+.answer-container .input:disabled:hover, .answer-container .input-filled:disabled:hover {
+  background-color: #ffd09c;
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
+  color: #333;
+}
+
+.answer-container .input:hover, .answer-container .input-filled:hover {
+  background-color: rgba(255, 208, 156, 0.1);
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #ffd09c;
+}
+
 .answer-container .input-filled {
   background-color: #ffd09c;
   color: #333;
@@ -706,6 +724,14 @@ input[type='number']::-webkit-outer-spin-button {
     font-size: 18px;
     margin: 6px 2px;
   }
+}
+
+.answer-container .radio-group .radio:hover {
+  background-color: rgba(255, 208, 156, 0.1);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .answer-container .radio-group input[type='radio']:checked + label {
