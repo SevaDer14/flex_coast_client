@@ -103,6 +103,7 @@ const se = {
       start_dateUnsure: 'Osäker'
     },
     submitButton: 'Skicka in',
+    submitMessage: 'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!'
   },
 }
 
