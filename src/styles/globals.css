@@ -111,8 +111,9 @@
 }
 
 .compelling-container .offer-container .offer p {
+  text-align: center;
   font-size: 17px;
-  padding: 0 30px;
+  padding: 0 50px;
 }
 
 #footer {
