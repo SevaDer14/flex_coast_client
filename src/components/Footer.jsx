@@ -28,7 +28,7 @@ const Footer = () => {
           className='logo'
           data-cy='flex-coast-white'
         />
-        <hr className='top-hr' />
+        <hr className='sub-hr' />
       </Grid>
       <Grid data-cy='footer-categories' container alignItems='flex-start'>
         <Grid data-cy='footer-about' className='sub-header' item sm={4}>

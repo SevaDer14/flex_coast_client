@@ -7,21 +7,22 @@
   padding-bottom: 50px;
 
   .footer-header {
-    font-size: 20px;
-    color: #fff;
     text-align: center;
     margin: 0 0 20px 0;
   }
-  .top-hr {
+
+  .sub-hr {
     border: none;
-    height: 2px;
-    background-color: $secondaryColor;
+    height: 1px;
+    background-color: rgba(223, 183, 130, 0.124);
     text-align: center;
-    margin: 0 5%;
+    margin: 10px 5%;
+    @media (min-width: 599px) {
+      display: none;
+    }
   }
 
   .sub-header {
-    color: #fff;
     text-align: center;
     padding-bottom: 30px;
     h3 {
@@ -46,16 +47,6 @@
       font-size: 18px;
     }
 
-    .sub-hr {
-      border: none;
-      height: 2px;
-      background-color: $secondaryColor;
-      text-align: center;
-      margin: 10px 5%;
-      @media (min-width: 599px) {
-        display: none;
-      }
-    }
     .custom-button {
       background-color: $secondaryColor;
       color: $fontColor;
