@@ -152,6 +152,12 @@
   padding: 0 20px 15px 20px;
 }
 
+@media (max-width: 1000px) {
+  #footer .sub-header .footer-text {
+    margin: 0 20px 0 20px;
+  }
+}
+
 @media (max-width: 600px) {
   #footer .sub-header .footer-text {
     margin: 0 50px 0 50px;
