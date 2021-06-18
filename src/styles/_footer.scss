@@ -69,6 +69,10 @@
     .icon {
       color: $secondaryColor !important;
       margin: 10px;
+      &:hover {
+        opacity: 0.7;
+        transform: none;
+      }
     }
   }
   .logo {

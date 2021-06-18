@@ -193,6 +193,12 @@
   margin: 10px;
 }
 
+#footer .sub-header .icon:hover, #footer .sub-header .answer-container .done-btn .icon-filled:hover, .answer-container .done-btn #footer .sub-header .icon-filled:hover, #footer .sub-header .answer-container .done-btn-filled .icon-filled:hover, .answer-container .done-btn-filled #footer .sub-header .icon-filled:hover {
+  opacity: 0.7;
+  -webkit-transform: none;
+          transform: none;
+}
+
 #footer .logo {
   height: 120px;
   color: #ffd09c;
