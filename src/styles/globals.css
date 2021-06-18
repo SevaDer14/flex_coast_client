@@ -88,6 +88,12 @@
   margin-bottom: 150px;
 }
 
+@media (max-width: 1000px) {
+  .compelling-container .offer-container .offer {
+    padding: 10px 10px;
+  }
+}
+
 .compelling-container .offer-container .offer img {
   height: 120px;
 }
