@@ -254,6 +254,8 @@
 
 .page-header-landing .menu-wrapper .MuiSelect-select {
   color: white;
+  font-size: 18px;
+  padding-bottom: 0;
 }
 
 .page-header-landing .dropdown-menu button:first-of-type {
@@ -467,10 +469,11 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .question-container {
-  margin: 20px 50px 50px 0;
+  margin: 30px 50px 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -500,7 +503,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: #333;
   background-color: #61f7d2;
   font-size: 1.4rem;
-  padding: 16px;
+  padding: 16px 32px;
   border-radius: 10px;
 }
 
@@ -519,13 +522,14 @@ input[type='number']::-webkit-outer-spin-button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 0 20px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 620px) {
@@ -585,7 +589,7 @@ input[type='number']::-webkit-outer-spin-button {
   }
 }
 
-.answer-container .input[type=number], .answer-container .input-filled[type=number] {
+.answer-container .input[type='number'], .answer-container .input-filled[type='number'] {
   font-size: 1.7rem;
 }
 
@@ -626,7 +630,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: #ffd09c;
 }
 
-.answer-container .input[type=number], .answer-container .input-filled[type=number] {
+.answer-container .input[type='number'], .answer-container .input-filled[type='number'] {
   width: 100px;
 }
 

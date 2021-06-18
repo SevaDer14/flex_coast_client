@@ -32,8 +32,9 @@
 }
 
 .question-container {
-  margin: 20px 50px 50px 0;
+  margin: 30px 50px 40px 0;
   display: flex;
+  padding: 0 20px;
   @media only screen and (max-width: $mobile) {
     justify-content: left;
     margin-bottom: 30px;
@@ -55,7 +56,7 @@
     color: $fontColor;
     background-color: $mainColor;
     font-size: 1.4rem;
-    padding: 16px;
+    padding: 16px 32px;
     border-radius: $borderRadius;
     @media only screen and (max-width: $mobile) {
       font-size: 18px;
@@ -67,9 +68,10 @@
 .answer-container {
   display: flex;
   flex-direction: row;
+  padding: 0 20px;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   @media only screen and (max-width: $mobile) {
     flex-direction: column;
     align-items: flex-end;
@@ -110,7 +112,7 @@
       margin-bottom: 10px;
     }
 
-    &[type=number] {
+    &[type='number'] {
       font-size: 1.7rem;
     }
 
