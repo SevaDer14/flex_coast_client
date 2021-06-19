@@ -40,7 +40,7 @@ describe('User can switch between languages', () => {
       cy.get('[data-cy=footer-about-header]').should('contain', 'Om tjänsten')
       cy.get('[data-cy=footer-about-us]').should(
         'contain',
-        'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och flexibla kontrakt.'
+        'Vi hjälper entreprenör att hitta kontorslokaler där bra idéer föds och fantastiska företag växer'
       )
       cy.get('[data-cy=footer-contact-header]').should(
         'contain',
