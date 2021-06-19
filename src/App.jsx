@@ -12,6 +12,7 @@ const App = () => {
   const { consent } = useSelector((state) => state)
   useEffect(() => {
     consent && ahoy.trackView()
+    // eslint-disable-next-line
   }, [])
 
   return (
@@ -23,7 +24,7 @@ const App = () => {
           location='bottom'
           buttonText='I accept'
           cookieName='flexCoastCookies'
-          style={{ background: 'rgb(255, 208, 156)' }}
+          style={{ background: '#333' }}
           buttonStyle={{
             color: '#4e503b',
             fontSize: '13px',
@@ -36,7 +37,7 @@ const App = () => {
             })
           }}
           enableDeclineButton>
-          <span style={{ fontSize: '16px', color: '#333' }}>
+          <span style={{ fontSize: '16px' }}>
             This website uses cookies to enhance the user experience.
           </span>
         </CookieConsent>
