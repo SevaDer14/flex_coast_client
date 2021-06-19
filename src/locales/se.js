@@ -48,7 +48,7 @@ const se = {
 
     footer: {
       subHeader1: 'Om tjänsten',
-      subHeader2: 'Prata med en människa',
+      subHeader2: 'Slå oss en pling!',
       subHeader3: 'Följ oss gärna!',
       aboutUsText:
         'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och flexibla kontrakt.',
