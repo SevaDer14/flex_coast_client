@@ -4,6 +4,8 @@ import matildaLogo from '../assets/matilda_logo.png'
 import profile1 from '../assets/social-img-1.jpg'
 import profile2 from '../assets/social-img-2.jpg'
 import profile3 from '../assets/social-img-3.jpg'
+import profile4 from '../assets/social-img-4.jpg'
+import profile5 from '../assets/social-img-5.jpg'
 
 export const testimonials = [
   {
@@ -50,7 +52,7 @@ export const persons = [
     position_en: 'CEO of Lenvovo',
     position_se: 'CEO av Lenvovo',
     logo: logoPlaceholder,
-    image: profile3,
+    image: profile2,
     employee: false,
   },
   {
@@ -61,7 +63,7 @@ export const persons = [
     position_en: 'Real estate specialist at FlexCoast',
     position_se: 'Fastighetsspecialist på FlexCoast',
     logo: logoPlaceholder,
-    image: profile1,
+    image: profile3,
     employee: true,
   },
   {
@@ -72,7 +74,7 @@ export const persons = [
     position_en: 'Chief Editor at Some News',
     position_se: 'Chefredaktör av Some News',
     logo: logoPlaceholder,
-    image: profile2,
+    image: profile4,
     employee: false,
   },
   {
@@ -83,7 +85,7 @@ export const persons = [
     position_en: 'Real estate specialist at FlexCoast',
     position_se: 'Fastighetsspecialist på FlexCoast',
     logo: logoPlaceholder,
-    image: profile3,
+    image: profile5,
     employee: true,
   },
 ]
