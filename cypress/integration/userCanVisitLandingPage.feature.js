@@ -24,7 +24,7 @@ describe('User can visit Flex Coast landing page', () => {
         cy.get('[data-cy=footer-contact]').first().should('contain', 'Talk to a human')
         cy.get('[data-cy=links]').first().should('contain', 'Please follow us!')
         cy.get('[data-cy=link-grid]').children().should('have.length', 2)
-        cy.get('[data-cy=facebook-button]').should('have.attr', 'href', 'https://www.facebook.com/')
+        cy.get('[data-cy=facebook-button]').should('have.attr', 'href', 'https://www.facebook.com/flexcoastsweden/')
         cy.get('[data-cy=linkedin-button]').should('have.attr', 'href', 'https://www.linkedin.com/company/flex-coast/')
       })
     })

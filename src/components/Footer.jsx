@@ -62,7 +62,7 @@ const Footer = () => {
             <IconButton data-cy='linkedin-button' href={'https://www.linkedin.com/company/flex-coast/'} >
               <LinkedInIcon className='icon' fontSize='large' />
             </IconButton>
-            <IconButton data-cy='facebook-button' href={'https://www.facebook.com/'} >
+            <IconButton data-cy='facebook-button' href={'https://www.facebook.com/flexcoastsweden/'} >
               <FacebookIcon className='icon' fontSize='large' />
             </IconButton>
           </Grid>
