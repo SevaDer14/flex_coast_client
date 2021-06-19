@@ -14,7 +14,7 @@ const InquiryPeers = () => {
       dataCy: 'positive',
     },    
     {
-      value: 'open minded',
+      value: 'open_minded',
       label: 'Open minded',
       dataCy: 'open-minded',
     }
