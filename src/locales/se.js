@@ -51,7 +51,7 @@ const se = {
       subHeader2: 'Prata med en människa',
       subHeader3: 'Följ oss gärna!',
       aboutUsText:
-        'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och kortvariga kontrakt.',
+        'Vi erbjuder topnotch kontorslokaler i Göteborg med flexibla villkor och flexibla kontrakt.',
       startButton: 'Hitta Kontor',
     },
 

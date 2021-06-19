@@ -52,7 +52,7 @@ const en = {
       subHeader2: 'Talk to a human',
       subHeader3: 'Please follow us!',
       aboutUsText:
-        'We provide high end office spaces in Gothenburg with flexible conditions and short term contracts.',
+        'We provide high end office spaces in Gothenburg with flexible conditions and flexible term contracts.',
       startButton: 'Get Started',
     },
 
