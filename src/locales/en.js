@@ -52,7 +52,7 @@ const en = {
       subHeader2: 'Give us a buzz!',
       subHeader3: 'Please follow us!',
       aboutUsText:
-        'We help entrepreneurs find office space where good ideas are born and fantastic companies grow',
+        'We help entrepreneurs find office space where good ideas are born and fantastic companies grow.',
       startButton: 'Get Started',
     },
 
