@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 describe('User can visit Flex Coast landing page', () => {
   beforeEach(() => {
     cy.visit('/')
