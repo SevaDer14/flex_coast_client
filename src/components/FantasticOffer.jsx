@@ -28,12 +28,14 @@ const FantasticOffer = () => {
           {t('fantasticOffer.offerSMS')}
         </h2>
       </div>
-      <button
-        data-cy='rent-out-button'
-        className='rent-out-button'
+      <Link
+        to='/rent_out'
+        className='rent-out'
         onClick={consent && ahoy.track(`rent_out_submit_button`)}>
-        <Link to='/rent_out'>Rent Out Office</Link>
-      </button>
+        <button data-cy='rent-out-button' className='rent-out-button'>
+          Rent Out Office
+        </button>
+      </Link>
       <div className='offer-container'>
         <Offer
           id={1}

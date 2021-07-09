@@ -28,18 +28,16 @@
     }
   }
 
-   .rent-out-button{
-    @extend .custom-button;
-    width: 20%;
+  .rent-out {
     align-self: center;
-    @media (max-width: 1000px) {
-      width: 25%;
-    }
-    @media only screen and (max-width: $mobile) {
-      width: 80%;
+    .rent-out-button {
+      @extend .custom-button;
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
     }
   }
-  
+
   .offer-container {
     max-width: 1280px;
     margin: 30px auto;
