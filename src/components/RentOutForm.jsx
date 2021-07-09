@@ -3,6 +3,8 @@ import Header from './Header'
 import TextField from '@material-ui/core/TextField'
 import Inquiries from '../modules/Inquiries'
 import { useTranslation } from 'react-i18next'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
 
 const RentOutForm = () => {
   const { t } = useTranslation()
@@ -20,21 +22,21 @@ const RentOutForm = () => {
       type: 'text',
       required: true,
       multiline: false,
-      dataKey: 'name'
+      dataKey: 'name',
     },
     {
       text: 'Can you leave your phone number?',
       type: 'number',
       required: true,
       multiline: false,
-      dataKey: 'phone'
+      dataKey: 'phone',
     },
     {
       text: 'Where can we reach you?',
       type: 'email',
       required: true,
       multiline: false,
-      dataKey: 'email'
+      dataKey: 'email',
     },
     {
       text: 'Do you have anything else to say?',
@@ -42,7 +44,7 @@ const RentOutForm = () => {
       required: false,
       multiline: true,
       rows: 4,
-      dataKey: 'notes'
+      dataKey: 'notes',
     },
   ]
 
@@ -67,7 +69,7 @@ const RentOutForm = () => {
       multiline={question.multiline}
       rows={question.rows}
       variant='outlined'
-      style={{margin: '10px'}}
+      style={{ margin: '10px' }}
     />
   ))
 
@@ -75,9 +77,16 @@ const RentOutForm = () => {
     <>
       <Header />
       <div className='form-container'>
+        <IconButton className='close-form-button'>
+          <CloseIcon style={{ color: '#bbb', fontSize: '24px' }} />
+        </IconButton>
         <form onSubmit={(event) => sendToHubSpot(event)}>
           {form}
-          <button className='custom-button' loading={loading} submit dataCy='submit-btn'>
+          <button
+            className='custom-button'
+            loading={loading}
+            submit
+            dataCy='submit-btn'>
             {t('submitButton')}
           </button>
         </form>

@@ -1219,7 +1219,7 @@ section {
   max-width: 800px;
   margin: auto;
   margin-top: 50px;
-  padding: 50px;
+  padding: 0 50px;
   border-radius: 10px;
   border: 1px solid lightgray;
 }
@@ -1230,6 +1230,12 @@ section {
     margin-top: 0;
     padding: 0 20px 0 20px;
   }
+}
+
+.form-container .close-form-button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 10px;
 }
 
 .form-container .custom-button, .form-container .compelling-container .rent-out-button, .compelling-container .form-container .rent-out-button {
