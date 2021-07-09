@@ -84,7 +84,7 @@ const RentOutForm = () => {
       <div className='form-container'>
         <IconButton className='close-form-button'>
           <Link to='/'>
-            <CloseIcon style={{ color: '#bbb', fontSize: '24px' }} />
+            <CloseIcon style={{ color: '#333', fontSize: '24px' }} />
           </Link>
         </IconButton>
         <form
