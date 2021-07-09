@@ -5,7 +5,7 @@ import Inquiries from '../modules/Inquiries'
 import { useTranslation } from 'react-i18next'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 
 const RentOutForm = () => {
   const { t } = useTranslation()
@@ -76,15 +76,17 @@ const RentOutForm = () => {
   ))
 
   return (
-    <>
+    <div className='rent-out-page'>
       <Header />
       <div className='form-container'>
         <IconButton className='close-form-button'>
-          <CloseIcon style={{ color: '#bbb', fontSize: '24px' }}>
-            <Link to='/'></Link>
-          </CloseIcon>
+          <Link to='/'>
+            <CloseIcon style={{ color: '#bbb', fontSize: '24px' }}/>
+          </Link>
         </IconButton>
-        <form data-cy='rent-out-form' onSubmit={(event) => sendToHubSpot(event)}>
+        <form
+          data-cy='rent-out-form'
+          onSubmit={(event) => sendToHubSpot(event)}>
           {form}
           <button
             className='custom-button'
@@ -96,7 +98,7 @@ const RentOutForm = () => {
           </button>
         </form>
       </div>
-    </>
+    </div>
   )
 }
 
