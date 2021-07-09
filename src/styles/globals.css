@@ -1234,6 +1234,10 @@ section {
           transform: scale(1.1);
 }
 
+.form-input {
+  margin: 10px;
+}
+
 #root {
   font-size: 62.5%;
   background-color: whitesmoke;
