@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -19,6 +19,10 @@ const RentOutForm = () => {
     email: '',
     notes: '',
   })
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
   const questions = [
     {

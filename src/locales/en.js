@@ -65,6 +65,7 @@ const en = {
       offer2: 'Month, quarter or longer periods.',
       offer3Sub: 'Best Locations',
       offer3: 'Choose places from the most beautiful parts of Gothenburg.',
+      rentOutOffice: 'Rent Out Office',
     },
 
     question: {

@@ -6,6 +6,8 @@ describe('user can submit inquiry to rent out a space with FlexCoast', () => {
   
   it('is expected to submit rent out form', () => {
     cy.url().should('contain', 'http://localhost:3001/rent_out')
+    cy.get('[data-cy=language-dropdown]').click()
+    cy.get('[data-cy=svenska]').click()
     cy.get('[data-cy=rent-out-form]').within(() => {
       cy.get('[data-cy=name]').should('contain', 'Vad heter du?')
       cy.get('[data-cy=name]').type('Edward Black')
