@@ -101,6 +101,7 @@ const en = {
     submitButton: 'Send',
     submitMessage:
       'Thanks for your answers! We will get back to you as soon as possible with the best results!',
+    officeSubmitMessage: 'Thank you for your inquiry',
   },
 }
 
