@@ -5,6 +5,7 @@ import Inquiries from '../modules/Inquiries'
 import { useTranslation } from 'react-i18next'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
+import { Link } from 'react-scroll'
 
 const RentOutForm = () => {
   const { t } = useTranslation()
@@ -64,6 +65,7 @@ const RentOutForm = () => {
       className='form-input'
       onChange={(event) => saveToState(event, question.dataKey)}
       label={question.text}
+      data-cy={question.dataKey}
       type={question.type}
       required={question.required}
       multiline={question.multiline}
@@ -78,13 +80,16 @@ const RentOutForm = () => {
       <Header />
       <div className='form-container'>
         <IconButton className='close-form-button'>
-          <CloseIcon style={{ color: '#bbb', fontSize: '24px' }} />
+          <CloseIcon style={{ color: '#bbb', fontSize: '24px' }}>
+            <Link to='/'></Link>
+          </CloseIcon>
         </IconButton>
-        <form onSubmit={(event) => sendToHubSpot(event)}>
+        <form data-cy='rent-out-form' onSubmit={(event) => sendToHubSpot(event)}>
           {form}
           <button
             className='custom-button'
             loading={loading}
+            data-cy='submit-button'
             submit
             dataCy='submit-btn'>
             {t('submitButton')}
