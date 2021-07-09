@@ -20,37 +20,46 @@ const RentOutForm = () => {
       type: 'text',
       required: true,
       multiline: false,
+      dataKey: 'name'
     },
     {
       text: 'Can you leave your phone number?',
       type: 'number',
       required: true,
       multiline: false,
+      dataKey: 'phone'
     },
     {
       text: 'Where can we reach you?',
       type: 'email',
       required: true,
       multiline: false,
+      dataKey: 'email'
     },
     {
       text: 'Do you have anything else to say?',
       type: 'text',
       required: false,
       multiline: true,
+      dataKey: 'notes'
     },
   ]
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    debugger
-    //Inquiries.exportHubSpot(formData, setLoading)
+    Inquiries.sendToHubSpot(formData, setLoading)
+  }
+
+  const saveToState = (event, dataKey) => {
+    let data = formData
+    data[dataKey] = event.target.value
+    setFormData(data)
   }
 
   const form = questions.map((question) => (
     <TextField
       className='form-input'
-      onChange={(event) => }
+      onChange={(event) => saveToState(event, question.dataKey)}
       label={question.text}
       type={question.type}
       required={question.required}
