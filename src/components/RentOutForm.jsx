@@ -41,11 +41,12 @@ const RentOutForm = () => {
       type: 'text',
       required: false,
       multiline: true,
+      rows: 4,
       dataKey: 'notes'
     },
   ]
 
-  const handleSubmit = (event) => {
+  const sendToHubSpot = (event) => {
     event.preventDefault()
     Inquiries.sendToHubSpot(formData, setLoading)
   }
@@ -64,7 +65,9 @@ const RentOutForm = () => {
       type={question.type}
       required={question.required}
       multiline={question.multiline}
+      rows={question.rows}
       variant='outlined'
+      style={{margin: '10px'}}
     />
   ))
 
@@ -72,7 +75,7 @@ const RentOutForm = () => {
     <>
       <Header />
       <div className='form-container'>
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form onSubmit={(event) => sendToHubSpot(event)}>
           {form}
           <button className='custom-button' loading={loading} submit dataCy='submit-btn'>
             {t('submitButton')}

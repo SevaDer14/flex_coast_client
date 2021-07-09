@@ -249,7 +249,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 75px;
+  height: 150px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -290,7 +290,7 @@
 
 .page-header .logo, .page-header-landing .logo {
   height: 100px;
-  margin-top: 50px;
+  margin-top: 10px;
   cursor: pointer;
 }
 
@@ -446,36 +446,6 @@ input[type='number']::-webkit-outer-spin-button {
 
 .hero-section .submit-message-container {
   width: 75%;
-}
-
-.form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  min-height: 100vh;
-  max-width: 800px;
-  margin: auto;
-  margin-top: 50px;
-  padding: 10px 50px 50px 50px;
-  border-radius: 10px;
-  border: 1px solid lightgray;
-}
-
-@media only screen and (max-width: 620px) {
-  .form-container {
-    border: none;
-    margin-top: 0;
-    padding: 0 20px 0 20px;
-  }
-}
-
-.form-container .custom-button, .form-container .compelling-container .rent-out-button, .compelling-container .form-container .rent-out-button {
-  width: 200px;
-  margin: 0 auto;
 }
 
 .welcomeMessage {
@@ -867,6 +837,10 @@ input.phone {
   color: #fff;
 }
 
+.testimonial-section {
+  background-color: whitesmoke;
+}
+
 .illu-container {
   padding: 75px 25px 0 25px;
   max-width: 1280px;
@@ -1234,13 +1208,48 @@ section {
           transform: scale(1.1);
 }
 
-.form-input {
-  margin: 10px;
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 50px;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+}
+
+@media only screen and (max-width: 620px) {
+  .form-container {
+    border: none;
+    margin-top: 0;
+    padding: 0 20px 0 20px;
+  }
+}
+
+.form-container .custom-button, .form-container .compelling-container .rent-out-button, .compelling-container .form-container .rent-out-button {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #root {
-  font-size: 62.5%;
   background-color: whitesmoke;
+  font-size: 62.5%;
 }
 
 * {
