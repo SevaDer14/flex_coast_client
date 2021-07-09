@@ -22,28 +22,28 @@ const RentOutForm = () => {
 
   const questions = [
     {
-      text: 'Please tell us your name',
+      text: t('rentOutQuestions.name'),
       type: 'text',
       required: true,
       multiline: false,
       dataKey: 'name',
     },
     {
-      text: 'Can you leave your phone number?',
+      text: t('rentOutQuestions.phone'),
       type: 'number',
       required: true,
       multiline: false,
       dataKey: 'phone',
     },
     {
-      text: 'Where can we reach you?',
+      text: t('rentOutQuestions.location'),
       type: 'email',
       required: true,
       multiline: false,
       dataKey: 'email',
     },
     {
-      text: 'Do you have anything else to say?',
+      text: t('rentOutQuestions.extraText'),
       type: 'text',
       required: false,
       multiline: true,
