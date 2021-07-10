@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 describe('user can submit inquiry to rent out a space with FlexCoast', () => {
-  before(() => {
+
+  beforeEach(() => {
     cy.intercept(
       'POST',
       'https://flex-coast-api-production.herokuapp.com/api/**',
@@ -11,13 +12,11 @@ describe('user can submit inquiry to rent out a space with FlexCoast', () => {
         },
       }
     )
-  })
-  beforeEach(() => {
     cy.visit('/')
     cy.contains('Rent Out Office').click()
   })
 
-  it('is expected to submit rent out form', () => {
+  it.only('is expected to submit rent out form', () => {
     cy.url().should('contain', '/rent_out')
     cy.get('[data-cy=language-dropdown]').click()
     cy.get('[data-cy=svenska]').click()

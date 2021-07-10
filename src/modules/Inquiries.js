@@ -28,6 +28,8 @@ const Inquiries = {
         type: 'SET_SUBMIT_MESSAGE',
         payload: i18n.t('officeSubmitMessage')
       })
+      let { consent } = store.getState()
+      consent && ahoy.track(`rent_out_button`)
     } catch (error) {}
     setLoading(false)
   },

@@ -57,7 +57,6 @@ const RentOutForm = () => {
 
   const sendToHubSpot = (event) => {
     event.preventDefault()
-    consent && ahoy.track(`rent_out_button`)
     Inquiries.sendToHubSpot(formData, setLoading)
   }
 
