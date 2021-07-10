@@ -109,7 +109,7 @@ const se = {
     submitButton: 'Skicka in',
     submitMessage:
       'Tack för dina svar! Vi återkommer så snart som möjligt med dem bästa resultaten!',
-    officeSubmitMessage: 'Tack för dina svar! Vi återkommer till dig snart!'
+    officeSubmitMessage: 'Tack för förfrågan'
   },
 }
 

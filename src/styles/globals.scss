@@ -14,6 +14,15 @@
   font-family: 'Nunito', sans-serif !important;
 }
 
+.success-snackbar {
+  .MuiSnackbarContent-root {
+    background-color: lime;
+    color: white;
+    font-size: 22px;
+    padding: 0 20px;
+  }
+}
+
 h2 {
   font-size: 32px;
   color: $secondaryColor;

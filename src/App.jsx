@@ -7,6 +7,8 @@ import CookieConsent from 'react-cookie-consent'
 import store from './state/store/configureStore'
 import { Switch, Route } from 'react-router'
 import RentOutForm from './components/RentOutForm'
+import SuccessMessage from './components/alerts/SuccessMessage'
+
 const LandingPage = React.lazy(() => import('./views/LandingPage'))
 const Footer = React.lazy(() => import('./components/Footer'))
 
@@ -20,6 +22,7 @@ const App = () => {
   return (
     <>
       <Suspense fallback={<LoadingScreen />}>
+        <SuccessMessage />
         <Switch>
           <Route exact path='/'>
             <LandingPage />
