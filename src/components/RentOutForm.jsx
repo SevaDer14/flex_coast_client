@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import { TextField, IconButton } from '@material-ui/core'
+import CloseIcon from '@material-ui/icons/Close'
 import ahoy from '../modules/analytics'
 import Header from './Header'
 import Inquiries from '../modules/Inquiries'
-import TextField from '@material-ui/core/TextField'
-import IconButton from '@material-ui/core/IconButton'
-import CloseIcon from '@material-ui/icons/Close'
 
 const RentOutForm = () => {
   const { consent } = useSelector((state) => state)
@@ -58,6 +57,7 @@ const RentOutForm = () => {
 
   const sendToHubSpot = (event) => {
     event.preventDefault()
+    consent && ahoy.track(`rent_out_button`)
     Inquiries.sendToHubSpot(formData, setLoading)
   }
 
@@ -100,8 +100,7 @@ const RentOutForm = () => {
             loading={loading}
             data-cy='submit-button'
             submit
-            dataCy='submit-btn'
-            onClick={consent && ahoy.track(`rent_out_button`)}>
+            dataCy='submit-btn'>
             {t('submitButton')}
           </button>
         </form>
