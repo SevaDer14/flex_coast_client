@@ -25,9 +25,11 @@ const Inquiries = {
       let params = { inquiry: { ...formData, language: setLanguageValue() } }
       await axios.post('/inquiries', params)
       store.dispatch({
-        type: 'SET_SUBMIT_MESSAGE',
+        type: 'SET_SUCCESS_MESSAGE',
         payload: i18n.t('officeSubmitMessage')
       })
+      let { consent } = store.getState()
+      consent && ahoy.track(`rent_out_button`)
     } catch (error) {}
     setLoading(false)
   },

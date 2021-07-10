@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
 import { TextField, IconButton } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
-import ahoy from '../modules/analytics'
 import Header from './Header'
 import Inquiries from '../modules/Inquiries'
 
 const RentOutForm = () => {
-  const { consent } = useSelector((state) => state)
   const { t } = useTranslation()
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
+    officeProvider: true,
     name: '',
     phone: '',
     email: '',
@@ -57,7 +55,6 @@ const RentOutForm = () => {
 
   const sendToHubSpot = (event) => {
     event.preventDefault()
-    consent && ahoy.track(`rent_out_button`)
     Inquiries.sendToHubSpot(formData, setLoading)
   }
 
