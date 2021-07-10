@@ -21,7 +21,7 @@ const SuccessMessage = () => {
       onClose={handleClose}
       anchorOrigin={{
         vertical: 'top',
-        horizontal: 'right',
+        horizontal: 'center',
       }}
       message={<p data-cy='success-message'>{successMessage}</p>}
       severity='success'

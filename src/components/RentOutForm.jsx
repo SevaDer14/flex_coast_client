@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { TextField, IconButton } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
@@ -9,6 +9,7 @@ import Inquiries from '../modules/Inquiries'
 const RentOutForm = () => {
   const { t } = useTranslation()
   const [loading, setLoading] = useState(false)
+  const [redirect, setRedirect] = useState(false)
   const [formData, setFormData] = useState({
     officeProvider: true,
     name: '',
@@ -56,6 +57,7 @@ const RentOutForm = () => {
   const sendToHubSpot = (event) => {
     event.preventDefault()
     Inquiries.sendToHubSpot(formData, setLoading)
+    setRedirect(true)
   }
 
   const saveToState = (event, dataKey) => {
@@ -81,6 +83,7 @@ const RentOutForm = () => {
 
   return (
     <div className='rent-out-page'>
+      {redirect && <Redirect to='/'/>}
       <Header />
       <div className='form-container'>
         <IconButton className='close-form-button'>

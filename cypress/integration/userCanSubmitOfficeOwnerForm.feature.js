@@ -37,14 +37,14 @@ describe('user can submit inquiry to rent out a space with FlexCoast', () => {
         cy.get('[data-cy=submit-button]').should('contain', 'Skicka in')
         cy.get('[data-cy=submit-button]').click()
       })
-      //cy.url().should('contain', 'http://localhost:3001')
+      cy.url().should('contain', 'http://localhost:3001')
       cy.get('[data-cy=success-message]').should(
         'contain',
         'Tack för förfrågan'
       )
     })
 
-    it.only('is expected to se submit form in english', () => {
+    it('is expected to se submit form in english', () => {
       cy.url().should('contain', '/rent_out')
       cy.get('[data-cy=rent-out-form]').within(() => {
         cy.get('[data-cy=name]').should('contain', 'Please tell us your name')
