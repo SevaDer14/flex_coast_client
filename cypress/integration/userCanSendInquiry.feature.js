@@ -3,7 +3,7 @@ describe('User can send inquiry', () => {
   beforeEach(() => {
     cy.intercept(
       'POST',
-      'https://flex-coast-production.herokuapp.com/api/inquiries',
+      '**/api/inquiries',
       {
         body: {
           message:

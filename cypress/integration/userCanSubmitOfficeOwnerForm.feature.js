@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-describe('user can submit inquiry to rent out a space with FlexCoast', () => {
+describe('User can submit inquiry to rent out a space with FlexCoast', () => {
   beforeEach(() => {
     cy.intercept(
       'POST',
-      'https://flex-coast-production.herokuapp.com/api/inquiries',
+      '**/api/inquiries',
       {
         body: {
           message: 'Thank you for your inquiry! We will be in touch soon.',
