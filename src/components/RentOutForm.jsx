@@ -20,6 +20,9 @@ const RentOutForm = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    return () => {
+      setLoading(false)
+    }
   }, [])
 
   const questions = [
@@ -66,8 +69,9 @@ const RentOutForm = () => {
     setFormData(data)
   }
 
-  const form = questions.map((question) => (
+  const formElements = questions.map((question, index) => (
     <TextField
+      key={index}
       className='form-input'
       onChange={(event) => saveToState(event, question.dataKey)}
       label={question.text}
@@ -83,7 +87,7 @@ const RentOutForm = () => {
 
   return (
     <div className='rent-out-page'>
-      {redirect && <Redirect to='/'/>}
+      {redirect && <Redirect to='/' />}
       <Header />
       <div className='form-container'>
         <IconButton className='close-form-button'>
@@ -91,16 +95,9 @@ const RentOutForm = () => {
             <CloseIcon style={{ color: '#333', fontSize: '24px' }} />
           </Link>
         </IconButton>
-        <form
-          data-cy='rent-out-form'
-          onSubmit={(event) => handleSubmit(event)}>
-          {form}
-          <button
-            className='custom-button'
-            loading={loading}
-            data-cy='submit-button'
-            submit
-            dataCy='submit-btn'>
+        <form data-cy='rent-out-form' onSubmit={(event) => handleSubmit(event)}>
+          {formElements}
+          <button className='custom-button' data-cy='submit-button'>
             {t('submitButton')}
           </button>
         </form>

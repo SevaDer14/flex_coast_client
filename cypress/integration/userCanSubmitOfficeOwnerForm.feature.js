@@ -17,7 +17,7 @@ describe('User can submit inquiry to rent out a space with FlexCoast', () => {
       cy.get('[data-cy=svenska]').click()
     })
 
-    it.only('is expected to submit form and receive success message', () => {
+    it('is expected to submit form and receive success message', () => {
       cy.get('[data-cy=rent-out-form]').within(() => {
         cy.get('[data-cy=name]').should('contain', 'Vad heter du?')
         cy.get('[data-cy=name]').type('Edward Black')

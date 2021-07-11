@@ -20,41 +20,39 @@ const App = () => {
   }, [])
 
   return (
-    <>
-      <Suspense fallback={<LoadingScreen />}>
-        <SuccessMessage />
-        <Switch>
-          <Route exact path='/'>
-            <LandingPage />
-          </Route>
-          <Route exact path='/rent_out'>
-            <RentOutForm />
-          </Route>
-        </Switch>
-        <Footer landing/>
-        <CookieConsent
-          location='bottom'
-          buttonText='I accept'
-          cookieName='flexCoastCookies'
-          style={{ background: '#333' }}
-          buttonStyle={{
-            color: '#4e503b',
-            fontSize: '13px',
-            backgroundColor: 'lightgreen',
-          }}
-          expires={150}
-          onAccept={() => {
-            store.dispatch({
-              type: 'ACCEPT_COOKIES',
-            })
-          }}
-          enableDeclineButton>
-          <span style={{ fontSize: '16px' }}>
-            This website uses cookies to enhance the user experience.
-          </span>
-        </CookieConsent>
-      </Suspense>
-    </>
+    <Suspense fallback={<LoadingScreen />}>
+      <SuccessMessage />
+      <Switch>
+        <Route exact path='/'>
+          <LandingPage />
+        </Route>
+        <Route exact path='/rent_out'>
+          <RentOutForm />
+        </Route>
+      </Switch>
+      <Footer landing />
+      <CookieConsent
+        location='bottom'
+        buttonText='I accept'
+        cookieName='flexCoastCookies'
+        style={{ background: '#333' }}
+        buttonStyle={{
+          color: '#4e503b',
+          fontSize: '13px',
+          backgroundColor: 'lightgreen',
+        }}
+        expires={150}
+        onAccept={() => {
+          store.dispatch({
+            type: 'ACCEPT_COOKIES',
+          })
+        }}
+        enableDeclineButton>
+        <span style={{ fontSize: '16px' }}>
+          This website uses cookies to enhance the user experience.
+        </span>
+      </CookieConsent>
+    </Suspense>
   )
 }
 

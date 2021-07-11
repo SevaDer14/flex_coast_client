@@ -31,7 +31,7 @@ const FantasticOffer = () => {
       <Link
         to='/rent_out'
         className='rent-out'
-        onClick={consent && ahoy.track(`rent_out_submit_button`)}>
+        onClick={() => consent && ahoy.track(`rent_out_submit_button`)}>
         <button data-cy='rent-out-button' className='rent-out-button'>
           {t('fantasticOffer.rentOutOffice')}
         </button>

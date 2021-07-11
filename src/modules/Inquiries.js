@@ -5,7 +5,7 @@ import i18n from '../i18n'
 
 const Inquiries = {
   async create(formData, setLoading) {
-    setLoading(true)
+    // setLoading(true)
     try {
       let params = { inquiry: { ...formData, language: setLanguageValue() } }
       await axios.post('/inquiries', params)
@@ -17,7 +17,7 @@ const Inquiries = {
       let { consent } = store.getState()
       consent && formData.officeProvider ? ahoy.track(`rent_out_button`) : ahoy.track(`answer`, { question: 'submit' })
     } catch (error) {}
-    setLoading(false)
+    // setLoading(false)
   },
 }
 
