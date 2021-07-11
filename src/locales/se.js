@@ -102,6 +102,7 @@ const se = {
     },
     rentOutQuestions: {
       name: 'Vad heter du?',
+      email: 'Kan vi få din mailadress?',
       phone: 'Kan vi få ditt telefonnummer?',
       location: 'Hur kan vi kontakta dig?',
       extraText: 'Har du något annat du vill säga?',

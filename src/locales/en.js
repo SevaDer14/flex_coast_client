@@ -102,6 +102,7 @@ const en = {
     rentOutQuestions: {
       name: 'Please tell us your name',
       phone: 'Can you leave your phone number?',
+      email: 'Can we have your email address?',
       location: 'Where can we reach you?',
       extraText: 'Do you have anything else to say?',
     },

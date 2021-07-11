@@ -38,7 +38,7 @@ const RentOutForm = () => {
       dataKey: 'phone',
     },
     {
-      text: t('rentOutQuestions.location'),
+      text: t('rentOutQuestions.email'),
       type: 'email',
       required: true,
       multiline: false,
@@ -54,9 +54,9 @@ const RentOutForm = () => {
     },
   ]
 
-  const sendToHubSpot = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault()
-    Inquiries.sendToHubSpot(formData, setLoading)
+    Inquiries.create(formData, setLoading)
     setRedirect(true)
   }
 
@@ -93,7 +93,7 @@ const RentOutForm = () => {
         </IconButton>
         <form
           data-cy='rent-out-form'
-          onSubmit={(event) => sendToHubSpot(event)}>
+          onSubmit={(event) => handleSubmit(event)}>
           {form}
           <button
             className='custom-button'

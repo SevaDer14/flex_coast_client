@@ -9,27 +9,13 @@ const Inquiries = {
     try {
       let params = { inquiry: { ...formData, language: setLanguageValue() } }
       await axios.post('/inquiries', params)
-      store.dispatch({
-        type: 'SET_SUBMIT_MESSAGE',
-        payload: i18n.t('submitMessage'),
-      })
+      const action = {
+        type: formData.officeProvider ? 'SET_SUCCESS_MESSAGE' : 'SET_SUBMIT_MESSAGE',
+        payload: formData.officeProvider ? i18n.t('officeSubmitMessage') : i18n.t('submitMessage'),
+      }
+      store.dispatch(action)
       let { consent } = store.getState()
-      consent && ahoy.track(`answer`, { question: 'submit' })
-    } catch (error) {}
-    setLoading(false)
-  },
-
-  async sendToHubSpot(formData, setLoading) {
-    setLoading(true)
-    try {
-      let params = { inquiry: { ...formData, language: setLanguageValue() } }
-      await axios.post('/inquiries', params)
-      store.dispatch({
-        type: 'SET_SUCCESS_MESSAGE',
-        payload: i18n.t('officeSubmitMessage')
-      })
-      let { consent } = store.getState()
-      consent && ahoy.track(`rent_out_button`)
+      consent && formData.officeProvider ? ahoy.track(`rent_out_button`) : ahoy.track(`answer`, { question: 'submit' })
     } catch (error) {}
     setLoading(false)
   },
