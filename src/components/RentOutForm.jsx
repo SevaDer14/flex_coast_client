@@ -57,9 +57,11 @@ const RentOutForm = () => {
     },
   ]
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    Inquiries.create(formData, setLoading)
+    setLoading(true)
+    await Inquiries.create(formData)
+    setLoading(false)
     setRedirect(true)
   }
 
@@ -97,7 +99,10 @@ const RentOutForm = () => {
         </IconButton>
         <form data-cy='rent-out-form' onSubmit={(event) => handleSubmit(event)}>
           {formElements}
-          <button className='custom-button' data-cy='submit-button'>
+          <button
+            className='custom-button'
+            loading={loading}
+            data-cy='submit-button'>
             {t('submitButton')}
           </button>
         </form>
