@@ -66,7 +66,6 @@ describe('User can send inquiry', () => {
           'Where would you like to be situated?'
         )
         cy.get('[data-testid=locations]').click()
-        cy.wait('@eventRequest')
       })
       cy.get('[data-testid=rrs-option_locations_1]').click()
       cy.get('[data-testid=rrs-option_locations_2]').click()
