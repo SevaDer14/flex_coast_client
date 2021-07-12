@@ -5,6 +5,7 @@ import { TextField, IconButton } from '@material-ui/core'
 import CloseIcon from '@material-ui/icons/Close'
 import Header from './Header'
 import Inquiries from '../modules/Inquiries'
+import CustomButton from './custom/CustomButton'
 
 const RentOutForm = () => {
   const { t } = useTranslation()
@@ -99,12 +100,13 @@ const RentOutForm = () => {
         </IconButton>
         <form data-cy='rent-out-form' onSubmit={(event) => handleSubmit(event)}>
           {formElements}
-          <button
+          <CustomButton
             className='custom-button'
-            loading={loading}
-            data-cy='submit-button'>
+            loading={loading}        
+            submit={true}
+            dataCy='submit-button'>
             {t('submitButton')}
-          </button>
+          </CustomButton>
         </form>
       </div>
     </div>

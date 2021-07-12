@@ -23,7 +23,8 @@ const CustomRadioButton = ({ data, disabled, onChange, inputValue }) => {
             <label
               data-cy={`${item.dataCy}-label`}
               htmlFor={item.dataCy}
-              className={!disabled && 'radio'}>
+              //className={!disabled && 'radio'}
+              >
               {item.label}
             </label>
           </div>
