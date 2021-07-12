@@ -28,6 +28,11 @@ const FantasticOffer = () => {
           {t('fantasticOffer.offerSMS')}
         </h2>
       </div>
+      <div className='offer-title'>
+        <h1 data-cy='offer-section-header'>
+          {t('fantasticOffer.rentOutOfficeText')}
+        </h1>
+      </div>
       <Link
         to='/rent_out'
         className='rent-out'

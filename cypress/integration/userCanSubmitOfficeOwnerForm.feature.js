@@ -7,7 +7,7 @@ describe('User can submit inquiry to rent out a space with FlexCoast', () => {
       },
     })
     cy.visit('/')
-    cy.contains('Rent Out Office').click()
+    cy.contains('Get in touch').click()
   })
 
   describe('in Swedish', () => {

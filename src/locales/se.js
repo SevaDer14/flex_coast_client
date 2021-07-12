@@ -64,7 +64,9 @@ const se = {
       offer2: 'Månad, kvartal eller längre perioder',
       offer3Sub: 'Bästa lägena',
       offer3: 'Välj bland dem bästa lägena i Göteborg',
-      rentOutOffice: 'Hyr Ut Kontor',
+      rentOutOffice: 'Kontakta oss',
+      rentOutOfficeText: 'Har du kontor som du vill dela med andra?'
+
     },
 
     question: {
